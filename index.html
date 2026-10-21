@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Nê ơi, anh xin lỗi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Be+Vietnam+Pro:wght@400;500;700&family=Shantell+Sans:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* Hallmark · macrostructure: Letter · tone: soft / handwritten · anchor hue: coral (25°)
+ * theme: studied-DNA (source: 360feedback warm theme) · paper oklch(95.6% 0.016 80) · accent oklch(64% 0.17 32)
+ * display: Bricolage Grotesque · body: Be Vietnam Pro · annotation: Shantell Sans
+ * nav: none (single letter) · footer: none · enrichment: Tier A CSS envelope
+ */
+:root{
+  --color-paper: oklch(95.6% 0.016 80);
+  --color-paper-2: oklch(98.5% 0.008 80);
+  --color-ink: oklch(25% 0.04 265);
+  --color-ink-soft: oklch(42% 0.03 265);
+  --color-accent: oklch(64% 0.17 32);
+  --color-accent-ink: oklch(50% 0.16 32);
+  --color-accent-tint: oklch(93% 0.04 32);
+  --color-mint-tint: oklch(94% 0.04 165);
+  --color-iris-tint: oklch(93% 0.035 290);
+  --color-sun-tint: oklch(95% 0.06 90);
+  --color-env: oklch(88% 0.05 40);
+  --color-env-dark: oklch(80% 0.07 38);
+  --color-focus: oklch(50% 0.16 32);
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: "Be Vietnam Pro", system-ui, sans-serif;
+  --font-hand: "Shantell Sans", "Comic Sans MS", cursive;
+  --space-xs: 4px; --space-sm: 8px; --space-md: 16px; --space-lg: 24px;
+  --space-xl: 32px; --space-2xl: 48px; --space-3xl: 64px; --space-4xl: 96px;
+  --radius-card: 22px; --radius-pill: 999px;
+  --shadow-sticker: 5px 5px 0 var(--color-ink);
+  --shadow-sticker-sm: 3px 3px 0 var(--color-ink);
+  --ease-out: cubic-bezier(.2,.7,.3,1);
+  --dur-fast: .12s; --dur-med: .32s; --dur-slow: .7s;
+}
+*{box-sizing:border-box;margin:0}
+html,body{overflow-x:clip}
+body{background:var(--color-paper);color:var(--color-ink);font:400 17px/1.7 var(--font-body);-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--color-focus);outline-offset:3px}
+
+/* ---------- stage 1: envelope ---------- */
+.stage{min-height:100vh;display:grid;place-items:center;padding:var(--space-2xl) var(--space-lg)}
+.intro{text-align:center;display:grid;gap:var(--space-xl);justify-items:center}
+.intro h1{font:800 clamp(34px,5vw,60px)/1.04 var(--font-display);letter-spacing:-.03em;max-width:14ch}
+.intro .hint{font:500 20px/1.3 var(--font-hand);color:var(--color-accent-ink)}
+.env{position:relative;width:min(420px,84vw);aspect-ratio:3/2;background:var(--color-env);border:2.5px solid var(--color-ink);border-radius:14px;box-shadow:var(--shadow-sticker);transition:transform var(--dur-med) var(--ease-out)}
+.env{overflow:hidden}
+.env::before{content:"";position:absolute;inset:0;background:var(--color-env-dark);clip-path:polygon(0 0,50% 56%,100% 0,100% 100%,0 100%);opacity:.55}
+.env::after{content:"";position:absolute;inset:0;background:var(--color-env);clip-path:polygon(0 100%,50% 50%,100% 100%)}
+.env .flap{position:absolute;inset:0 0 auto 0;height:58%;background:var(--color-env-dark);clip-path:polygon(0 0,100% 0,50% 100%);z-index:2;transform-origin:top;transition:transform var(--dur-slow) var(--ease-out)}
+.env .seal{position:absolute;left:50%;top:50%;translate:-50% -50%;z-index:3;width:64px;height:64px;border-radius:47% 53% 45% 55%/56% 43% 57% 44%;background:var(--color-accent);border:2.5px solid var(--color-ink);display:grid;place-items:center;color:var(--color-paper-2);font:700 26px/1 var(--font-hand)}
+.open-btn{background:none;border:0;padding:0;border-radius:16px}
+.open-btn:hover .env{transform:translateY(-4px) rotate(-1deg)}
+.open-btn:active .env{transform:translateY(1px)}
+.is-open .env .flap{transform:rotateX(180deg)}
+.is-open .intro{opacity:0;transition:opacity var(--dur-med) var(--ease-out) .35s}
+
+/* ---------- stage 2: letter ---------- */
+.letter-wrap{display:none;padding:var(--space-3xl) var(--space-lg) var(--space-4xl)}
+.is-read .stage{display:none}
+.is-read .letter-wrap{display:block;animation:rise var(--dur-slow) var(--ease-out) both}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.letter{max-width:720px;margin:0 auto;background:var(--color-paper-2);border:2.5px solid var(--color-ink);border-radius:var(--radius-card);box-shadow:var(--shadow-sticker);padding:clamp(28px,6vw,64px)}
+.date{font:500 16px/1 var(--font-hand);color:var(--color-ink-soft);margin-bottom:var(--space-lg)}
+.letter h2{font:800 clamp(30px,4vw,44px)/1.08 var(--font-display);letter-spacing:-.025em;margin-bottom:var(--space-lg)}
+.letter h2 .u{background:linear-gradient(transparent 62%,var(--color-accent-tint) 62%)}
+.letter p{max-width:62ch;margin-bottom:var(--space-md)}
+.sign{font:700 26px/1.3 var(--font-hand);margin-top:var(--space-xl);color:var(--color-accent-ink)}
+.sign small{display:block;font:500 18px/1.4 var(--font-hand);color:var(--color-ink-soft)}
+
+.promises{max-width:720px;margin:var(--space-3xl) auto 0}
+.promises h3{font:800 clamp(24px,3vw,32px)/1.1 var(--font-display);letter-spacing:-.02em;margin-bottom:var(--space-lg)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-lg)}
+.card{border:2px solid var(--color-ink);border-radius:var(--radius-card);padding:var(--space-lg);box-shadow:var(--shadow-sticker-sm)}
+.card .ic{font-size:30px;line-height:1}
+.card h4{font:700 21px/1.25 var(--font-display);margin:var(--space-sm) 0 var(--space-xs)}
+.card p{font-size:16px;line-height:1.6;color:var(--color-ink-soft)}
+.c1{background:var(--color-sun-tint)}
+.c2{background:var(--color-mint-tint)}
+.wish{grid-column:1/-1;background:var(--color-iris-tint)}
+.wish .note{font:500 17px/1.4 var(--font-hand);color:var(--color-accent-ink);margin-top:var(--space-xs)}
+.opts{display:flex;flex-wrap:wrap;gap:var(--space-sm);margin:var(--space-md) 0}
+.opt{background:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:var(--radius-pill);padding:10px 18px;min-height:44px;font-weight:500;font-size:15px;white-space:nowrap;transition:transform var(--dur-fast) var(--ease-out),background-color var(--dur-fast) var(--ease-out)}
+.opt:hover{transform:translateY(-2px)}
+.opt[aria-pressed="true"]{background:var(--color-ink);color:var(--color-paper-2);font-weight:700}
+.own{display:none;width:100%;margin-bottom:var(--space-md);padding:12px 16px;border:2px solid var(--color-ink);border-radius:14px;font:inherit;font-size:16px;background:var(--color-paper-2)}
+.own.show{display:block}
+.send{background:var(--color-accent);color:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:var(--radius-pill);padding:12px 26px;min-height:48px;font:700 16px/1 var(--font-body);box-shadow:var(--shadow-sticker-sm);white-space:nowrap;transition:transform var(--dur-fast) var(--ease-out),box-shadow var(--dur-fast) var(--ease-out)}
+.send:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--color-ink)}
+.send:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--color-ink)}
+.send:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:var(--shadow-sticker-sm)}
+.done{display:none;margin-top:var(--space-md);font:500 17px/1.5 var(--font-hand);color:var(--color-accent-ink)}
+.done.show{display:block}
+.again{max-width:720px;margin:var(--space-2xl) auto 0;text-align:center}
+.again button{background:none;border:0;font:500 16px/1 var(--font-hand);color:var(--color-ink-soft);text-decoration:underline;text-underline-offset:4px;padding:var(--space-sm)}
+
+@media (max-width:640px){
+  body{font-size:16px}
+  .grid{grid-template-columns:minmax(0,1fr)}
+  .opt{white-space:normal}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.12s!important}
+  .is-open .env .flap{transform:none}
+}
+</style>
+</head>
+<body>
+<main id="app">
+  <section class="stage">
+    <div class="intro">
+      <h1>Nê ơi, anh có cái này cho em</h1>
+      <button class="open-btn" id="open" aria-label="Mở thư">
+        <div class="env"><div class="flap"></div><div class="seal">N</div></div>
+      </button>
+      <p class="hint">bấm vào bao thư nha</p>
+    </div>
+  </section>
+
+  <section class="letter-wrap" aria-live="polite">
+    <article class="letter">
+      <p class="date">21/10/2026</p>
+      <h2>Anh xin lỗi <span class="u">Nê</span></h2>
+      <p>Nê ơi,</p>
+      <p>Hôm qua là 20/10, ngày của em, mà anh lại không có quà gì cho em. Anh biết em buồn. Một ngày lẽ ra phải dành cho em, anh lại để nó trôi qua như mọi ngày khác. Lỗi đó là của anh, anh không bào chữa.</p>
+      <p>Em lúc nào cũng để ý tới anh từ những chuyện nhỏ nhất. Vậy mà tới ngày của em, anh lại là người quên. Anh thấy có lỗi với em lắm.</p>
+      <p>Anh không muốn chỉ nói xin lỗi rồi thôi, nên anh gửi em ba điều bên dưới. Cái nào anh cũng làm thật.</p>
+      <p class="sign">Thương em,<small>Anh</small></p>
+    </article>
+
+    <section class="promises">
+      <h3>Ba điều anh bù cho em</h3>
+      <div class="grid">
+        <div class="card c1">
+          <div class="ic" aria-hidden="true">🍽️</div>
+          <h4>Một buổi tối hẹn hò</h4>
+          <p>Em chọn ngày, phần còn lại anh lo hết: đặt bàn, đón em, chỉ hai đứa mình thôi.</p>
+        </div>
+        <div class="card c2">
+          <div class="ic" aria-hidden="true">💐</div>
+          <h4>Hoa và quà cho em</h4>
+          <p>Sẽ được giao tới tận tay em. Ngày nào thì anh giữ bí mật nha.</p>
+        </div>
+        <div class="card wish">
+          <div class="ic" aria-hidden="true">🎟️</div>
+          <h4>Một phiếu điều ước</h4>
+          <p>Em chọn một điều, anh thực hiện. Không hết hạn.</p>
+          <p class="note">phiếu này dùng được một lần thôi đó, chọn kỹ nha</p>
+          <div class="opts" role="group" aria-label="Chọn điều ước">
+            <button class="opt" aria-pressed="false" data-w="Một ngày anh chiều em hết mình">Một ngày anh chiều em hết mình</button>
+            <button class="opt" aria-pressed="false" data-w="Một buổi massage, spa thư giãn">Một buổi massage, spa</button>
+            <button class="opt" aria-pressed="false" data-w="Một chuyến đi chơi ngắn của hai đứa">Một chuyến đi chơi ngắn</button>
+            <button class="opt" aria-pressed="false" data-w="__own">Điều khác, em tự ghi</button>
+          </div>
+          <input class="own" id="own" type="text" maxlength="140" placeholder="Em muốn gì nè…" aria-label="Điều ước của em">
+          <button class="send" id="send" disabled>Gửi điều ước cho anh</button>
+          <p class="done" id="done" role="status">Anh nhận rồi nha. Nếu mail không tự mở, em chụp màn hình này gửi anh là được 💛</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="again"><button id="again">đọc lại từ đầu</button></div>
+  </section>
+</main>
+<script>
+const app=document.getElementById('app'),opts=[...document.querySelectorAll('.opt')],own=document.getElementById('own'),send=document.getElementById('send'),done=document.getElementById('done');
+const TO='thaiquang.nguyenle@gmail.com';
+let pick=null;
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.getElementById('open').addEventListener('click',()=>{
+  app.classList.add('is-open');
+  setTimeout(()=>{app.classList.add('is-read');scrollTo({top:0,behavior:'instant'});document.querySelector('.letter h2').setAttribute('tabindex','-1');document.querySelector('.letter h2').focus({preventScroll:true});},reduce?50:900);
+});
+document.getElementById('again').addEventListener('click',()=>{app.classList.remove('is-open','is-read');scrollTo({top:0,behavior:'instant'});});
+function update(){const v=pick==='__own'?own.value.trim():pick;send.disabled=!v;}
+opts.forEach(b=>b.addEventListener('click',()=>{
+  opts.forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');
+  pick=b.dataset.w;own.classList.toggle('show',pick==='__own');if(pick==='__own')own.focus();done.classList.remove('show');update();
+}));
+own.addEventListener('input',update);
+send.addEventListener('click',()=>{
+  const v=pick==='__own'?own.value.trim():pick;if(!v)return;
+  try{localStorage.setItem('ne-wish',v)}catch(e){}
+  location.href='mailto:'+TO+'?subject='+encodeURIComponent('Phiếu điều ước của Nê 🎟️')+'&body='+encodeURIComponent('Anh ơi, em chọn: '+v);
+  done.classList.add('show');
+});
+</script>
+</body>
+</html>
