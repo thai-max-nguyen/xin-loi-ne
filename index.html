@@ -72,16 +72,33 @@ svg{display:block}
 .open-btn:hover .env{transform:rotate(-1deg) translateY(-4px)}
 .open-btn:hover .flap{transform:rotateX(-8deg)}
 .open-btn:active .env{transform:rotate(-2deg) translateY(1px)}
-.is-open .seal{opacity:0}
 .is-open .flap{transform:rotateX(180deg);z-index:0}
-.is-open .peek{transform:translateY(-62%)}
+.is-flip .flap{z-index:0}
 .is-open .hint,.is-open h1{opacity:0;transition:opacity var(--dur-med) var(--ease-out)}
+
+/* ---------- stage 0: sound gate ---------- */
+.gate{position:fixed;inset:0;z-index:60;display:grid;place-items:center;background:var(--color-paper);transition:opacity .6s var(--ease-out),visibility .6s}
+.gate-in{text-align:center;display:grid;gap:var(--space-lg);justify-items:center;padding:var(--space-lg)}
+.gate-in p{font:500 22px/1.4 var(--font-hand);color:var(--color-ink-soft)}
+.gate-in b{font:800 clamp(30px,4vw,44px)/1.1 var(--font-display);letter-spacing:-.025em}
+.gate .send{font-size:17px;padding:14px 30px}
+.started .gate{opacity:0;visibility:hidden}
+.stage .env{animation:float 3.6s ease-in-out infinite}
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -8px}}
+.is-open .stage .env{animation:none}
+/* opening sequence */
+.is-open .seal{animation:pop .35s var(--ease-out) forwards}
+@keyframes pop{0%{opacity:1;scale:1}40%{scale:1.25}100%{opacity:0;scale:.4;rotate:40deg}}
+.is-open .flap{transition:transform .65s var(--ease-out) .3s}
+.is-open .peek{transition:transform .7s var(--ease-out) .85s;transform:translateY(-70%)}
+.is-drop .env-back,.is-drop .pocket,.is-drop .to,.is-drop .flap{transition:transform .55s cubic-bezier(.5,0,.75,0),opacity .55s;transform:translateY(120%);opacity:0}
+.is-drop .peek{transition:transform .55s var(--ease-out),opacity .55s .3s;transform:translateY(-70%) scale(1.35);opacity:0}
 
 .petal{position:fixed;width:16px;height:16px;pointer-events:none;z-index:50}
 
 /* ---------- music pill ---------- */
 .music{position:fixed;top:20px;right:24px;z-index:40;display:none;align-items:center;gap:var(--space-sm);background:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:var(--radius-pill);box-shadow:var(--shadow-sticker-sm);padding:6px 16px 6px 8px;min-height:44px;font:700 15px/1 var(--font-hand);transition:transform var(--dur-fast) var(--ease-out)}
-.is-read .music{display:flex}
+.started .music{display:flex}
 .music:hover{transform:translate(-1px,-1px)}
 .music:active{transform:translate(1px,1px)}
 .disc{width:28px;height:28px;animation:spin 3.2s linear infinite;animation-play-state:paused}
@@ -165,13 +182,39 @@ svg{display:block}
 .pc .ph{aspect-ratio:3/4;height:auto}
 .pc.next .ph{background:repeating-linear-gradient(45deg,var(--color-paper-2) 0 10px,var(--bg) 10px 20px)}
 
+/* journeys */
+.journey{max-width:1120px;margin:var(--space-4xl) auto 0}
+.journey h3{font:800 clamp(24px,2.6vw,30px)/1.1 var(--font-display);letter-spacing:-.02em;margin-bottom:var(--space-lg)}
+.journey .sub{font:500 18px/1.4 var(--font-hand);color:var(--color-ink-soft);margin:-12px 0 var(--space-xl)}
+.wed{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-xl)}
+.wcard{background:var(--color-paper-2);border:2.5px solid var(--color-ink);border-radius:var(--radius-card);box-shadow:var(--shadow-sticker);overflow:hidden;display:grid;grid-template-rows:240px auto}
+.wcard>img,.wcard .sun,.wcard .sun svg{width:100%;height:240px;object-fit:cover;border-bottom:2.5px solid var(--color-ink)}
+.wcard .sun svg{border:0}
+.wbody{padding:var(--space-lg) var(--space-xl) var(--space-xl)}
+.wdate{font:700 15px/1 var(--font-body);letter-spacing:.08em;color:var(--color-accent-ink)}
+.wbody h4{font:800 clamp(24px,2.4vw,30px)/1.1 var(--font-display);letter-spacing:-.02em;margin:var(--space-sm) 0}
+.wbody p{color:var(--color-ink-soft);font-size:16px;line-height:1.6}
+.wcount{margin-top:var(--space-md);font:500 18px/1.2 var(--font-hand)!important;color:var(--color-ink)!important}
+.wcount b{font:800 40px/1 var(--font-display);color:var(--color-accent-ink);letter-spacing:-.03em;margin-right:4px}
+.logos{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-xl) var(--space-3xl);background:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:var(--radius-card);padding:var(--space-lg) var(--space-xl);margin-bottom:var(--space-xl)}
+.logos img{height:64px;width:auto}
+.road{list-style:none;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--space-md);counter-reset:r}
+.road li{position:relative;background:var(--color-iris-tint);border:2px solid var(--color-ink);border-radius:18px;padding:var(--space-lg) var(--space-md) var(--space-md);box-shadow:var(--shadow-sticker-sm);display:grid;gap:6px;align-content:start}
+.road li::before{counter-increment:r;content:counter(r);position:absolute;top:-14px;left:16px;width:28px;height:28px;border-radius:50%;background:var(--color-ink);color:var(--color-paper-2);display:grid;place-items:center;font:700 14px/1 var(--font-body)}
+.road .rd{font:500 15px/1.2 var(--font-hand);color:var(--color-accent-ink)}
+.road b{font:700 17px/1.25 var(--font-display)}
+.road li>span:last-child{font-size:14px;line-height:1.5;color:var(--color-ink-soft)}
+.road .goal{background:var(--color-accent-ink);color:var(--color-paper-2)}
+.road .goal .rd,.road .goal>span:last-child{color:var(--color-paper-2)}
+@media (max-width:900px){.road{grid-template-columns:minmax(0,1fr)}.wed{grid-template-columns:minmax(0,1fr)}.logos img{height:44px}}
+
 /* closing */
-.closing{max-width:720px;margin:var(--space-3xl) auto 0;text-align:center}
+.closing{max-width:720px;margin:var(--space-4xl) auto 0;text-align:center}
 .count{display:inline-block;background:var(--color-paper-2);border:2.5px solid var(--color-ink);border-radius:var(--radius-card);box-shadow:var(--shadow-sticker);padding:var(--space-xl) var(--space-2xl)}
 .count .n{display:block;font:800 clamp(56px,8vw,88px)/1 var(--font-display);letter-spacing:-.04em;color:var(--color-accent-ink)}
 .count .l{display:block;font:500 20px/1.4 var(--font-hand);margin-top:var(--space-sm)}
 .count .d{display:block;font-size:14px;color:var(--color-ink-soft);margin-top:var(--space-xs)}
-.promise{font:700 22px/1.4 var(--font-hand);margin-top:var(--space-2xl)}
+.promise{font:700 24px/1.4 var(--font-hand)}
 .again{margin-top:var(--space-lg)}
 .again button{background:none;border:0;font:500 15px/1 var(--font-hand);color:var(--color-ink-mute);text-decoration:underline;text-underline-offset:4px;padding:var(--space-sm)}
 .again button:hover{color:var(--color-ink)}
@@ -194,6 +237,8 @@ svg{display:block}
   .flap,.peek,.env{transition:none}
   .is-open .flap{transform:none}
   .is-open .peek{transform:none}
+  .stage .env,.is-open .seal{animation:none}
+  .gate{transition:none}
   .is-read .letter,.is-read .letter .r,.used .stamp{animation:fade .15s linear both;animation-delay:0s}
   @keyframes fade{from{opacity:0}to{opacity:1}}
 }
@@ -201,6 +246,7 @@ svg{display:block}
 </head>
 <body>
 <main id="app">
+  <div class="gate" id="gate"><div class="gate-in"><p>Nê ơi,</p><b>bật loa lên nha</b><button class="send" id="start">Ok, mở đi anh</button></div></div>
   <section class="stage">
     <div class="intro">
       <h1>Nê ơi, anh có cái này cho em</h1>
@@ -234,7 +280,8 @@ svg{display:block}
           <p class="r" style="--i:3">Em lúc nào cũng để ý tới anh từ những chuyện nhỏ nhất. Tối nào cũng ngồi học chung với anh, đi đâu cũng đi cùng anh. Vậy mà tới ngày của em, anh lại là người quên. Anh thấy có lỗi với em lắm.</p>
           <figure class="funny r" style="--i:3"><img src="photos/me.jpg" alt="Thái khoanh tay, mặt hối lỗi" onerror="this.parentNode.remove()"><figcaption>ảnh minh hoạ: anh lúc tự giận bản thân</figcaption></figure>
           <p class="r" style="--i:4">Anh không muốn chỉ nói xin lỗi rồi thôi, nên anh gửi em ba điều kế bên. Cái nào anh cũng làm thật.</p>
-          <p class="sign r" style="--i:5">Thương em,<span>Anh</span></p>
+          <p class="r" style="--i:5">Nên Nê đừng giận anh nữa nha. Tối nay mình còn học GMAT chung đó.</p>
+          <p class="sign r" style="--i:6">Thương em,<span>Anh</span></p>
         </article>
       </div>
 
@@ -279,25 +326,69 @@ svg{display:block}
       <p class="sub">và mấy chỗ sắp đi nữa</p>
       <div class="strip">
         <figure class="pc" style="--r:-2deg;--bg:var(--color-sun-tint)"><div class="ph"><b>Đài Bắc</b></div><figcaption>chuyến đi xa đầu tiên<small>05/2025</small></figcaption></figure>
-        <figure class="pc" style="--r:1.5deg;--bg:var(--color-accent-mark)"><div class="ph"><b>Bangkok</b></div><figcaption>một tuần hai đứa<small>11/2025</small></figcaption></figure>
-        <figure class="pc photo" style="--r:-1deg"><img src="photos/08.jpg" alt="Thái và Nguyên ngồi ghế gỗ trong vườn" loading="lazy" width="600" height="800"><figcaption>ngồi vườn, nắm tay<small>hai đứa mình</small></figcaption></figure>
-        <figure class="pc photo" style="--r:2deg"><img src="photos/04.jpg" alt="Hai đứa áo dài trắng khoe nhẫn" loading="lazy" width="600" height="800"><figcaption>khoe nhẫn nè<small>đính hôn · 06/02/2026</small></figcaption></figure>
-        <figure class="pc photo" style="--r:-1.5deg"><img src="photos/05.jpg" alt="Thái ghé sát má Nguyên trước phông đỏ" loading="lazy" width="600" height="800"><figcaption>Quang Thái và Nê<small>đính hôn · 06/02/2026</small></figcaption></figure>
-        <figure class="pc photo" style="--r:1deg"><img src="photos/06.jpg" alt="Thái hôn Nguyên giữa mưa cánh hoa" loading="lazy" width="600" height="800"><figcaption>mưa cánh hoa<small>đính hôn · 06/02/2026</small></figcaption></figure>
-        <figure class="pc photo" style="--r:-2deg"><img src="photos/07.jpg" alt="Hai đứa cụng ly ở tiệc tối" loading="lazy" width="600" height="800"><figcaption>cụng ly tối đó<small>đính hôn · 06/02/2026</small></figcaption></figure>
-        <figure class="pc photo" style="--r:1.5deg"><img src="photos/01.jpg" alt="Hai đứa mặc cổ phục đỏ, Nguyên cầm hoa vàng" loading="lazy" width="600" height="800"><figcaption>cổ phục đỏ ở Huế<small>chụp ảnh cưới · 06/2026</small></figcaption></figure>
-        <figure class="pc photo" style="--r:-1deg"><img src="photos/02.jpg" alt="Thái áp má ôm Nguyên" loading="lazy" width="600" height="800"><figcaption>váy trắng, ngọc trai<small>chụp ảnh cưới · 06/2026</small></figcaption></figure>
-        <figure class="pc photo" style="--r:2deg"><img src="photos/03.jpg" alt="Hai đứa giơ tay trước biển chiều" loading="lazy" width="600" height="800"><figcaption>biển chiều<small>chụp ảnh cưới · 06/2026</small></figcaption></figure>
-        <figure class="pc" style="--r:-1.5deg;--bg:var(--color-mint-tint)"><div class="ph"><b>Mũi Né</b></div><figcaption>đi biển cùng gia đình<small>07/2026</small></figcaption></figure>
-        <figure class="pc" style="--r:1deg;--bg:var(--color-sun-tint)"><div class="ph"><b>Kuala Lumpur</b></div><figcaption>ba ngày ở KL<small>09/2026</small></figcaption></figure>
-        <figure class="pc" style="--r:-2deg;--bg:var(--color-mint-tint)"><div class="ph"><b>Nam Du</b></div><figcaption>ra đảo bằng tàu<small>10/2026</small></figcaption></figure>
-        <figure class="pc next" style="--r:1.5deg;--bg:var(--color-iris-tint)"><div class="ph"><b>Hàn Quốc</b></div><figcaption>sắp đi nè<small>21/11/2026</small></figcaption></figure>
-        <figure class="pc next" style="--r:-1deg;--bg:var(--color-accent-mark)"><div class="ph"><b>Đà Lạt</b></div><figcaption>ngày mình cưới<small>03/04/2027</small></figcaption></figure>
+        <figure class="pc photo" style="--r:1.5deg"><img src="photos/thailan.jpg" alt="Thái hôn má Nguyên ở Thái Lan" loading="lazy" width="600" height="800"><figcaption>Thái Lan</figcaption></figure>
+        <figure class="pc photo" style="--r:-1deg"><img src="photos/cauhon.jpg" alt="Nguyên khoe nhẫn cầu hôn dưới đèn đêm" loading="lazy" width="600" height="800"><figcaption>ngày em đeo nhẫn<small>ở Thái</small></figcaption></figure>
+        <figure class="pc photo" style="--r:2deg"><img src="photos/damngo.jpg" alt="Hai đứa selfie ngày dạm ngõ" loading="lazy" width="600" height="800"><figcaption>dạm ngõ<small>2025</small></figcaption></figure>
+        <figure class="pc photo" style="--r:-1.5deg"><img src="photos/08.jpg" alt="Thái và Nguyên ngồi ghế gỗ trong vườn" loading="lazy" width="600" height="800"><figcaption>ngồi vườn, nắm tay</figcaption></figure>
+        <figure class="pc photo" style="--r:1deg"><img src="photos/04.jpg" alt="Hai đứa áo dài trắng khoe nhẫn" loading="lazy" width="600" height="800"><figcaption>khoe nhẫn nè<small>đính hôn · 06/02/2026</small></figcaption></figure>
+        <figure class="pc photo" style="--r:-2deg"><img src="photos/05.jpg" alt="Thái ghé sát má Nguyên trước phông đỏ" loading="lazy" width="600" height="800"><figcaption>Quang Thái và Nê<small>đính hôn · 06/02/2026</small></figcaption></figure>
+        <figure class="pc photo" style="--r:1.5deg"><img src="photos/06.jpg" alt="Thái hôn Nguyên giữa mưa cánh hoa" loading="lazy" width="600" height="800"><figcaption>mưa cánh hoa<small>đính hôn · 06/02/2026</small></figcaption></figure>
+        <figure class="pc photo" style="--r:-1deg"><img src="photos/07.jpg" alt="Hai đứa cụng ly ở tiệc tối" loading="lazy" width="600" height="800"><figcaption>cụng ly tối đó<small>đính hôn · 06/02/2026</small></figcaption></figure>
+        <figure class="pc photo" style="--r:2deg"><img src="photos/01.jpg" alt="Hai đứa mặc cổ phục đỏ, Nguyên cầm hoa vàng" loading="lazy" width="600" height="800"><figcaption>cổ phục đỏ ở Huế<small>chụp ảnh cưới · 06/2026</small></figcaption></figure>
+        <figure class="pc photo" style="--r:-1.5deg"><img src="photos/02.jpg" alt="Thái áp má ôm Nguyên" loading="lazy" width="600" height="800"><figcaption>váy trắng, ngọc trai<small>chụp ảnh cưới · 06/2026</small></figcaption></figure>
+        <figure class="pc photo" style="--r:1deg"><img src="photos/03.jpg" alt="Hai đứa giơ tay trước biển chiều" loading="lazy" width="600" height="800"><figcaption>biển chiều<small>chụp ảnh cưới · 06/2026</small></figcaption></figure>
+        <figure class="pc" style="--r:-2deg;--bg:var(--color-mint-tint)"><div class="ph"><b>Mũi Né</b></div><figcaption>đi biển cùng gia đình<small>07/2026</small></figcaption></figure>
+        <figure class="pc photo" style="--r:1.5deg"><img src="photos/vungtau.jpg" alt="Hai đứa ló mặt qua bảng Bạch Tuyết ở Vũng Tàu" loading="lazy" width="600" height="800"><figcaption>hoàng tử và Bạch Tuyết<small>Vũng Tàu</small></figcaption></figure>
+        <figure class="pc" style="--r:-1deg;--bg:var(--color-sun-tint)"><div class="ph"><b>Kuala Lumpur</b></div><figcaption>ba ngày ở KL<small>09/2026</small></figcaption></figure>
+        <figure class="pc" style="--r:2deg;--bg:var(--color-mint-tint)"><div class="ph"><b>Nam Du</b></div><figcaption>ra đảo bằng tàu<small>10/2026</small></figcaption></figure>
+        <figure class="pc photo" style="--r:-1.5deg"><img src="photos/dalat.jpg" alt="Hai đứa đứng trên ban công ở Đà Lạt" loading="lazy" width="600" height="800"><figcaption>Đà Lạt</figcaption></figure>
+        <figure class="pc photo" style="--r:1deg"><img src="photos/bmt.jpg" alt="Hai đứa mặc đồ thổ cẩm ở Buôn Ma Thuột" loading="lazy" width="600" height="800"><figcaption>thử đồ Tây Nguyên<small>Buôn Ma Thuột</small></figcaption></figure>
+        <figure class="pc photo" style="--r:-2deg"><img src="photos/chaybo.jpg" alt="Hai đứa đeo số chạy trước bảng WaterRun" loading="lazy" width="600" height="800"><figcaption>chạy WaterRun cùng nhau<small>Sài Gòn</small></figcaption></figure>
+        <figure class="pc photo" style="--r:1.5deg"><img src="photos/sitecheck.jpg" alt="Hai đứa ở Rừng Thông Mơ" loading="lazy" width="600" height="800"><figcaption>đi xem chỗ cưới<small>Rừng Thông Mơ, Đà Lạt</small></figcaption></figure>
+        <figure class="pc next" style="--r:-1deg;--bg:var(--color-iris-tint)"><div class="ph"><b>Hàn Quốc</b></div><figcaption>sắp đi nè<small>21/11/2026</small></figcaption></figure>
+        <figure class="pc next" style="--r:2deg;--bg:var(--color-accent-mark)"><div class="ph"><b>Đà Lạt</b></div><figcaption>ngày mình cưới<small>03/04/2027</small></figcaption></figure>
       </div>
     </section>
 
+    <section class="journey" aria-labelledby="wt">
+      <h3 id="wt">Hành trình cưới của mình</h3>
+      <p class="sub">hai mốc lớn nhất năm sau</p>
+      <div class="wed">
+        <article class="wcard w1">
+          <img src="photos/sitecheck.jpg" alt="Hai đứa đi xem Rừng Thông Mơ" loading="lazy">
+          <div class="wbody">
+            <p class="wdate">03/04/2027</p>
+            <h4>Rừng Thông Mơ, Đà Lạt</h4>
+            <p>Lễ vow và tiệc giữa rừng thông. Chỗ này hai đứa đã đi xem tận nơi rồi.</p>
+            <p class="wcount"><b data-to="2027-04-03">—</b> ngày nữa</p>
+          </div>
+        </article>
+        <article class="wcard w2">
+          <div class="sun" aria-hidden="true"><svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMax slice"><rect width="320" height="200" fill="var(--color-sun-tint)"/><circle cx="160" cy="150" r="62" fill="var(--color-accent-mark)"/><circle cx="160" cy="150" r="40" fill="var(--color-accent)"/><path d="M0 150h320v50H0z" fill="var(--color-env)"/><path d="M0 150h320" stroke="var(--color-ink)" stroke-width="2.5"/><path d="M40 170h60M140 182h90M240 168h50" stroke="var(--color-ink)" stroke-width="2" stroke-linecap="round" opacity=".5"/></svg></div>
+          <div class="wbody">
+            <p class="wdate">15 – 16/05/2027</p>
+            <h4>Sunrise, Tây Ninh</h4>
+            <p>15/05 tiệc tối nhà gái. 16/05 lễ Vu Quy, Tân Hôn và tiệc nhà trai. Về quê em làm đám cưới chính.</p>
+            <p class="wcount"><b data-to="2027-05-16">—</b> ngày nữa</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="journey" aria-labelledby="st">
+      <h3 id="st">Rồi mình cùng qua Singapore</h3>
+      <p class="sub">mục tiêu: tháng 8/2027 hai đứa nhập học cùng đợt</p>
+      <div class="logos"><img src="logos/nus.png" alt="NUS"><img src="logos/ntu.png" alt="NTU"><img src="logos/smu.png" alt="SMU"></div>
+      <ol class="road">
+        <li><span class="rd">tối nào cũng vậy</span><b>Học GMAT chung</b><span>8 giờ tối, hai đứa ngồi học cùng nhau</span></li>
+        <li><span class="rd">24 – 27/12/2026</span><b>Qua Singapore một chuyến</b><span>đi xem trước chỗ mình sắp sống</span></li>
+        <li><span class="rd">đầu 2027</span><b>Thi GMAT</b><span>anh đặt lịch thi từ đầu tháng 11</span></li>
+        <li><span class="rd">01 – 03/2027</span><b>Nộp hồ sơ</b><span>anh nộp NUS khoảng 15/01 · em nộp NUS 07/02, SMU 21/03</span></li>
+        <li class="goal"><span class="rd">08/2027</span><b>Cùng nhập học ở Singapore</b><span>cưới xong là mình đi</span></li>
+      </ol>
+    </section>
+
     <section class="closing">
-      <div class="count"><span class="n" id="days">—</span><span class="l">ngày nữa là mình cưới</span><span class="d">Rừng Thông Mơ, Đà Lạt · 03/04/2027</span></div>
       <p class="promise">Từ năm nay, 20/10 nào anh cũng nhớ. Hứa đó.</p>
       <div class="again"><button id="again">đọc lại từ đầu</button></div>
     </section>
@@ -313,7 +404,7 @@ let pick=null;
 
 // countdown (whole days, Asia/Ho_Chi_Minh-ish: local midnight)
 const t=new Date();t.setHours(0,0,0,0);
-document.getElementById('days').textContent=Math.max(0,Math.round((new Date(2027,3,3)-t)/864e5));
+document.querySelectorAll('[data-to]').forEach(e=>{const [y,m,d]=e.dataset.to.split('-').map(Number);e.textContent=Math.max(0,Math.round((new Date(y,m-1,d)-t)/864e5));});
 
 function setMusic(on){music.setAttribute('aria-pressed',on);document.getElementById('musicLabel').textContent=on?'đang phát':'nhạc';}
 music.addEventListener('click',()=>{if(!window.MusicBox)return;MusicBox.toggle();setMusic(MusicBox.isPlaying);});
@@ -331,15 +422,20 @@ function petals(x,y){
   }
 }
 
-document.getElementById('open').addEventListener('click',e=>{
-  if(app.classList.contains('is-open'))return;
+document.getElementById('start').addEventListener('click',()=>{
   try{window.MusicBox&&MusicBox.start();setMusic(true)}catch(_){}
+  app.classList.add('started');document.getElementById('open').focus({preventScroll:true});
+});
+document.getElementById('open').addEventListener('click',()=>{
+  if(app.classList.contains('is-open'))return;
+  if(window.MusicBox&&!MusicBox.isPlaying){try{MusicBox.start();setMusic(true)}catch(_){}}
   app.classList.add('is-open');
   const r=document.querySelector('.seal').getBoundingClientRect();
-  setTimeout(()=>petals(r.left+r.width/2,r.top),reduce?0:500);
-  setTimeout(()=>{app.classList.add('is-read');scrollTo({top:0,behavior:'instant'});document.getElementById('letter').focus({preventScroll:true});},reduce?60:1100);
+  setTimeout(()=>petals(r.left+r.width/2,r.top),reduce?0:1000);
+  setTimeout(()=>app.classList.add('is-drop'),reduce?0:1700);
+  setTimeout(()=>{app.classList.add('is-read');scrollTo({top:0,behavior:'instant'});document.getElementById('letter').focus({preventScroll:true});},reduce?60:2250);
 });
-document.getElementById('again').addEventListener('click',()=>{app.classList.remove('is-open','is-read');scrollTo({top:0,behavior:'instant'});});
+document.getElementById('again').addEventListener('click',()=>{app.classList.remove('is-open','is-read','is-drop');scrollTo({top:0,behavior:'instant'});});
 
 function update(){const v=pick==='__own'?own.value.trim():pick;send.disabled=!v;document.getElementById('hintPick').style.visibility=v?'hidden':'visible';}
 opts.forEach(b=>b.addEventListener('click',()=>{
