@@ -254,6 +254,9 @@ svg{display:block}
   .strip{flex-wrap:wrap;justify-content:center;overflow:visible;row-gap:var(--space-2xl)}
   .layout{grid-template-columns:minmax(0,640px) 400px;justify-content:center;gap:var(--space-3xl);align-items:start}
   .side{position:sticky;top:var(--space-2xl)}
+  #app:not(.promised) .side>*:not(.lock){filter:blur(6px);opacity:.45;pointer-events:none;user-select:none}
+  #app:not(.promised) .lock{display:block}
+  .side>*{transition:filter .6s var(--ease-out),opacity .6s var(--ease-out)}
   .read{padding-top:84px}
 }
 @media (max-width:640px){
@@ -296,6 +299,7 @@ svg{display:block}
 @keyframes sob{from{translate:0 0}to{translate:0 2px}}
 @media(max-width:640px){.gate-toons .toon{width:118px}.tf{width:108px}.jt{width:104px;margin-top:-18px}.card{grid-template-columns:64px minmax(0,1fr)}.card svg.toon{width:64px;height:64px}}
 @media(prefers-reduced-motion:reduce){.toon,.gate-toons .toon{animation:none!important}}
+.lock{display:none;position:absolute;z-index:3;top:140px;left:50%;translate:-50% 0;rotate:-3deg;white-space:nowrap;background:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:999px;box-shadow:var(--shadow-sticker-sm);padding:10px 18px;font:700 18px/1.2 var(--font-hand);color:var(--color-accent-ink)}
 </style>
 </head>
 <body>
@@ -333,21 +337,21 @@ svg{display:block}
               <h2 class="r" style="--i:0">Anh xin lỗi <span class="u">Nê</span></h2>
               <div class="tf"><svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Hái quỳ xin lỗi, khóc huhu"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round"><ellipse cx="100" cy="176" rx="52" ry="6" style="fill:var(--color-ink);opacity:.12;stroke:none"/><path d="M70,150C66,166 78,174 100,174C124,174 136,166 130,150Z" style="fill:var(--color-iris-tint)"/><ellipse cx="74" cy="172" rx="10" ry="5" style="fill:var(--color-ink)"/><ellipse cx="126" cy="172" rx="10" ry="5" style="fill:var(--color-ink)"/><g transform="translate(100 118)"><path d="M-17,-4C-24,8-25,22-24,32L24,32C25,22 24,8 17,-4Z" style="fill:var(--color-ink)"/><path d="M-6,-4C-3,1 3,1 6,-4" style="fill:var(--color-sun-tint)"/><path d="M-19,8L13,16M19,8L-13,16" style="stroke-width:10"/><path d="M-19,8L13,16" style="stroke:#F6D2B8;stroke-width:5"/><path d="M19,8L-13,16" style="stroke:#F6D2B8;stroke-width:5"/></g><g transform="translate(100 84) rotate(14)"><path d="M-27,6C-30,-24-16,-33 2,-33L5,-46L11,-34L19,-43L20,-30C30,-24 31,-10 27,6Z" style="fill:var(--color-ink)"/><path d="M-27,0C-28,-16-15,-25 1,-25C17,-24 28,-15 27,1C27,17 15,26 0,26C-16,25-28,15-27,0Z" style="fill:#F6D2B8"/><path d="M-27,-2C-26,-18-14,-27 0,-28L4,-38L9,-27C14,-27 24,-22 27,-4C20,-14 12,-17 6,-16C2,-12-10,-18-18,-12C-22,-10-25,-6-27,-2Z" style="fill:var(--color-ink)"/><path d="M-15,-2L-7,2L-15,6M15,-2L7,2L15,6"/><path d="M-9,10C-9,24 9,24 9,10C4,13-4,13-9,10Z" style="fill:var(--color-accent)"/><ellipse cx="-17" cy="11" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/><ellipse cx="17" cy="11" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/><path d="M-14,5C-26,2-32,14-30,30M14,5C26,2 32,14 30,30" style="stroke-width:8"/><path d="M-14,5C-26,2-32,14-30,30M14,5C26,2 32,14 30,30" style="stroke:var(--color-iris-tint);stroke-width:4"/></g><g transform="translate(136 54) scale(1.2)"><path d="M0,-9C3,-3 6,1 5,4C4,8-4,8-5,4C-6,1-3,-3 0,-9Z" style="fill:var(--color-iris-tint)"/></g><path d="M48,104L40,100M46,118L37,118M152,104L160,100M154,118L163,118"/><text x="18" y="46" font-size="22" transform="rotate(-12 18 46)" style="fill:var(--color-ink);stroke:none;font:700 22px 'Comic Sans MS','Chalkboard SE',cursive">huhu</text><text x="142" y="34" font-size="16" transform="rotate(10 142 34)" style="fill:var(--color-ink);stroke:none;font:700 16px 'Comic Sans MS','Chalkboard SE',cursive">huhu</text></g></svg></div>
               <p class="r" style="--i:1">Nê ơi,</p>
-              <p class="r" style="--i:2">Hôm qua là 20/10, ngày của em, mà anh lại không có quà gì cho em. Anh biết em buồn. Một ngày lẽ ra phải dành cho em, anh lại để nó trôi qua như mọi ngày khác. Lỗi đó là của anh, anh không bào chữa.</p>
+              <p class="r" style="--i:2">Hôm qua là 20/10, ngày của em, mà anh lại không có quà gì cho em. Anh biết em buồn. Một ngày lẽ ra phải dành cho em, anh lại để nó trôi qua như mọi ngày khác. Anh sai, anh nhận hết.</p>
               <p class="r" style="--i:3">Em lúc nào cũng để ý tới anh, từ mấy chuyện nhỏ xíu. Vậy mà tới ngày của em, anh lại là người quên.</p>
               <p class="turn r" style="--i:4">kéo qua trang sau nha →</p>
             </div>
             <div class="pg" role="group" aria-roledescription="trang" aria-label="Trang 2 / 4">
               <h2>Nhớ lại một chút</h2>
               <p>Lúc làm cái thư này, anh ngồi coi lại hình của hai đứa. Từ chuyến Đài Bắc, chuyến đi xa đầu tiên của mình, tới cái tối anh cầu hôn em ở Thái.</p>
-              <p>Rồi dạm ngõ, rồi lễ đính hôn 06/02, rồi ra Huế chụp ảnh cưới. Năm nay mình còn đi Vũng Tàu, Mũi Né, KL, Nam Du, chạy WaterRun, lên Buôn Ma Thuột, lên Đà Lạt coi chỗ cưới.</p>
-              <p>Coi lại mới thấy, chỗ nào cũng có em đi bên cạnh anh. Một năm nhiều chuyện như vậy, mà tới đúng một ngày dành riêng cho em, anh lại quên mất. Anh tiếc chỗ đó nhất.</p>
+              <p>Rồi dạm ngõ, đính hôn, ra Huế chụp ảnh cưới, rồi còn đi thêm bao nhiêu chỗ nữa. Hình anh để ở dưới cho em coi.</p>
+              <p>Coi lại mới thấy, chỗ nào cũng có em đi bên cạnh anh. Coi hết đống hình mới thấy anh may cỡ nào.</p>
             </div>
             <div class="pg" role="group" aria-roledescription="trang" aria-label="Trang 3 / 4">
               <h2>Mình còn đi xa nữa</h2>
-              <p>Còn mấy tháng nữa là mình cưới. Lễ vow ở Rừng Thông Mơ, rồi về Sunrise Tây Ninh làm đám chính. Cưới xong, tháng 8 năm sau hai đứa tính cùng qua Singapore đi học.</p>
+              <p>Còn mấy tháng nữa là mình cưới, cưới xong là cùng qua Singapore đi học.</p>
               <div class="tf"><svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Hái ngủ gật khi học GMAT, Nê chọc bút chì"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round"><path d="M10,148L190,148L184,160L16,160Z" style="fill:var(--color-sun-tint)"/><path d="M30,160L30,190M170,160L170,190"/><path d="M24,146C40,138 56,140 66,146C76,140 92,138 104,146L104,150L24,150Z" style="fill:var(--color-paper-2)"/><path d="M66,146L66,150"/><text x="32" y="172" font-size="14" transform="rotate(0 32 172)" style="fill:var(--color-ink);stroke:none;font:700 14px 'Comic Sans MS','Chalkboard SE',cursive">GMAT</text><g transform="translate(48 126) rotate(-70)"><path d="M-15,-2C-20,8-21,22-19,30L19,30C21,22 20,8 15,-2Z" style="fill:var(--color-ink)"/></g><g transform="translate(68 118) rotate(-62)"><path d="M-27,6C-30,-24-16,-33 2,-33L5,-46L11,-34L19,-43L20,-30C30,-24 31,-10 27,6Z" style="fill:var(--color-ink)"/><path d="M-27,0C-28,-16-15,-25 1,-25C17,-24 28,-15 27,1C27,17 15,26 0,26C-16,25-28,15-27,0Z" style="fill:#F6D2B8"/><path d="M-27,-2C-26,-18-14,-27 0,-28L4,-38L9,-27C14,-27 24,-22 27,-4C20,-14 12,-17 6,-16C2,-12-10,-18-18,-12C-22,-10-25,-6-27,-2Z" style="fill:var(--color-ink)"/><path d="M-15,3C-12,6-8,6-5,3M5,3C8,6 12,6 15,3"/><path d="M-4,14L4,14"/><path d="M3,14C4,19 7,21 5,23" style="fill:var(--color-iris-tint)"/><ellipse cx="-17" cy="11" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/><ellipse cx="17" cy="11" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/></g><path d="M64,52C56,52 52,40 62,36C62,24 86,22 90,32C100,26 114,36 106,46C112,56 96,62 88,56C82,62 68,60 64,52Z" style="fill:var(--color-paper-2)"/><text x="70" y="50" font-size="14" transform="rotate(-8 70 50)" style="fill:var(--color-ink);stroke:none;font:700 14px 'Comic Sans MS','Chalkboard SE',cursive">zzz</text><circle cx="66" cy="70" r="4" style="fill:var(--color-paper-2)"/><circle cx="68" cy="82" r="2.5" style="fill:var(--color-paper-2)"/><g transform="translate(150 116)"><path d="M-15,-2C-21,8-22,22-21,30L21,30C22,22 21,8 15,-2Z" style="fill:var(--color-paper-2)"/><path d="M-6,-2C-3,4 3,4 6,-2"/></g><g transform="translate(150 82)"><path d="M-28,-4C-34,14-32,34-24,40L24,40C32,34 34,14 28,-4Z" style="fill:var(--color-ink)"/><path d="M-26,0C-27,-16-14,-25 1,-25C16,-24 27,-15 26,1C26,17 14,25 0,25C-15,24-27,15-26,0Z" style="fill:#F6D2B8"/><path d="M-28,2C-31,-22-14,-34 1,-33C18,-33 32,-22 28,2C26,-8 22,-13 16,-14C10,-10 4,-12 0,-16C-6,-11-14,-11-18,-14C-23,-12-26,-6-28,2Z" style="fill:var(--color-ink)"/><path d="M-15,2L-6,2M6,2L15,2"/><path d="M-16,-6L-6,-3M16,-6L6,-3"/><g style="fill:none;stroke-width:2.2"><circle cx="-10" cy="3" r="7.5"/><circle cx="10" cy="3" r="7.5"/></g><path d="M-2,3L2,3"/><path d="M-4,15C-2,12 2,12 4,15"/><ellipse cx="-17" cy="12" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/><ellipse cx="17" cy="12" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/></g><g transform="translate(176 50) scale(1)"><path d="M-8,-3C-3,-3-3,-3-3,-8M3,-8C3,-3 3,-3 8,-3M8,3C3,3 3,3 3,8M-3,8C-3,3-3,3-8,3" style="stroke:var(--color-accent);stroke-width:3.2"/></g><path d="M136,124C124,126 112,122 104,116" style="fill:#F6D2B8"/><path d="M106,110L84,98L82,104L104,118Z" style="fill:var(--color-sun-tint)"/><path d="M84,98L76,98L82,104Z" style="fill:var(--color-ink)"/><path d="M70,92L64,88M72,102L64,104"/></g></svg></div><p>Em vừa đi làm, vừa lo hồ sơ, tối về còn ngồi học GMAT với anh. Anh biết em cố nhiều lắm.</p>
-              <p>Mình còn đi chung với nhau lâu lắm. Anh không muốn sau này nhắc lại năm mình đính hôn, em lại nhớ đó là năm anh quên ngày của em.</p>
+              <p>Mình còn đi chung với nhau lâu lắm. Nên năm nay anh phải sửa cho bằng được. Sau này em kể lại năm mình đính hôn, em kể chuyện cái thư này chứ đừng kể chuyện anh quên.</p>
             </div>
             <div class="pg" role="group" aria-roledescription="trang" aria-label="Trang 4 / 4">
               <h2>Anh hứa</h2>
@@ -368,6 +372,7 @@ svg{display:block}
       </div>
 
       <aside class="side" aria-labelledby="pt">
+        <p class="lock" aria-hidden="true">đọc hết thư rồi mới được mở nha</p>
         <h3 id="pt">Ba điều anh bù cho em</h3>
         <div class="stack">
           <div class="card c1">
@@ -465,7 +470,7 @@ svg{display:block}
         <li><span class="rd">tối nào cũng vậy</span><b>Học GMAT chung</b><span>8 giờ tối, hai đứa ngồi học cùng nhau</span></li>
         <li><span class="rd">24–27/12/2026</span><b>Qua Singapore một chuyến</b><span>đi coi Singapore trước</span></li>
         <li><span class="rd">đầu 2027</span><b>Thi GMAT</b><span>anh đặt lịch thi từ đầu tháng 11</span></li>
-        <li><span class="rd">tháng 1 đến 3/2027</span><b>Nộp hồ sơ</b><span>anh nộp NUS khoảng 15/01 · em nộp NUS 07/02, SMU 21/03</span></li>
+        <li><span class="rd">tháng 1 đến 3/2027</span><b>Nộp hồ sơ</b><span>anh nộp trước, em nộp sau, hai đứa canh nhau</span></li>
         <li class="goal"><span class="rd">08/2027</span><b>Cùng nhập học ở Singapore</b><span>cưới xong là mình đi</span></li>
       </ol>
     </section>
@@ -580,7 +585,7 @@ openBtn.addEventListener('click',e=>{
   hintTxt.textContent='không phải bấm đâu, kéo con tem ra nè';
 });
 seal.addEventListener('animationend',()=>seal.classList.remove('nudge'));
-document.getElementById('again').addEventListener('click',()=>{app.classList.remove('is-open','is-read','is-drop');['--dx','--dy','--rot','--sc'].forEach(v=>seal.style.removeProperty(v));[seal,flap,peek].forEach(el=>el.classList.remove('back','drag'));hintTxt.textContent='kéo con tem ra để mở thư nha';scrollTo({top:0,behavior:'instant'});});
+document.getElementById('again').addEventListener('click',()=>{app.classList.remove('is-open','is-read','is-drop','promised');['--dx','--dy','--rot','--sc'].forEach(v=>seal.style.removeProperty(v));[seal,flap,peek].forEach(el=>el.classList.remove('back','drag'));hintTxt.textContent='kéo con tem ra để mở thư nha';scrollTo({top:0,behavior:'instant'});});
 
 function update(){const v=pick==='__own'?own.value.trim():pick;send.disabled=!v;document.getElementById('hintPick').style.visibility=v?'hidden':'visible';}
 opts.forEach(b=>b.addEventListener('click',()=>{
@@ -601,7 +606,7 @@ try{const w=localStorage.getItem('ne-wish');if(w)markUsed(w)}catch(_){}
 (()=>{
   const pages=document.getElementById('pages'),track=document.getElementById('track'),n=track.children.length,dots=[...document.querySelectorAll('#dots i')],prev=document.getElementById('prev'),next=document.getElementById('next'),pnum=document.getElementById('pnum');
   let i=0,x0=null,dx=0;
-  function go(k){i=Math.max(0,Math.min(n-1,k));track.style.transform=`translateX(${-i*100}%)`;dots.forEach((d,j)=>d.classList.toggle('on',j===i));prev.disabled=i===0;next.disabled=i===n-1;pnum.textContent=(i+1)+' / '+n;[...track.children].forEach((c,j)=>c.setAttribute('aria-hidden',j!==i));}
+  function go(k){i=Math.max(0,Math.min(n-1,k));if(i===n-1)app.classList.add('promised');track.style.transform=`translateX(${-i*100}%)`;dots.forEach((d,j)=>d.classList.toggle('on',j===i));prev.disabled=i===0;next.disabled=i===n-1;pnum.textContent=(i+1)+' / '+n;[...track.children].forEach((c,j)=>c.setAttribute('aria-hidden',j!==i));}
   prev.onclick=()=>go(i-1);next.onclick=()=>go(i+1);
   document.addEventListener('keydown',e=>{if(!app.classList.contains('is-read')||e.target.tagName==='INPUT')return;{const r=document.getElementById('pages').getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;}if(e.key==='ArrowRight')go(i+1);if(e.key==='ArrowLeft')go(i-1);});
   pages.addEventListener('pointerdown',e=>{if(e.button!==0)return;x0=e.clientX;dx=0;pages.classList.add('drag');pages.setPointerCapture(e.pointerId);});
