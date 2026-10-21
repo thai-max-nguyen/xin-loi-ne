@@ -65,6 +65,7 @@ svg{display:block}
 .pocket{position:absolute;inset:0;z-index:2;border-radius:14px;overflow:hidden;pointer-events:none}
 .pocket::before{content:"";position:absolute;inset:0;background:var(--color-env);clip-path:polygon(0 0,50% 56%,100% 0,100% 100%,0 100%)}
 .pocket::after{content:"";position:absolute;inset:0;background:var(--color-env-light);clip-path:polygon(0 100%,50% 52%,100% 100%)}
+.to small{display:block;margin-top:6px;font:500 15px/1 var(--font-hand);color:var(--color-ink-soft)}
 .to{position:absolute;z-index:3;left:0;right:0;bottom:12%;font:700 22px/1 var(--font-hand);color:var(--color-ink)}
 .flap{position:absolute;inset:0 0 auto 0;height:58%;z-index:4;transform-origin:top;transition:transform var(--dur-slow) var(--ease-out)}
 .flap::before{content:"";position:absolute;inset:0;background:var(--color-env-dark);clip-path:polygon(0 0,100% 0,50% 100%);border-radius:14px 14px 0 0}
@@ -115,7 +116,7 @@ svg{display:block}
 .petal{position:fixed;width:16px;height:16px;pointer-events:none;z-index:50}
 
 /* ---------- music pill ---------- */
-.music{position:fixed;top:20px;right:24px;z-index:40;display:none;align-items:center;gap:var(--space-sm);background:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:var(--radius-pill);box-shadow:var(--shadow-sticker-sm);padding:6px 16px 6px 8px;min-height:44px;font:700 15px/1 var(--font-hand);transition:transform var(--dur-fast) var(--ease-out)}
+.music{position:fixed;bottom:20px;left:24px;z-index:40;display:none;align-items:center;gap:var(--space-sm);background:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:var(--radius-pill);box-shadow:var(--shadow-sticker-sm);padding:6px 16px 6px 8px;min-height:44px;font:700 15px/1 var(--font-hand);transition:transform var(--dur-fast) var(--ease-out)}
 .started .music{display:flex}
 .music:hover{transform:translate(-1px,-1px)}
 .music:active{transform:translate(1px,1px)}
@@ -141,7 +142,8 @@ svg{display:block}
 @keyframes fadeup{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .funny{float:right;width:190px;margin:0 -8px var(--space-lg) var(--space-lg);background:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:6px;box-shadow:var(--shadow-sticker-sm);padding:10px 10px 12px;transform:rotate(3deg);position:relative}
 .funny::before{content:"";position:absolute;top:-12px;left:50%;width:70px;height:22px;translate:-50% 0;rotate:-4deg;background:var(--color-accent-mark);opacity:.85}
-.funny img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:3px}
+.funny img,.funny video{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:3px}
+.funny.vid{rotate:-6deg}
 .funny figcaption{font:500 14px/1.3 var(--font-hand);margin-top:8px;color:var(--color-ink-soft)}
 .sign{clear:both;font:700 28px/1.2 var(--font-hand);color:var(--color-accent-ink);margin-top:var(--space-sm)}
 .sign span{display:block;margin-top:6px;font:500 21px/1.3 var(--font-hand);color:var(--color-ink-soft)}
@@ -198,6 +200,7 @@ svg{display:block}
 .pc figcaption small{display:block;font:500 14px/1.3 var(--font-body);color:var(--color-ink-soft);margin-top:2px}
 .pc.photo img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:3px;border:1.5px solid var(--color-ink)}
 .pc .ph{aspect-ratio:3/4;height:auto}
+.pc:not(.photo):not(.next) .ph{aspect-ratio:auto;height:110px}
 .pc.next .ph{background:repeating-linear-gradient(45deg,var(--color-paper-2) 0 10px,var(--bg) 10px 20px)}
 
 /* journeys */
@@ -245,7 +248,7 @@ svg{display:block}
 }
 @media (max-width:640px){
   body{font-size:16px}
-  .music{top:12px;right:12px}
+  .music{bottom:12px;left:12px}
   .read{padding-top:84px}
   .stamp{right:80px}
   .funny{width:150px;margin-right:0}
@@ -260,6 +263,9 @@ svg{display:block}
   .is-read .letter,.is-read .letter .r,.used .stamp{animation:fade .15s linear both;animation-delay:0s}
   @keyframes fade{from{opacity:0}to{opacity:1}}
 }
+.w1>img{object-position:50% 25%}
+.used .note{display:none}
+@media(max-width:640px){.ticket{grid-template-columns:minmax(0,1fr) 40px}.ticket::before,.ticket::after{right:28px}.t-stub{font-size:11px}}
 </style>
 </head>
 <body>
@@ -273,7 +279,7 @@ svg{display:block}
           <div class="env-back"></div>
           <div class="peek" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
           <div class="pocket"></div>
-          <div class="to">Gửi Nê</div>
+          <div class="to">Gửi Nê<small>từ Chồng Vai Cót</small></div>
           <div class="flap"></div>
           <div class="seal">N</div>
         </div>
@@ -297,28 +303,28 @@ svg{display:block}
               <h2 class="r" style="--i:0">Anh xin lỗi <span class="u">Nê</span></h2>
               <p class="r" style="--i:1">Nê ơi,</p>
               <p class="r" style="--i:2">Hôm qua là 20/10, ngày của em, mà anh lại không có quà gì cho em. Anh biết em buồn. Một ngày lẽ ra phải dành cho em, anh lại để nó trôi qua như mọi ngày khác. Lỗi đó là của anh, anh không bào chữa.</p>
-              <p class="r" style="--i:3">Em lúc nào cũng để ý tới anh từ những chuyện nhỏ nhất. Vậy mà tới ngày của em, anh lại là người quên. Anh thấy có lỗi với em lắm.</p>
-              <figure class="funny r" style="--i:3"><img src="photos/me.jpg" alt="Thái khoanh tay, mặt hối lỗi" onerror="this.parentNode.remove()"><figcaption>ảnh minh hoạ: anh lúc tự giận bản thân</figcaption></figure>
+              <p class="r" style="--i:3">Em lúc nào cũng để ý tới anh, từ mấy chuyện nhỏ xíu. Vậy mà tới ngày của em, anh lại là người quên.</p>
               <p class="turn r" style="--i:4">kéo qua trang sau nha →</p>
             </div>
             <div class="pg" role="group" aria-roledescription="trang" aria-label="Trang 2 / 4">
               <h2>Nhớ lại một chút</h2>
-              <p>Hôm qua anh ngồi coi lại hình của hai đứa. Từ chuyến Đài Bắc, chuyến đi xa đầu tiên của mình, tới Bangkok, rồi cái tối anh cầu hôn em ở Thái.</p>
-              <p>Rồi dạm ngõ, rồi lễ đính hôn 06/02, rồi ra Huế chụp ảnh cưới. Năm nay mình còn đi Vũng Tàu, Mũi Né, KL, Nam Du, chạy WaterRun, lên Buôn Ma Thuột, lên Đà Lạt xem chỗ cưới.</p>
+              <p>Lúc làm cái thư này, anh ngồi coi lại hình của hai đứa. Từ chuyến Đài Bắc, chuyến đi xa đầu tiên của mình, tới cái tối anh cầu hôn em ở Thái.</p>
+              <p>Rồi dạm ngõ, rồi lễ đính hôn 06/02, rồi ra Huế chụp ảnh cưới. Năm nay mình còn đi Vũng Tàu, Mũi Né, KL, Nam Du, chạy WaterRun, lên Buôn Ma Thuột, lên Đà Lạt coi chỗ cưới.</p>
               <p>Coi lại mới thấy, chỗ nào cũng có em đi bên cạnh anh. Một năm nhiều chuyện như vậy, mà tới đúng một ngày dành riêng cho em, anh lại quên mất. Anh tiếc chỗ đó nhất.</p>
             </div>
             <div class="pg" role="group" aria-roledescription="trang" aria-label="Trang 3 / 4">
               <h2>Mình còn đi xa nữa</h2>
-              <p>Còn mấy tháng nữa là mình cưới. Lễ vow ở Rừng Thông Mơ, rồi về Sunrise Tây Ninh làm đám chính. Xong rồi tháng 8 hai đứa cùng qua Singapore đi học.</p>
+              <p>Còn mấy tháng nữa là mình cưới. Lễ vow ở Rừng Thông Mơ, rồi về Sunrise Tây Ninh làm đám chính. Cưới xong, tháng 8 năm sau hai đứa tính cùng qua Singapore đi học.</p>
               <p>Em vừa đi làm, vừa lo hồ sơ, tối về còn ngồi học GMAT với anh. Anh biết em cố nhiều lắm.</p>
-              <p>Mình còn đi chung với nhau lâu lắm. Anh không muốn năm nay em nhớ tới là năm anh quên ngày của em.</p>
+              <p>Mình còn đi chung với nhau lâu lắm. Anh không muốn sau này nhắc lại năm mình đính hôn, em lại nhớ đó là năm anh quên ngày của em.</p>
             </div>
             <div class="pg" role="group" aria-roledescription="trang" aria-label="Trang 4 / 4">
               <h2>Anh hứa</h2>
+              <figure class="funny vid"><video style="object-position:center 35%" src="photos/mat-le.mp4" poster="photos/mat-le.jpg" autoplay muted loop playsinline preload="auto" aria-label="Hái và Nguyên làm mắt lé"></video><figcaption>hai đứa mắt lé, coi cho đỡ giận nha</figcaption></figure>
               <p>Anh không hứa gì lớn lao. Anh chỉ hứa sẽ nhớ những ngày quan trọng với em, và để ý tới em nhiều hơn, như cách em vẫn luôn để ý tới anh.</p>
-              <p>Ba điều anh bù cho em nằm ngay kế bên. Cái nào anh cũng làm thật.</p>
+              <p>Ba điều anh bù cho em đây nè. Cái nào anh cũng làm thật.</p>
               <p>Nên Nê đừng giận anh nữa nha. Tối nay mình còn học GMAT chung đó.</p>
-              <p class="sign">Thương em,<span>Anh</span></p>
+              <p class="sign">Thương em,<span>Chồng Vai Cót</span></p>
             </div>
           </div></div>
           <nav class="pager" aria-label="Chuyển trang">
@@ -335,11 +341,11 @@ svg{display:block}
         <div class="stack">
           <div class="card c1">
             <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="23" r="15" fill="var(--color-paper-2)" stroke="var(--color-ink)" stroke-width="2.2"/><circle cx="22" cy="23" r="9" fill="none" stroke="var(--color-ink)" stroke-width="1.6"/><path d="M5 8v10M3 8v5c0 2 4 2 4 0V8M5 18v18M39 8c-3 2-3 9 0 11v17" stroke="var(--color-ink)" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
-            <div><h4>Một buổi tối hẹn hò</h4><p>Em chọn ngày, phần còn lại anh lo hết: đặt bàn, đón em, chỉ hai đứa mình thôi.</p></div>
+            <div><h4>Một buổi tối hẹn hò</h4><p>Em chọn ngày, còn lại để anh lo. Tối đó chỉ có hai đứa mình thôi.</p></div>
           </div>
           <div class="card c2">
             <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M22 24v15M22 32c-4-1-7-4-8-7M22 30c4-1 6-3 7-6" stroke="var(--color-ink)" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="16" cy="13" r="6" fill="var(--color-accent)" stroke="var(--color-ink)" stroke-width="2"/><circle cx="28" cy="13" r="6" fill="var(--color-accent-mark)" stroke="var(--color-ink)" stroke-width="2"/><circle cx="22" cy="20" r="6" fill="var(--color-sun-tint)" stroke="var(--color-ink)" stroke-width="2"/></svg>
-            <div><h4>Hoa và quà cho em</h4><p>Sẽ được giao tới tận tay em. Ngày nào thì anh giữ bí mật nha.</p></div>
+            <div><h4>Hoa và quà cho em</h4><p>Anh gửi tới tận tay em. Ngày nào thì bí mật nha.</p></div>
           </div>
           <div class="ticket" id="ticket">
             <div class="t-main">
@@ -371,27 +377,27 @@ svg{display:block}
       <p class="sub">và mấy chỗ sắp đi nữa</p>
       <div class="strip">
         <figure class="pc" style="--r:-2deg;--bg:var(--color-sun-tint)"><div class="ph"><b>Đài Bắc</b></div><figcaption>chuyến đi xa đầu tiên<small>05/2025</small></figcaption></figure>
-        <figure class="pc photo" style="--r:1.5deg"><img src="photos/thailan.jpg" alt="Thái hôn má Nguyên ở Thái Lan" loading="lazy" width="600" height="800"><figcaption>Thái Lan</figcaption></figure>
-        <figure class="pc photo" style="--r:-1deg"><img src="photos/cauhon.jpg" alt="Nguyên khoe nhẫn cầu hôn dưới đèn đêm" loading="lazy" width="600" height="800"><figcaption>ngày em đeo nhẫn<small>ở Thái</small></figcaption></figure>
+        <figure class="pc photo" style="--r:1.5deg"><img src="photos/thailan.jpg" alt="Hái hôn má Nguyên ở Thái Lan" loading="lazy" width="600" height="800"><figcaption>Thái Lan</figcaption></figure>
+        <figure class="pc photo" style="--r:-1deg"><img src="photos/cauhon.jpg" alt="Nguyên khoe nhẫn cầu hôn dưới đèn đêm" loading="lazy" width="600" height="800"><figcaption>cái tối em gật đầu<small>ở Thái</small></figcaption></figure>
         <figure class="pc photo" style="--r:2deg"><img src="photos/damngo.jpg" alt="Hai đứa selfie ngày dạm ngõ" loading="lazy" width="600" height="800"><figcaption>dạm ngõ<small>2025</small></figcaption></figure>
-        <figure class="pc photo" style="--r:-1.5deg"><img src="photos/08.jpg" alt="Thái và Nguyên ngồi ghế gỗ trong vườn" loading="lazy" width="600" height="800"><figcaption>ngồi vườn, nắm tay</figcaption></figure>
+        <figure class="pc photo" style="--r:-1.5deg"><img src="photos/08.jpg" alt="Hái và Nguyên ngồi ghế gỗ trong vườn" loading="lazy" width="600" height="800"><figcaption>ngồi vườn, nắm tay</figcaption></figure>
         <figure class="pc photo" style="--r:1deg"><img src="photos/04.jpg" alt="Hai đứa áo dài trắng khoe nhẫn" loading="lazy" width="600" height="800"><figcaption>khoe nhẫn nè<small>đính hôn · 06/02/2026</small></figcaption></figure>
-        <figure class="pc photo" style="--r:-2deg"><img src="photos/05.jpg" alt="Thái ghé sát má Nguyên trước phông đỏ" loading="lazy" width="600" height="800"><figcaption>Quang Thái và Nê<small>đính hôn · 06/02/2026</small></figcaption></figure>
-        <figure class="pc photo" style="--r:1.5deg"><img src="photos/06.jpg" alt="Thái hôn Nguyên giữa mưa cánh hoa" loading="lazy" width="600" height="800"><figcaption>mưa cánh hoa<small>đính hôn · 06/02/2026</small></figcaption></figure>
+        <figure class="pc photo" style="--r:-2deg"><img src="photos/05.jpg" alt="Hái ghé sát má Nguyên trước phông đỏ" loading="lazy" width="600" height="800"><figcaption>Hái và Nê<small>đính hôn · 06/02/2026</small></figcaption></figure>
+        <figure class="pc photo" style="--r:1.5deg"><img src="photos/06.jpg" alt="Hái hôn Nguyên giữa mưa cánh hoa" loading="lazy" width="600" height="800"><figcaption>mưa cánh hoa<small>đính hôn · 06/02/2026</small></figcaption></figure>
         <figure class="pc photo" style="--r:-1deg"><img src="photos/07.jpg" alt="Hai đứa cụng ly ở tiệc tối" loading="lazy" width="600" height="800"><figcaption>cụng ly tối đó<small>đính hôn · 06/02/2026</small></figcaption></figure>
         <figure class="pc photo" style="--r:2deg"><img src="photos/01.jpg" alt="Hai đứa mặc cổ phục đỏ, Nguyên cầm hoa vàng" loading="lazy" width="600" height="800"><figcaption>cổ phục đỏ ở Huế<small>chụp ảnh cưới · 06/2026</small></figcaption></figure>
-        <figure class="pc photo" style="--r:-1.5deg"><img src="photos/02.jpg" alt="Thái áp má ôm Nguyên" loading="lazy" width="600" height="800"><figcaption>váy trắng, ngọc trai<small>chụp ảnh cưới · 06/2026</small></figcaption></figure>
+        <figure class="pc photo" style="--r:-1.5deg"><img src="photos/02.jpg" alt="Hái áp má ôm Nguyên" loading="lazy" width="600" height="800"><figcaption>váy trắng, ngọc trai<small>chụp ảnh cưới · 06/2026</small></figcaption></figure>
         <figure class="pc photo" style="--r:1deg"><img src="photos/03.jpg" alt="Hai đứa giơ tay trước biển chiều" loading="lazy" width="600" height="800"><figcaption>biển chiều<small>chụp ảnh cưới · 06/2026</small></figcaption></figure>
         <figure class="pc" style="--r:-2deg;--bg:var(--color-mint-tint)"><div class="ph"><b>Mũi Né</b></div><figcaption>đi biển cùng gia đình<small>07/2026</small></figcaption></figure>
         <figure class="pc photo" style="--r:1.5deg"><img src="photos/vungtau.jpg" alt="Hai đứa ló mặt qua bảng Bạch Tuyết ở Vũng Tàu" loading="lazy" width="600" height="800"><figcaption>hoàng tử và Bạch Tuyết<small>Vũng Tàu</small></figcaption></figure>
         <figure class="pc" style="--r:-1deg;--bg:var(--color-sun-tint)"><div class="ph"><b>Kuala Lumpur</b></div><figcaption>ba ngày ở KL<small>09/2026</small></figcaption></figure>
-        <figure class="pc photo" style="--r:2deg"><img style="object-position:58% center" src="photos/namdu.jpg" alt="Thái ôm Nguyên ngược nắng ở biển Nam Du" loading="lazy" width="900" height="600"><figcaption>Nam Du<small>10/2026</small></figcaption></figure>
         <figure class="pc photo" style="--r:-1.5deg"><img src="photos/dalat.jpg" alt="Hai đứa đứng trên ban công ở Đà Lạt" loading="lazy" width="600" height="800"><figcaption>Đà Lạt</figcaption></figure>
         <figure class="pc photo" style="--r:1deg"><img src="photos/bmt.jpg" alt="Hai đứa mặc đồ thổ cẩm ở Buôn Ma Thuột" loading="lazy" width="600" height="800"><figcaption>thử đồ Tây Nguyên<small>Buôn Ma Thuột</small></figcaption></figure>
         <figure class="pc photo" style="--r:-2deg"><img src="photos/chaybo.jpg" alt="Hai đứa đeo số chạy trước bảng WaterRun" loading="lazy" width="600" height="800"><figcaption>chạy WaterRun cùng nhau<small>Sài Gòn</small></figcaption></figure>
-        <figure class="pc photo" style="--r:1.5deg"><img src="photos/sitecheck.jpg" alt="Hai đứa ở Rừng Thông Mơ" loading="lazy" width="600" height="800"><figcaption>đi xem chỗ cưới<small>Rừng Thông Mơ, Đà Lạt</small></figcaption></figure>
+        <figure class="pc photo" style="--r:1.5deg"><img src="photos/sitecheck.jpg" alt="Hai đứa ở Rừng Thông Mơ" loading="lazy" width="600" height="800"><figcaption>đi coi chỗ cưới<small>Rừng Thông Mơ, Đà Lạt</small></figcaption></figure>
+        <figure class="pc photo" style="--r:2deg"><img style="object-position:58% center" src="photos/namdu.jpg" alt="Hái ôm Nguyên ngược nắng ở biển Nam Du" loading="lazy" width="900" height="600"><figcaption>Nam Du<small>10/2026</small></figcaption></figure>
         <figure class="pc next" style="--r:-1deg;--bg:var(--color-iris-tint)"><div class="ph"><b>Hàn Quốc</b></div><figcaption>sắp đi nè<small>21/11/2026</small></figcaption></figure>
-        <figure class="pc next" style="--r:2deg;--bg:var(--color-accent-mark)"><div class="ph"><b>Đà Lạt</b></div><figcaption>ngày mình cưới<small>03/04/2027</small></figcaption></figure>
+        <figure class="pc next" style="--r:2deg;--bg:var(--color-accent-mark)"><div class="ph"><b>Đà Lạt</b></div><figcaption>ngày em thành vợ anh<small>03/04/2027</small></figcaption></figure>
       </div>
     </section>
 
@@ -400,7 +406,7 @@ svg{display:block}
       <p class="sub">hai mốc lớn nhất năm sau</p>
       <div class="wed">
         <article class="wcard w1">
-          <img src="photos/sitecheck.jpg" alt="Hai đứa đi xem Rừng Thông Mơ" loading="lazy">
+          <img src="photos/sitecheck.jpg" alt="Hai đứa đi coi Rừng Thông Mơ" loading="lazy">
           <div class="wbody">
             <p class="wdate">03/04/2027</p>
             <h4>Rừng Thông Mơ, Đà Lạt</h4>
@@ -434,7 +440,7 @@ svg{display:block}
     </section>
 
     <section class="closing">
-      <p class="promise">Từ năm nay, 20/10 nào anh cũng nhớ. Hứa đó.</p>
+      <p class="promise">20/10 năm sau, em đã là vợ anh rồi. Từ năm đó, 20/10 nào anh cũng nhớ. Hứa đó.</p>
       <div class="again"><button id="again">đọc lại từ đầu</button></div>
     </section>
   </section>
@@ -444,10 +450,10 @@ svg{display:block}
 <script>
 // Nhạc: YouTube (Xin Đừng Rời Xa Anh, Truzg Remix). Dự phòng MusicBox nếu YouTube không tải được.
 (function(){
-  const ID='HedP3E7ljhk';let yt=null,ready=false,failed=false,on=false;
+  const ID='HedP3E7ljhk';const SKIP=5;let yt=null,ready=false,failed=false,on=false;
   window.onYouTubeIframeAPIReady=function(){
-    yt=new YT.Player('yt',{videoId:ID,playerVars:{autoplay:0,controls:0,loop:1,playlist:ID,playsinline:1},
-      events:{onReady:()=>{ready=true;yt.setVolume(70);if(on)yt.playVideo();},onError:()=>{failed=true;if(on)fb(true);}}});
+    yt=new YT.Player('yt',{videoId:ID,playerVars:{autoplay:0,controls:0,start:SKIP,playsinline:1},
+      events:{onStateChange:e=>{if(e.data===0){yt.seekTo(SKIP,true);yt.playVideo();}},onReady:()=>{yt.cueVideoById({videoId:ID,startSeconds:SKIP});ready=true;yt.setVolume(70);if(on)yt.playVideo();},onError:()=>{failed=true;if(on)fb(true);}}});
   };
   const sc=document.createElement('script');sc.src='https://www.youtube.com/iframe_api';sc.onerror=()=>{failed=true;if(on)fb(true)};document.head.appendChild(sc);
   function fb(v){try{window.MusicBox&&(v?MusicBox.start():MusicBox.stop())}catch(_){}}
@@ -456,6 +462,8 @@ svg{display:block}
     stop(){on=false;if(ready&&!failed)yt.pauseVideo();else fb(false);},
     toggle(){on?this.stop():this.start();},
     get isPlaying(){return on},
+    get t(){return yt&&yt.getCurrentTime?yt.getCurrentTime():-1},
+    seekEnd(){yt.seekTo(yt.getDuration()-2,true)},
     get state(){return failed?"fallback":(yt&&yt.getPlayerState?yt.getPlayerState():"loading")}
   };
 })();
@@ -523,7 +531,7 @@ try{const w=localStorage.getItem('ne-wish');if(w)markUsed(w)}catch(_){}
   let i=0,x0=null,dx=0;
   function go(k){i=Math.max(0,Math.min(n-1,k));track.style.transform=`translateX(${-i*100}%)`;dots.forEach((d,j)=>d.classList.toggle('on',j===i));prev.disabled=i===0;next.disabled=i===n-1;pnum.textContent=(i+1)+' / '+n;[...track.children].forEach((c,j)=>c.setAttribute('aria-hidden',j!==i));}
   prev.onclick=()=>go(i-1);next.onclick=()=>go(i+1);
-  document.addEventListener('keydown',e=>{if(!app.classList.contains('is-read')||e.target.tagName==='INPUT')return;if(e.key==='ArrowRight')go(i+1);if(e.key==='ArrowLeft')go(i-1);});
+  document.addEventListener('keydown',e=>{if(!app.classList.contains('is-read')||e.target.tagName==='INPUT')return;{const r=document.getElementById('pages').getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;}if(e.key==='ArrowRight')go(i+1);if(e.key==='ArrowLeft')go(i-1);});
   pages.addEventListener('pointerdown',e=>{if(e.button!==0)return;x0=e.clientX;dx=0;pages.classList.add('drag');pages.setPointerCapture(e.pointerId);});
   pages.addEventListener('pointermove',e=>{if(x0===null)return;dx=e.clientX-x0;track.style.transform=`translateX(calc(${-i*100}% + ${dx}px))`;});
   const end=()=>{if(x0===null)return;pages.classList.remove('drag');const w=pages.clientWidth;if(dx<-w*.15)go(i+1);else if(dx>w*.15)go(i-1);else go(i);x0=null;};
