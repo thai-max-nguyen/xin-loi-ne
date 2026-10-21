@@ -304,7 +304,7 @@ h1,h2,h3,h4,h5{text-wrap:balance}
 .who.butz.show{opacity:1;transform:none}
 .who.hit .toon{animation:ouch .7s var(--ease-spring)}
 .sfx{position:absolute;top:-30px;left:50%;translate:-50% 0;white-space:nowrap;font:700 17px/1 var(--font-hand);color:var(--color-accent-ink);background:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:12px;padding:5px 9px;opacity:0;scale:.4;transition:opacity .25s,scale .35s var(--ease-spring);pointer-events:none;z-index:3}
-.who.hit .sfx{opacity:1;scale:1}
+.who.hit .sfx{opacity:1;scale:1;z-index:6;top:-62px}
 @keyframes wag{50%{transform:rotate(18deg)}}
 @keyframes shuffle{from{transform:translateX(-16px) rotate(-2deg)}to{transform:translateX(16px) rotate(2deg)}}
 @keyframes ouch{0%{transform:none}20%{transform:translateY(-14px) rotate(-12deg) scale(1.08)}45%{transform:rotate(10deg)}70%{transform:rotate(-5deg)}100%{transform:none}}
@@ -956,7 +956,7 @@ function butMagic(who,line){
     if(a)a.onfinish=fin;else fin();
   },700);
 }
-function dodge(){
+function dodge(){try{acInit()}catch(_){}abuEl.classList.remove('up');
   if(busy)return;busy=true;dodges++;haptic(10);
   $('#yes').style.setProperty('--grow',1+dodges*.09);
   if(dodges>5){no.textContent='Tha luôn';no.classList.add('yes');no.onclick=forgive;flyTo(0,0,1);$$('.who').forEach(w=>w.classList.remove('hit'));say('','Giờ nút nào cũng là tha hết rồi nha.',()=>{busy=false});return}
@@ -980,7 +980,7 @@ function dodge(){
 no.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse'&&dodges<=5)dodge()});
 no.addEventListener('click',e=>{if(dodges<=5){e.preventDefault();dodge()}});
 function forgive(){
-  if(fg.classList.contains('forgiven'))return;fg.classList.add('forgiven');setTimeout(()=>abu('hoa','Hòa rồi! Mà đứa nào tông aBu hồi nãy vậy trời.'),1600);haptic([30,50,30,50,60]);sfx('chime');
+  if(fg.classList.contains('forgiven'))return;fg.classList.add('forgiven');busy=false;try{clearInterval(typing)}catch(_){}setTimeout(()=>abu('hoa',dodges>=4?'Hòa rồi! Mà đứa nào tông aBu hồi nãy vậy trời.':'Hòa rồi! aBu mừng quá trời.'),1600);haptic([30,50,30,50,60]);sfx('chime');
   const r=fg.querySelector('.fface').getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,'heart',24);
 }
 $('#yes').addEventListener('click',forgive);
