@@ -385,7 +385,7 @@ svg{display:block}
         <figure class="pc" style="--r:-2deg;--bg:var(--color-mint-tint)"><div class="ph"><b>Mũi Né</b></div><figcaption>đi biển cùng gia đình<small>07/2026</small></figcaption></figure>
         <figure class="pc photo" style="--r:1.5deg"><img src="photos/vungtau.jpg" alt="Hai đứa ló mặt qua bảng Bạch Tuyết ở Vũng Tàu" loading="lazy" width="600" height="800"><figcaption>hoàng tử và Bạch Tuyết<small>Vũng Tàu</small></figcaption></figure>
         <figure class="pc" style="--r:-1deg;--bg:var(--color-sun-tint)"><div class="ph"><b>Kuala Lumpur</b></div><figcaption>ba ngày ở KL<small>09/2026</small></figcaption></figure>
-        <figure class="pc" style="--r:2deg;--bg:var(--color-mint-tint)"><div class="ph"><b>Nam Du</b></div><figcaption>ra đảo bằng tàu<small>10/2026</small></figcaption></figure>
+        <figure class="pc photo" style="--r:2deg"><img style="object-position:58% center" src="photos/namdu.jpg" alt="Thái ôm Nguyên ngược nắng ở biển Nam Du" loading="lazy" width="900" height="600"><figcaption>Nam Du<small>10/2026</small></figcaption></figure>
         <figure class="pc photo" style="--r:-1.5deg"><img src="photos/dalat.jpg" alt="Hai đứa đứng trên ban công ở Đà Lạt" loading="lazy" width="600" height="800"><figcaption>Đà Lạt</figcaption></figure>
         <figure class="pc photo" style="--r:1deg"><img src="photos/bmt.jpg" alt="Hai đứa mặc đồ thổ cẩm ở Buôn Ma Thuột" loading="lazy" width="600" height="800"><figcaption>thử đồ Tây Nguyên<small>Buôn Ma Thuột</small></figcaption></figure>
         <figure class="pc photo" style="--r:-2deg"><img src="photos/chaybo.jpg" alt="Hai đứa đeo số chạy trước bảng WaterRun" loading="lazy" width="600" height="800"><figcaption>chạy WaterRun cùng nhau<small>Sài Gòn</small></figcaption></figure>
@@ -439,7 +439,27 @@ svg{display:block}
     </section>
   </section>
 </main>
+<div id="yt" aria-hidden="true" style="position:fixed;width:1px;height:1px;left:-9999px;top:0;opacity:0;pointer-events:none"></div>
 <script src="musicbox.js"></script>
+<script>
+// Nhạc: YouTube (Xin Đừng Rời Xa Anh, Truzg Remix). Dự phòng MusicBox nếu YouTube không tải được.
+(function(){
+  const ID='HedP3E7ljhk';let yt=null,ready=false,failed=false,on=false;
+  window.onYouTubeIframeAPIReady=function(){
+    yt=new YT.Player('yt',{videoId:ID,playerVars:{autoplay:0,controls:0,loop:1,playlist:ID,playsinline:1},
+      events:{onReady:()=>{ready=true;yt.setVolume(70);if(on)yt.playVideo();},onError:()=>{failed=true;if(on)fb(true);}}});
+  };
+  const sc=document.createElement('script');sc.src='https://www.youtube.com/iframe_api';sc.onerror=()=>{failed=true;if(on)fb(true)};document.head.appendChild(sc);
+  function fb(v){try{window.MusicBox&&(v?MusicBox.start():MusicBox.stop())}catch(_){}}
+  window.Song={
+    start(){on=true;if(ready&&!failed)yt.playVideo();else if(failed)fb(true);},
+    stop(){on=false;if(ready&&!failed)yt.pauseVideo();else fb(false);},
+    toggle(){on?this.stop():this.start();},
+    get isPlaying(){return on},
+    get state(){return failed?"fallback":(yt&&yt.getPlayerState?yt.getPlayerState():"loading")}
+  };
+})();
+</script>
 <script>
 const app=document.getElementById('app'),opts=[...document.querySelectorAll('.opt')],own=document.getElementById('own'),send=document.getElementById('send'),done=document.getElementById('done'),ticket=document.getElementById('ticket'),music=document.getElementById('music');
 const TO='thaiquang.nguyenle@gmail.com';
@@ -452,7 +472,7 @@ const t=new Date();t.setHours(0,0,0,0);
 document.querySelectorAll('[data-to]').forEach(e=>{const [y,m,d]=e.dataset.to.split('-').map(Number);e.textContent=Math.max(0,Math.round((new Date(y,m-1,d)-t)/864e5));});
 
 function setMusic(on){music.setAttribute('aria-pressed',on);document.getElementById('musicLabel').textContent=on?'đang phát':'nhạc';}
-music.addEventListener('click',()=>{if(!window.MusicBox)return;MusicBox.toggle();setMusic(MusicBox.isPlaying);});
+music.addEventListener('click',()=>{Song.toggle();setMusic(Song.isPlaying);});
 
 function petals(x,y){
   if(reduce)return;
@@ -468,12 +488,12 @@ function petals(x,y){
 }
 
 document.getElementById('start').addEventListener('click',()=>{
-  try{window.MusicBox&&MusicBox.start();setMusic(true)}catch(_){}
+  try{Song.start();setMusic(true)}catch(_){}
   app.classList.add('started');document.getElementById('open').focus({preventScroll:true});
 });
 document.getElementById('open').addEventListener('click',()=>{
   if(app.classList.contains('is-open'))return;
-  if(window.MusicBox&&!MusicBox.isPlaying){try{MusicBox.start();setMusic(true)}catch(_){}}
+  if(!Song.isPlaying){try{Song.start();setMusic(true)}catch(_){}}
   app.classList.add('is-open');
   const r=document.querySelector('.seal').getBoundingClientRect();
   setTimeout(()=>petals(r.left+r.width/2,r.top),reduce?0:1000);
