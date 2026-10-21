@@ -843,11 +843,10 @@ function markUsed(v){done.textContent='Em ước: '+v+'. Bụt duyệt rồi, ho
   const rb=document.createElement('button');rb.className='resend';rb.textContent='mở lại email';rb.onclick=()=>window.__goMail('mailto:'+TO+'?subject='+encodeURIComponent('Điều ước của Nê')+'&body='+encodeURIComponent('Bụt ơi, Nê ước: '+v));done.append(' ',rb);ticket.classList.add('used','but')}
 send.addEventListener('click',()=>{
   const v=pick==='__own'?own.value.trim():pick;if(!v)return;
-  try{localStorage.setItem('ne-wish',v)}catch(_){}
   markUsed(v);haptic([20,40,20]);sfx('chime');const r=send.getBoundingClientRect();burst(r.left+r.width/2,r.top,'heart',12);
   window.__goMail('mailto:'+TO+'?subject='+encodeURIComponent('Điều ước của Nê')+'&body='+encodeURIComponent('Bụt ơi, Nê ước: '+v));
 });
-try{const w=localStorage.getItem('ne-wish');if(w){markUsed(w);app.classList.add('promised');setSide(true)}}catch(_){}
+try{localStorage.removeItem('ne-wish');localStorage.removeItem('ne-forgave')}catch(_){}
 
 // ---------- 3 · cuộn trang ----------
 const prog=$('#prog');
@@ -983,7 +982,6 @@ no.addEventListener('click',e=>{if(dodges<=5){e.preventDefault();dodge()}});
 function forgive(){
   if(fg.classList.contains('forgiven'))return;fg.classList.add('forgiven');setTimeout(()=>abu('hoa','Hòa rồi! Mà đứa nào tông aBu hồi nãy vậy trời.'),1600);haptic([30,50,30,50,60]);sfx('chime');
   const r=fg.querySelector('.fface').getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,'heart',24);
-  try{localStorage.setItem('ne-forgave','1')}catch(_){}
 }
 $('#yes').addEventListener('click',forgive);
 new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){abu('epi','Tới khúc quan trọng rồi. aBu xin giùm luôn nè Nê.');o.disconnect()}}),{threshold:.5}).observe($('#fbtns'));
@@ -991,7 +989,7 @@ new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){abu('epi','
 $('#again').addEventListener('click',()=>{
   app.classList.remove('is-open','is-read','promised');opened=false;clicks=0;
   thi.getAnimations().forEach(a=>a.cancel());['--dx','--dy','--rot'].forEach(v=>thi.style.removeProperty(v));thi.style.setProperty('--sx',1);thi.style.setProperty('--sy',1);
-  hintTxt.textContent='kéo trái thị xuống cho rụng nha';drawStem();go(0,true);if(wide.matches&&!localStorage.getItem('ne-wish'))setSide(false);
+  hintTxt.textContent='kéo trái thị xuống cho rụng nha';drawStem();go(0,true);if(wide.matches)setSide(false);
   fg.classList.remove('forgiven');dodges=0;window.mapReset&&mapReset();no.textContent='Chưa';no.classList.remove('yes','rest');no.onclick=null;no.style.transform='';no.style.visibility='';no.style.display='';no.removeAttribute('aria-hidden');tx=ty=0;$('.who.butz').style.transform='';$('.who.butz').style.transition='';$$('.who').forEach(w=>{w.classList.remove('hit','show');w.getAnimations().forEach(a=>a.cancel())});fs.textContent='';fs.classList.remove('talk');busy=false;clearInterval(typing);$('#yes').style.removeProperty('--grow');
   scrollTo({top:0,behavior:'instant'});
 });
