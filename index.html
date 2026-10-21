@@ -94,6 +94,24 @@ svg{display:block}
 .is-drop .env-back,.is-drop .pocket,.is-drop .to,.is-drop .flap{transition:transform .55s cubic-bezier(.5,0,.75,0),opacity .55s;transform:translateY(120%);opacity:0}
 .is-drop .peek{transition:transform .55s var(--ease-out),opacity .55s .3s;transform:translateY(-70%) scale(1.35);opacity:0}
 
+/* multi-page letter */
+.pages{overflow:hidden;margin:0 calc(-1*clamp(28px,5vw,56px));touch-action:pan-y;cursor:grab;user-select:none}
+.pages.drag{cursor:grabbing}
+.track{display:flex;align-items:flex-start;transition:transform .45s var(--ease-out)}
+.pages.drag .track{transition:none}
+.pg{flex:0 0 100%;min-width:0;padding:0 clamp(28px,5vw,56px)}
+.pg:not(:first-child) h2{margin-top:0}
+.turn{font:500 17px/1.4 var(--font-hand);color:var(--color-accent-ink);clear:both;text-align:right}
+.pager{display:flex;align-items:center;gap:var(--space-md);margin-top:var(--space-lg);padding-top:var(--space-md);border-top:2px dashed var(--color-rule)}
+.pbtn{width:44px;height:44px;border-radius:50%;border:2px solid var(--color-ink);background:var(--color-paper-2);font:700 24px/1 var(--font-display);display:grid;place-items:center;box-shadow:var(--shadow-sticker-sm);transition:transform var(--dur-fast) var(--ease-out)}
+.pbtn:hover{transform:translate(-1px,-1px)}
+.pbtn:active{transform:translate(1px,1px)}
+.pbtn:disabled{opacity:1;background:var(--color-paper);color:var(--color-ink-mute);border-color:var(--color-ink-mute);box-shadow:none;cursor:not-allowed;transform:none}
+.dots{display:flex;gap:8px;flex:1;justify-content:center}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--color-rule);border:1.5px solid var(--color-ink-mute);transition:transform var(--dur-fast) var(--ease-out)}
+.dots i.on{background:var(--color-accent);border-color:var(--color-ink);transform:scale(1.25)}
+.pnum{font:500 15px/1 var(--font-hand);color:var(--color-ink-soft);min-width:40px;text-align:right}
+
 .petal{position:fixed;width:16px;height:16px;pointer-events:none;z-index:50}
 
 /* ---------- music pill ---------- */
@@ -196,7 +214,7 @@ svg{display:block}
 .wbody p{color:var(--color-ink-soft);font-size:16px;line-height:1.6}
 .wcount{margin-top:var(--space-md);font:500 18px/1.2 var(--font-hand)!important;color:var(--color-ink)!important}
 .wcount b{font:800 40px/1 var(--font-display);color:var(--color-accent-ink);letter-spacing:-.03em;margin-right:4px}
-.logos{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-xl) var(--space-3xl);background:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:var(--radius-card);padding:var(--space-lg) var(--space-xl);margin-bottom:var(--space-xl)}
+.logos{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-evenly;gap:var(--space-xl) var(--space-3xl);background:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:var(--radius-card);padding:var(--space-lg) var(--space-xl);margin-bottom:var(--space-xl)}
 .logos img{height:64px;width:auto}
 .road{list-style:none;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--space-md);counter-reset:r}
 .road li{position:relative;background:var(--color-iris-tint);border:2px solid var(--color-ink);border-radius:18px;padding:var(--space-lg) var(--space-md) var(--space-md);box-shadow:var(--shadow-sticker-sm);display:grid;gap:6px;align-content:start}
@@ -223,12 +241,12 @@ svg{display:block}
   .strip{flex-wrap:wrap;justify-content:center;overflow:visible;row-gap:var(--space-2xl)}
   .layout{grid-template-columns:minmax(0,640px) 400px;justify-content:center;gap:var(--space-3xl);align-items:start}
   .side{position:sticky;top:var(--space-2xl)}
-  .read{padding-top:var(--space-3xl)}
+  .read{padding-top:84px}
 }
 @media (max-width:640px){
   body{font-size:16px}
   .music{top:12px;right:12px}
-  .read{padding-top:var(--space-3xl)}
+  .read{padding-top:84px}
   .stamp{right:80px}
   .funny{width:150px;margin-right:0}
 }
@@ -272,16 +290,43 @@ svg{display:block}
   <section class="read">
     <div class="layout">
       <div class="sheet">
-        <article class="letter" tabindex="-1" id="letter">
-          <p class="date r" style="--i:0">21/10/2026</p>
-          <h2 class="r" style="--i:0">Anh xin lỗi <span class="u">Nê</span></h2>
-          <p class="r" style="--i:1">Nê ơi,</p>
-          <p class="r" style="--i:2">Hôm qua là 20/10, ngày của em, mà anh lại không có quà gì cho em. Anh biết em buồn. Một ngày lẽ ra phải dành cho em, anh lại để nó trôi qua như mọi ngày khác. Lỗi đó là của anh, anh không bào chữa.</p>
-          <p class="r" style="--i:3">Em lúc nào cũng để ý tới anh từ những chuyện nhỏ nhất. Tối nào cũng ngồi học chung với anh, đi đâu cũng đi cùng anh. Vậy mà tới ngày của em, anh lại là người quên. Anh thấy có lỗi với em lắm.</p>
-          <figure class="funny r" style="--i:3"><img src="photos/me.jpg" alt="Thái khoanh tay, mặt hối lỗi" onerror="this.parentNode.remove()"><figcaption>ảnh minh hoạ: anh lúc tự giận bản thân</figcaption></figure>
-          <p class="r" style="--i:4">Anh không muốn chỉ nói xin lỗi rồi thôi, nên anh gửi em ba điều kế bên. Cái nào anh cũng làm thật.</p>
-          <p class="r" style="--i:5">Nên Nê đừng giận anh nữa nha. Tối nay mình còn học GMAT chung đó.</p>
-          <p class="sign r" style="--i:6">Thương em,<span>Anh</span></p>
+        <article class="letter" tabindex="-1" id="letter" aria-roledescription="thư nhiều trang">
+          <div class="pages" id="pages"><div class="track" id="track">
+            <div class="pg" role="group" aria-roledescription="trang" aria-label="Trang 1 / 4">
+              <p class="date r" style="--i:0">21/10/2026</p>
+              <h2 class="r" style="--i:0">Anh xin lỗi <span class="u">Nê</span></h2>
+              <p class="r" style="--i:1">Nê ơi,</p>
+              <p class="r" style="--i:2">Hôm qua là 20/10, ngày của em, mà anh lại không có quà gì cho em. Anh biết em buồn. Một ngày lẽ ra phải dành cho em, anh lại để nó trôi qua như mọi ngày khác. Lỗi đó là của anh, anh không bào chữa.</p>
+              <p class="r" style="--i:3">Em lúc nào cũng để ý tới anh từ những chuyện nhỏ nhất. Vậy mà tới ngày của em, anh lại là người quên. Anh thấy có lỗi với em lắm.</p>
+              <figure class="funny r" style="--i:3"><img src="photos/me.jpg" alt="Thái khoanh tay, mặt hối lỗi" onerror="this.parentNode.remove()"><figcaption>ảnh minh hoạ: anh lúc tự giận bản thân</figcaption></figure>
+              <p class="turn r" style="--i:4">kéo qua trang sau nha →</p>
+            </div>
+            <div class="pg" role="group" aria-roledescription="trang" aria-label="Trang 2 / 4">
+              <h2>Nhớ lại một chút</h2>
+              <p>Hôm qua anh ngồi coi lại hình của hai đứa. Từ chuyến Đài Bắc, chuyến đi xa đầu tiên của mình, tới Bangkok, rồi cái tối anh cầu hôn em ở Thái.</p>
+              <p>Rồi dạm ngõ, rồi lễ đính hôn 06/02, rồi ra Huế chụp ảnh cưới. Năm nay mình còn đi Vũng Tàu, Mũi Né, KL, Nam Du, chạy WaterRun, lên Buôn Ma Thuột, lên Đà Lạt xem chỗ cưới.</p>
+              <p>Coi lại mới thấy, chỗ nào cũng có em đi bên cạnh anh. Một năm nhiều chuyện như vậy, mà tới đúng một ngày dành riêng cho em, anh lại quên mất. Anh tiếc chỗ đó nhất.</p>
+            </div>
+            <div class="pg" role="group" aria-roledescription="trang" aria-label="Trang 3 / 4">
+              <h2>Mình còn đi xa nữa</h2>
+              <p>Còn mấy tháng nữa là mình cưới. Lễ vow ở Rừng Thông Mơ, rồi về Sunrise Tây Ninh làm đám chính. Xong rồi tháng 8 hai đứa cùng qua Singapore đi học.</p>
+              <p>Em vừa đi làm, vừa lo hồ sơ, tối về còn ngồi học GMAT với anh. Anh biết em cố nhiều lắm.</p>
+              <p>Mình còn đi chung với nhau lâu lắm. Anh không muốn năm nay em nhớ tới là năm anh quên ngày của em.</p>
+            </div>
+            <div class="pg" role="group" aria-roledescription="trang" aria-label="Trang 4 / 4">
+              <h2>Anh hứa</h2>
+              <p>Anh không hứa gì lớn lao. Anh chỉ hứa sẽ nhớ những ngày quan trọng với em, và để ý tới em nhiều hơn, như cách em vẫn luôn để ý tới anh.</p>
+              <p>Ba điều anh bù cho em nằm ngay kế bên. Cái nào anh cũng làm thật.</p>
+              <p>Nên Nê đừng giận anh nữa nha. Tối nay mình còn học GMAT chung đó.</p>
+              <p class="sign">Thương em,<span>Anh</span></p>
+            </div>
+          </div></div>
+          <nav class="pager" aria-label="Chuyển trang">
+            <button class="pbtn" id="prev" aria-label="Trang trước"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M12.5 4 6.5 10l6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <span class="dots" id="dots"><i></i><i></i><i></i><i></i></span>
+            <span class="pnum" id="pnum">1 / 4</span>
+            <button class="pbtn" id="next" aria-label="Trang sau"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M7.5 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </nav>
         </article>
       </div>
 
@@ -359,14 +404,14 @@ svg{display:block}
           <div class="wbody">
             <p class="wdate">03/04/2027</p>
             <h4>Rừng Thông Mơ, Đà Lạt</h4>
-            <p>Lễ vow và tiệc giữa rừng thông. Chỗ này hai đứa đã đi xem tận nơi rồi.</p>
+            <p>Lễ vow và tiệc giữa rừng thông. Chỗ này hai đứa đi coi tận nơi rồi.</p>
             <p class="wcount"><b data-to="2027-04-03">—</b> ngày nữa</p>
           </div>
         </article>
         <article class="wcard w2">
           <div class="sun" aria-hidden="true"><svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMax slice"><rect width="320" height="200" fill="var(--color-sun-tint)"/><circle cx="160" cy="150" r="62" fill="var(--color-accent-mark)"/><circle cx="160" cy="150" r="40" fill="var(--color-accent)"/><path d="M0 150h320v50H0z" fill="var(--color-env)"/><path d="M0 150h320" stroke="var(--color-ink)" stroke-width="2.5"/><path d="M40 170h60M140 182h90M240 168h50" stroke="var(--color-ink)" stroke-width="2" stroke-linecap="round" opacity=".5"/></svg></div>
           <div class="wbody">
-            <p class="wdate">15 – 16/05/2027</p>
+            <p class="wdate">15–16/05/2027</p>
             <h4>Sunrise, Tây Ninh</h4>
             <p>15/05 tiệc tối nhà gái. 16/05 lễ Vu Quy, Tân Hôn và tiệc nhà trai. Về quê em làm đám cưới chính.</p>
             <p class="wcount"><b data-to="2027-05-16">—</b> ngày nữa</p>
@@ -381,9 +426,9 @@ svg{display:block}
       <div class="logos"><img src="logos/nus.png" alt="NUS"><img src="logos/ntu.png" alt="NTU"><img src="logos/smu.png" alt="SMU"></div>
       <ol class="road">
         <li><span class="rd">tối nào cũng vậy</span><b>Học GMAT chung</b><span>8 giờ tối, hai đứa ngồi học cùng nhau</span></li>
-        <li><span class="rd">24 – 27/12/2026</span><b>Qua Singapore một chuyến</b><span>đi xem trước chỗ mình sắp sống</span></li>
+        <li><span class="rd">24–27/12/2026</span><b>Qua Singapore một chuyến</b><span>đi coi Singapore trước</span></li>
         <li><span class="rd">đầu 2027</span><b>Thi GMAT</b><span>anh đặt lịch thi từ đầu tháng 11</span></li>
-        <li><span class="rd">01 – 03/2027</span><b>Nộp hồ sơ</b><span>anh nộp NUS khoảng 15/01 · em nộp NUS 07/02, SMU 21/03</span></li>
+        <li><span class="rd">tháng 1 đến 3/2027</span><b>Nộp hồ sơ</b><span>anh nộp NUS khoảng 15/01 · em nộp NUS 07/02, SMU 21/03</span></li>
         <li class="goal"><span class="rd">08/2027</span><b>Cùng nhập học ở Singapore</b><span>cưới xong là mình đi</span></li>
       </ol>
     </section>
@@ -451,6 +496,21 @@ send.addEventListener('click',()=>{
   window.__goMail('mailto:'+TO+'?subject='+encodeURIComponent('Phiếu điều ước của Nê')+'&body='+encodeURIComponent('Anh ơi, em chọn: '+v));
 });
 try{const w=localStorage.getItem('ne-wish');if(w)markUsed(w)}catch(_){}
+
+// letter pages: drag / swipe / buttons / arrow keys
+(()=>{
+  const pages=document.getElementById('pages'),track=document.getElementById('track'),n=track.children.length,dots=[...document.querySelectorAll('#dots i')],prev=document.getElementById('prev'),next=document.getElementById('next'),pnum=document.getElementById('pnum');
+  let i=0,x0=null,dx=0;
+  function go(k){i=Math.max(0,Math.min(n-1,k));track.style.transform=`translateX(${-i*100}%)`;dots.forEach((d,j)=>d.classList.toggle('on',j===i));prev.disabled=i===0;next.disabled=i===n-1;pnum.textContent=(i+1)+' / '+n;[...track.children].forEach((c,j)=>c.setAttribute('aria-hidden',j!==i));}
+  prev.onclick=()=>go(i-1);next.onclick=()=>go(i+1);
+  document.addEventListener('keydown',e=>{if(!app.classList.contains('is-read')||e.target.tagName==='INPUT')return;if(e.key==='ArrowRight')go(i+1);if(e.key==='ArrowLeft')go(i-1);});
+  pages.addEventListener('pointerdown',e=>{if(e.button!==0)return;x0=e.clientX;dx=0;pages.classList.add('drag');pages.setPointerCapture(e.pointerId);});
+  pages.addEventListener('pointermove',e=>{if(x0===null)return;dx=e.clientX-x0;track.style.transform=`translateX(calc(${-i*100}% + ${dx}px))`;});
+  const end=()=>{if(x0===null)return;pages.classList.remove('drag');const w=pages.clientWidth;if(dx<-w*.15)go(i+1);else if(dx>w*.15)go(i-1);else go(i);x0=null;};
+  pages.addEventListener('pointerup',end);pages.addEventListener('pointercancel',end);
+  document.getElementById('again').addEventListener('click',()=>go(0));
+  go(0);
+})();
 </script>
 </body>
 </html>
