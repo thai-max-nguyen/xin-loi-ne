@@ -4,490 +4,599 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Nê ơi, anh xin lỗi</title>
+<title>Sự tích Nguyên Tấm và hoàng tử Hái</title>
+<link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Be+Vietnam+Pro:wght@400;500;700&family=Shantell+Sans:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Be+Vietnam+Pro:wght@400;500;700&family=Shantell+Sans:wght@500;700&display=swap" rel="stylesheet">
 <style>
-/* Hallmark · macrostructure: Letter · tone: soft / handwritten · anchor hue: coral (32°)
- * theme: studied-DNA (source: 360feedback warm theme) · paper oklch(95.6% 0.016 80) · accent oklch(64% 0.17 32)
- * display: Bricolage Grotesque · body: Be Vietnam Pro · annotation: Shantell Sans
- * nav: none · footer: closing countdown · enrichment: Tier A CSS envelope + SVG petals · v2
+/* Hallmark · macrostructure: Storybook (cover → ritual → paged book → scrapbook → epilogue)
+ * theme: custom "sơn mài cổ tích" · paper oklch(94.5% .028 85) · lacquer oklch(52% .17 28) · gold oklch(76% .12 80)
+ * display: Baloo 2 (rounded storybook) · body: Be Vietnam Pro · annotation: Shantell Sans · v9
  */
 :root{
-  --color-paper: oklch(95.6% 0.016 80);
-  --color-paper-2: oklch(98.5% 0.008 80);
-  --color-rule: oklch(91% 0.02 80);
-  --color-ink: oklch(25% 0.04 265);
-  --color-ink-soft: oklch(42% 0.03 265);
-  --color-ink-mute: oklch(58% 0.02 265);
-  --color-accent: oklch(64% 0.17 32);
-  --color-accent-ink: oklch(50% 0.16 32);
-  --color-accent-mark: oklch(85% 0.08 32);
-  --color-mute-btn: oklch(86% 0.02 290);
-  --color-sun-tint: oklch(95% 0.06 90);
-  --color-mint-tint: oklch(94% 0.04 165);
-  --color-iris-tint: oklch(93% 0.035 290);
-  --color-env: oklch(88% 0.05 40);
-  --color-env-dark: oklch(80% 0.07 38);
-  --color-env-light: oklch(91% 0.04 40);
-  --color-focus: oklch(50% 0.16 32);
-  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --color-paper: oklch(94.5% 0.028 85);
+  --color-paper-2: oklch(97.8% 0.016 85);
+  --color-paper-3: oklch(89% 0.045 80);
+  --color-rule: oklch(86% 0.04 75);
+  --color-ink: oklch(27% 0.035 40);
+  --color-ink-soft: oklch(42% 0.035 45);
+  --color-ink-mute: oklch(58% 0.03 60);
+  --color-accent: oklch(55% 0.17 28);
+  --color-accent-ink: oklch(45% 0.15 28);
+  --color-sea:oklch(90% .045 215);--color-sea-ink:oklch(55% .08 225);--color-land:oklch(91% .06 110);--color-accent-mark: oklch(83% 0.08 40);
+  --color-gold: oklch(78% 0.12 80);
+  --color-gold-ink: oklch(52% 0.1 72);
+  --color-gold-light: oklch(90% 0.08 88);
+  --color-lacquer: oklch(42% 0.14 28);
+  --color-sun-tint: oklch(93% 0.07 88);
+  --color-mint-tint: oklch(92% 0.045 165);
+  --color-iris-tint: oklch(92% 0.035 300);
+  --color-mute-btn: oklch(87% 0.02 70);
+  --color-focus: oklch(45% 0.15 28);
+  --font-display: "Baloo 2", "Be Vietnam Pro", system-ui, sans-serif;
   --font-body: "Be Vietnam Pro", system-ui, sans-serif;
   --font-hand: "Shantell Sans", "Comic Sans MS", cursive;
   --space-xs: 4px; --space-sm: 8px; --space-md: 16px; --space-lg: 24px;
   --space-xl: 32px; --space-2xl: 48px; --space-3xl: 64px; --space-4xl: 96px;
-  --radius-card: 22px; --radius-pill: 999px;
+  --radius-card: 18px; --radius-pill: 999px;
   --shadow-sticker: 5px 5px 0 var(--color-ink);
   --shadow-sticker-sm: 3px 3px 0 var(--color-ink);
   --ease-out: cubic-bezier(.2,.7,.3,1);
-  --dur-fast: .12s; --dur-med: .32s; --dur-slow: .5s;
+  --ease-spring: cubic-bezier(.3,1.6,.5,1);
 }
 *{box-sizing:border-box;margin:0}
 html,body{overflow-x:clip}
-body{background:var(--color-paper);color:var(--color-ink);font:400 17px/1.75 var(--font-body);-webkit-font-smoothing:antialiased}
+body{background:var(--color-paper);color:var(--color-ink);font:400 17px/1.75 var(--font-body);-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(120% 90% at 50% 0%,transparent 55%,oklch(85% .05 70 / .55) 100%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .25 0 0 0 0 .1 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-attachment:fixed}
 button{font:inherit;color:inherit;cursor:pointer}
 :focus-visible{outline:3px solid var(--color-focus);outline-offset:3px}
 svg{display:block}
+.toon{display:block;width:100%;height:auto;overflow:visible}
+.haptic{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;overflow:hidden}
 
-/* ---------- stage 1: envelope ---------- */
-.stage{min-height:100vh;display:grid;place-items:center;padding:var(--space-2xl) var(--space-lg)}
-.intro{text-align:center;display:grid;gap:var(--space-xl);justify-items:center;transition:opacity var(--dur-med) var(--ease-out)}
-.intro h1{font:800 clamp(34px,5vw,60px)/1.04 var(--font-display);letter-spacing:-.03em;max-width:14ch}
-.hint{display:flex;align-items:center;gap:var(--space-sm);font:500 20px/1.3 var(--font-hand);color:var(--color-accent-ink)}
-.hint svg{width:34px;height:28px;transform:translateY(-6px)}
-.open-btn{background:none;border:0;padding:0;border-radius:16px}
-.env{position:relative;width:min(440px,84vw);aspect-ratio:3/2;perspective:900px;transform:rotate(-3deg);transition:transform var(--dur-med) var(--ease-out)}
-.env-back{position:absolute;inset:0;background:var(--color-env-dark);border:2.5px solid var(--color-ink);border-radius:14px;box-shadow:var(--shadow-sticker)}
-.peek{position:absolute;left:7%;right:7%;top:10%;height:80%;background:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:8px;z-index:1;padding:14% 10% 0;transition:transform .45s var(--ease-out) .35s}
-.peek i{display:block;height:6px;border-radius:3px;background:var(--color-rule);margin-bottom:10px}
-.peek i:nth-child(1){width:40%;background:var(--color-accent-mark)}
-.pocket{position:absolute;inset:0;z-index:2;border-radius:14px;overflow:hidden;pointer-events:none}
-.pocket::before{content:"";position:absolute;inset:0;background:var(--color-env);clip-path:polygon(0 0,50% 56%,100% 0,100% 100%,0 100%)}
-.pocket::after{content:"";position:absolute;inset:0;background:var(--color-env-light);clip-path:polygon(0 100%,50% 52%,100% 100%)}
-.to small{display:block;margin-top:6px;font:500 15px/1 var(--font-hand);color:var(--color-ink-soft)}
-.to{position:absolute;z-index:3;left:0;right:0;bottom:12%;font:700 22px/1 var(--font-hand);color:var(--color-ink)}
-.flap{position:absolute;inset:0 0 auto 0;height:58%;z-index:4;transform-origin:top;transition:transform var(--dur-slow) var(--ease-out)}
-.flap::before{content:"";position:absolute;inset:0;background:var(--color-env-dark);clip-path:polygon(0 0,100% 0,50% 100%);border-radius:14px 14px 0 0}
-.seal{position:absolute;left:50%;top:58%;translate:-50% -50%;z-index:5;width:64px;height:64px;border-radius:47% 53% 45% 55%/56% 43% 57% 44%;background:var(--color-accent);border:2.5px solid var(--color-ink);display:grid;place-items:center;color:var(--color-paper-2);font:700 26px/1 var(--font-hand);transition:opacity var(--dur-fast) var(--ease-out)}
-.open-btn:hover .env{transform:rotate(-1deg) translateY(-4px)}
-.seal{cursor:grab;touch-action:none;transform:translate(var(--dx,0px),var(--dy,0px)) rotate(var(--rot,0deg)) scale(var(--sc,1));box-shadow:var(--shadow-sticker-sm)}
-.seal::after{content:"";position:absolute;inset:-9px;border-radius:50%;border:2.5px dashed var(--color-accent-ink);animation:ring 1.6s ease-in-out infinite;pointer-events:none}
-@keyframes ring{0%,100%{scale:1;opacity:.8}50%{scale:1.15;opacity:.25}}
-.seal.drag{cursor:grabbing;transition:none}
-.seal.drag::after,.is-open .seal::after{display:none}
-.seal.back{transition:transform .45s cubic-bezier(.3,1.6,.5,1)}
-.seal.nudge{animation:nudge .5s ease-in-out}
-@keyframes nudge{0%,100%{rotate:0deg}25%{rotate:-14deg}75%{rotate:14deg}}
-.flap.drag,.peek.drag{transition:none}
-.flap.back,.peek.back{transition:transform .45s cubic-bezier(.3,1.6,.5,1)}
-.open-btn:hover .flap{transform:rotateX(-8deg)}
-.open-btn:active .env{transform:rotate(-2deg) translateY(1px)}
-.is-open .flap{transform:rotateX(180deg);z-index:0}
-.is-flip .flap{z-index:0}
-.is-open .hint,.is-open h1{opacity:0;transition:opacity var(--dur-med) var(--ease-out)}
+/* ornaments */
+.orn{position:absolute;width:44px;height:44px;color:var(--color-gold-ink);pointer-events:none}
+.orn.tl{top:8px;left:8px}.orn.tr{top:8px;right:8px;transform:scaleX(-1)}
+.orn.bl{bottom:8px;left:8px;transform:scaleY(-1)}.orn.br{bottom:8px;right:8px;transform:scale(-1)}
+.divider{width:220px;height:22px;margin:0 auto;color:var(--color-gold-ink)}
+.kicker{font:700 13px/1 var(--font-body);letter-spacing:.22em;text-transform:uppercase;color:var(--color-gold-ink)}
 
-/* ---------- stage 0: sound gate ---------- */
-.gate{position:fixed;inset:0;z-index:60;display:grid;place-items:center;background:var(--color-paper);transition:opacity .6s var(--ease-out),visibility .6s}
-.gate-in{text-align:center;display:grid;gap:var(--space-lg);justify-items:center;padding:var(--space-lg)}
-.gate-in p{font:500 22px/1.4 var(--font-hand);color:var(--color-ink-soft)}
-.gate-in b{font:800 clamp(30px,4vw,44px)/1.1 var(--font-display);letter-spacing:-.025em}
-.gate .send{font-size:17px;padding:14px 30px}
-.started .gate{opacity:0;visibility:hidden}
-.stage .env{animation:float 3.6s ease-in-out infinite}
-@keyframes float{0%,100%{translate:0 0}50%{translate:0 -8px}}
-.is-open .stage .env{animation:none}
-/* opening sequence */
-.is-open .seal{animation:pop .35s var(--ease-out) forwards}
-@keyframes pop{0%{opacity:1;scale:1}40%{scale:1.25}100%{opacity:0;scale:.4;rotate:40deg}}
-.is-open .flap{transition:transform .65s var(--ease-out) .3s}
-.is-open .peek{transition:transform .7s var(--ease-out) .85s;transform:translateY(-70%)}
-.is-drop .env-back,.is-drop .pocket,.is-drop .to,.is-drop .flap{transition:transform .55s cubic-bezier(.5,0,.75,0),opacity .55s;transform:translateY(120%);opacity:0}
-.is-drop .peek{transition:transform .55s var(--ease-out),opacity .55s .3s;transform:translateY(-70%) scale(1.35);opacity:0}
+/* ---------- 0 · cover (gate) ---------- */
+.gate{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding:var(--space-lg);perspective:1600px;transition:visibility 0s linear 1.1s}
+.gate::before{content:"";position:absolute;inset:0;background:inherit;background:var(--color-paper);transition:opacity .6s ease .6s}
+.cover{position:relative;width:min(400px,88vw);aspect-ratio:3/4.1;max-height:86vh;background:var(--color-lacquer);border:3px solid var(--color-ink);border-left-width:12px;border-radius:6px 18px 18px 6px;box-shadow:8px 8px 0 var(--color-ink);transform-origin:left center;transition:transform 1s cubic-bezier(.5,0,.2,1),opacity .4s ease .7s;touch-action:pan-y;user-select:none;display:grid;place-items:center;text-align:center;color:var(--color-gold-light);padding:44px 28px;cursor:grab}
+.cover::before,.cover::after{content:"";position:absolute;pointer-events:none;border-radius:4px 10px 10px 4px}
+.cover::before{inset:14px;border:2px solid var(--color-gold)}
+.cover::after{inset:20px;border:1px solid var(--color-gold)}
+.cover .orn{color:var(--color-gold);width:40px;height:40px}
+.cover .orn.tl{top:24px;left:24px}.cover .orn.tr{top:24px;right:24px}.cover .orn.bl{bottom:24px;left:24px}.cover .orn.br{bottom:24px;right:24px}
+.cv{display:grid;gap:12px;justify-items:center;position:relative;z-index:1}
+.cv .kicker{color:var(--color-gold)}
+.cv h1{font:800 clamp(28px,7.4vw,38px)/1.22 var(--font-display);color:var(--color-gold-light);max-width:12ch}
+.cv .duo{display:flex;align-items:flex-end;gap:0;margin:2px 0}
+.cv .duo .toon{width:clamp(96px,26vw,124px)}
+.cv .by{font:500 15px/1.3 var(--font-hand);color:var(--color-gold)}
+.cv .open{margin-top:6px;background:var(--color-gold-light);color:var(--color-lacquer);border:2px solid var(--color-ink);border-radius:var(--radius-pill);padding:12px 26px;min-height:48px;font:700 16px/1 var(--font-body);box-shadow:var(--shadow-sticker-sm);transition:transform .12s var(--ease-out)}
+.cv .open:hover{transform:translate(-1px,-1px)}
+.cv .open:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--color-ink)}
+.cv .tip{font:500 13px/1.3 var(--font-hand);color:var(--color-gold);opacity:.9}
+.cover.drag{transition:none;cursor:grabbing}
+.started .cover{transform:rotateY(-118deg);opacity:0}
+.started .gate{visibility:hidden}
+.started .gate::before{opacity:0}
 
-/* multi-page letter */
-.pages{overflow:hidden;margin:0 calc(-1*clamp(28px,5vw,56px));touch-action:pan-y;cursor:grab;user-select:none}
-.pages.drag{cursor:grabbing}
-.track{display:flex;align-items:flex-start;transition:transform .45s var(--ease-out)}
-.pages.drag .track{transition:none}
-.pg{flex:0 0 100%;min-width:0;padding:0 clamp(28px,5vw,56px)}
-.pg:not(:first-child) h2{margin-top:0}
-.turn{font:500 17px/1.4 var(--font-hand);color:var(--color-accent-ink);clear:both;text-align:right}
-.pager{display:flex;align-items:center;gap:var(--space-md);margin-top:var(--space-lg);padding-top:var(--space-md);border-top:2px dashed var(--color-rule)}
-.pbtn{width:44px;height:44px;border-radius:50%;border:2px solid var(--color-ink);background:var(--color-paper-2);font:700 24px/1 var(--font-display);display:grid;place-items:center;box-shadow:var(--shadow-sticker-sm);transition:transform var(--dur-fast) var(--ease-out)}
-.pbtn:hover{transform:translate(-1px,-1px)}
-.pbtn:active{transform:translate(1px,1px)}
-.pbtn:disabled{opacity:1;background:var(--color-paper);color:var(--color-ink-mute);border-color:var(--color-ink-mute);box-shadow:none;cursor:not-allowed;transform:none}
-.dots{display:flex;gap:8px;flex:1;justify-content:center}
-.dots i{width:9px;height:9px;border-radius:50%;background:var(--color-rule);border:1.5px solid var(--color-ink-mute);transition:transform var(--dur-fast) var(--ease-out)}
-.dots i.on{background:var(--color-accent);border-color:var(--color-ink);transform:scale(1.25)}
-.pnum{font:500 15px/1 var(--font-hand);color:var(--color-ink-soft);min-width:40px;text-align:right}
+/* ---------- 1 · quả thị ---------- */
+.stage{min-height:100svh;display:grid;place-items:center;padding:var(--space-2xl) var(--space-lg)}
+.intro{text-align:center;display:grid;gap:var(--space-md);justify-items:center}
+.intro .kicker{margin-bottom:-4px}
+.intro h2{font:800 clamp(32px,5vw,54px)/1.22 var(--font-display);max-width:16ch}
+.intro .rhyme{font:500 19px/1.4 var(--font-hand);color:var(--color-ink-soft);margin-top:-6px}
+.tree{position:relative;width:min(440px,88vw);height:400px;margin-top:var(--space-sm)}
+.branch{position:absolute;inset:0 0 auto;width:100%;height:120px;color:var(--color-ink)}
+.stem{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.thi{position:absolute;left:50%;top:150px;width:120px;height:120px;margin-left:-60px;background:none;border:0;padding:0;touch-action:none;cursor:grab;border-radius:50%;
+  transform:translate(var(--dx,0px),var(--dy,0px)) rotate(var(--rot,0deg)) scale(var(--sx,1),var(--sy,1));animation:sway 3s ease-in-out infinite;transform-origin:50% 0}
+.thi .toon{width:120px;height:120px;pointer-events:none}
+@keyframes sway{0%,100%{rotate:-4deg}50%{rotate:4deg}}
+.thi.drag{animation:none;cursor:grabbing}
+.thi.back{transition:transform .5s var(--ease-spring)}
+.thi.nudge{animation:jiggle .5s ease-in-out}
+@keyframes jiggle{0%,100%{rotate:0}20%{rotate:-16deg}50%{rotate:14deg}80%{rotate:-8deg}}
+.ground{position:absolute;left:8%;right:8%;bottom:18px;height:14px;border-radius:50%;background:oklch(80% .05 70 / .5)}
+.bup{position:absolute;left:50%;bottom:70px;translate:-50% 0;font:800 44px/1.22 var(--font-display);color:var(--color-accent);opacity:0;pointer-events:none}
+.hint{display:flex;align-items:center;gap:var(--space-sm);font:500 19px/1.3 var(--font-hand);color:var(--color-accent-ink);min-height:30px}
+.hint svg{width:22px;height:30px;animation:down 1.2s ease-in-out infinite}
+@keyframes down{0%,100%{transform:translateY(-3px)}50%{transform:translateY(4px)}}
+.is-open .hint,.is-open .intro h2,.is-open .rhyme,.is-open .intro .kicker{opacity:.0;transition:opacity .4s}
 
-.petal{position:fixed;width:16px;height:16px;pointer-events:none;z-index:50}
-
-/* ---------- music pill ---------- */
-.music{position:fixed;bottom:20px;left:24px;z-index:40;display:none;align-items:center;gap:var(--space-sm);background:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:var(--radius-pill);box-shadow:var(--shadow-sticker-sm);padding:6px 16px 6px 8px;min-height:44px;font:700 15px/1 var(--font-hand);transition:transform var(--dur-fast) var(--ease-out)}
+/* ---------- music ---------- */
+.music{position:fixed;bottom:20px;left:24px;z-index:40;display:none;align-items:center;gap:var(--space-sm);background:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:var(--radius-pill);box-shadow:var(--shadow-sticker-sm);padding:6px 16px 6px 8px;min-height:44px;font:700 15px/1 var(--font-hand)}
 .started .music{display:flex}
-.music:hover{transform:translate(-1px,-1px)}
-.music:active{transform:translate(1px,1px)}
 .disc{width:28px;height:28px;animation:spin 3.2s linear infinite;animation-play-state:paused}
 .music[aria-pressed="true"] .disc{animation-play-state:running}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-/* ---------- stage 2: letter + promises ---------- */
-.read{display:none;padding:var(--space-4xl) var(--space-lg) var(--space-4xl)}
+/* scroll progress: chiếc hài chạy */
+.prog{position:fixed;top:0;left:0;right:0;height:5px;z-index:45;background:oklch(88% .04 75 / .7);display:none}
+.is-read .prog{display:block}
+.prog i{position:absolute;inset:0 auto 0 0;width:var(--p,0%);background:var(--color-gold-ink)}
+.prog .shoe{position:absolute;top:-2px;left:var(--p,0%);width:46px;translate:-40px 0}
+.prog .shoe .toon{width:46px;height:auto}
+
+/* ---------- 2 · cuốn sách ---------- */
+.read{display:none;padding:var(--space-4xl) var(--space-lg)}
 .is-read .stage{display:none}
 .is-read .read{display:block}
-.layout{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr);gap:var(--space-3xl)}
-.is-read .letter{animation:land .6s var(--ease-out) both}
-@keyframes land{from{opacity:0;transform:translateY(40px) scale(.97) rotate(-1deg)}to{opacity:1;transform:none}}
-.sheet{position:relative}
-.sheet::before{content:"";position:absolute;inset:0;background:var(--color-env-light);border:2px solid var(--color-ink);border-radius:var(--radius-card);transform:rotate(1.4deg)}
-.letter{position:relative;background-color:var(--color-paper-2);border:2.5px solid var(--color-ink);border-radius:var(--radius-card);box-shadow:var(--shadow-sticker);padding:clamp(28px,5vw,56px)}
-.date{font:500 16px/1.75 var(--font-hand);color:var(--color-ink-soft)}
-.letter h2{font:800 clamp(32px,4vw,46px)/1.08 var(--font-display);letter-spacing:-.025em;margin:var(--space-sm) 0 var(--space-lg)}
-.letter h2 .u{background:linear-gradient(transparent 58%,var(--color-accent-mark) 58%);padding:0 2px}
-.letter p{max-width:60ch;margin-bottom:1.75em}
-.is-read .letter .r{animation:fadeup .5s var(--ease-out) both;animation-delay:calc(.45s + var(--i)*.22s)}
-@keyframes fadeup{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-.funny{float:right;width:190px;margin:0 -8px var(--space-lg) var(--space-lg);background:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:6px;box-shadow:var(--shadow-sticker-sm);padding:10px 10px 12px;transform:rotate(3deg);position:relative}
-.funny::before{content:"";position:absolute;top:-12px;left:50%;width:70px;height:22px;translate:-50% 0;rotate:-4deg;background:var(--color-accent-mark);opacity:.85}
-.funny img,.funny video{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:3px}
-.funny.vid{rotate:-6deg}
+.layout{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr);gap:var(--space-3xl)}
+.book{position:relative;background:var(--color-paper-3);border:2.5px solid var(--color-ink);border-left-width:10px;border-radius:6px 20px 20px 6px;box-shadow:4px 4px 0 var(--color-paper-3),6px 6px 0 var(--color-ink),10px 10px 0 var(--color-paper-3),12px 12px 0 var(--color-ink);padding:10px}
+.is-read .book{animation:land .7s var(--ease-out) both}
+@keyframes land{from{opacity:0;transform:translateY(40px) rotate(-2deg) scale(.96)}to{opacity:1;transform:none}}
+.pages{position:relative;perspective:2000px;touch-action:pan-y;user-select:none;cursor:grab;transition:height .4s var(--ease-out)}
+.pages.drag{cursor:grabbing}
+.pg{position:absolute;inset:0 0 auto 0;background:var(--color-paper-2);border-radius:4px 14px 14px 4px;padding:clamp(28px,5vw,52px) clamp(24px,5vw,52px) clamp(24px,4vw,40px);transform-origin:left center;transition:transform .9s cubic-bezier(.3,.7,.2,1),box-shadow .9s;backface-visibility:hidden;overflow:hidden;box-shadow:inset 18px 0 22px -18px oklch(40% .05 50 / .35)}
+.pg.gone{transform:rotateY(-172deg);box-shadow:-30px 0 40px -20px oklch(30% .05 50 / .5)}
+.pages.drag .pg{transition:none}
+.pg:not(.cur){bottom:0}
+.pg .orn{width:34px;height:34px;opacity:.7}
+.chap{font:700 13px/1 var(--font-body);letter-spacing:.22em;text-transform:uppercase;color:var(--color-gold-ink)}
+.pg h3{font:800 clamp(28px,3.6vw,40px)/1.22 var(--font-display);margin:var(--space-sm) 0 var(--space-lg)}
+.pg h3 .u{background:linear-gradient(transparent 60%,var(--color-accent-mark) 60%);padding:0 2px}
+.pg p{max-width:60ch;margin-bottom:1.4em}
+.pg .lead::first-letter{float:left;font:800 3.6em/1 var(--font-display);color:var(--color-accent);margin:.06em .1em 0 0}
+.date{font:500 15px/1.6 var(--font-hand);color:var(--color-ink-soft)}
+.tf{float:right;width:150px;margin:0 -6px var(--space-sm) var(--space-md);shape-outside:circle(50%)}
+.tf .toon{animation:bob 3.2s ease-in-out infinite}
+.turn{font:500 17px/1.4 var(--font-hand);color:var(--color-accent-ink);clear:both;text-align:right;margin:0!important}
+.turn span{display:inline-block;animation:nudgeR 1.4s ease-in-out infinite}
+@keyframes nudgeR{0%,100%{transform:none}50%{transform:translateX(6px)}}
+.funny{float:right;width:180px;margin:0 -6px var(--space-lg) var(--space-lg);background:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:6px;box-shadow:var(--shadow-sticker-sm);padding:10px 10px 12px;rotate:-3deg;position:relative}
+.funny::before{content:"";position:absolute;top:-12px;left:50%;width:70px;height:22px;translate:-50% 0;rotate:-4deg;background:var(--color-gold);opacity:.75}
+.funny video{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 35%;border-radius:3px}
 .funny figcaption{font:500 14px/1.3 var(--font-hand);margin-top:8px;color:var(--color-ink-soft)}
-.sign{clear:both;font:700 28px/1.2 var(--font-hand);color:var(--color-accent-ink);margin-top:var(--space-sm)}
-.sign span{display:block;margin-top:6px;font:500 21px/1.3 var(--font-hand);color:var(--color-ink-soft)}
+.sign{clear:both;font:700 26px/1.2 var(--font-hand);color:var(--color-accent-ink)}
+.sign span{display:block;margin-top:6px;font:500 20px/1.3 var(--font-hand);color:var(--color-ink-soft)}
+.pager{display:flex;align-items:center;gap:var(--space-md);padding:var(--space-md) clamp(14px,3vw,30px) 6px}
+.pbtn{width:46px;height:46px;border-radius:50%;border:2px solid var(--color-ink);background:var(--color-paper-2);display:grid;place-items:center;box-shadow:var(--shadow-sticker-sm);transition:transform .12s var(--ease-out)}
+.pbtn:hover{transform:translate(-1px,-1px)}
+.pbtn:active{transform:translate(1px,1px)}
+.pbtn:disabled{background:var(--color-paper-3);color:var(--color-ink-mute);border-color:var(--color-ink-mute);box-shadow:none;cursor:not-allowed;transform:none}
+.dots{display:flex;gap:8px;flex:1;justify-content:center}
+.dots i{width:10px;height:10px;border-radius:50%;background:var(--color-paper-2);border:1.5px solid var(--color-ink-mute);transition:transform .15s}
+.dots i.on{background:var(--color-accent);border-color:var(--color-ink);transform:scale(1.25)}
+.pnum{font:500 15px/1 var(--font-hand);color:var(--color-ink-soft);min-width:64px;text-align:right}
 
-.side h3,.memories h3{font:800 clamp(24px,2.6vw,30px)/1.1 var(--font-display);letter-spacing:-.02em;margin-bottom:var(--space-lg)}
+/* side: chuộc lỗi + điều ước của Bụt */
+.side{position:relative}
+.side h4.h{font:800 clamp(24px,2.6vw,30px)/1.22 var(--font-display);margin:6px 0 var(--space-lg)}
 .stack{display:grid;gap:var(--space-lg)}
-.card{border:2px solid var(--color-ink);border-radius:var(--radius-card);padding:var(--space-lg);box-shadow:var(--shadow-sticker-sm);display:grid;grid-template-columns:44px minmax(0,1fr);gap:var(--space-md);align-items:start}
-.card svg{width:44px;height:44px}
-.card h4{font:700 20px/1.25 var(--font-display);margin-bottom:var(--space-xs)}
-.card p{font-size:16px;line-height:1.6;color:var(--color-ink-soft)}
-.c1{background:var(--color-sun-tint)}
-.c2{background:var(--color-mint-tint)}
-
-/* ticket */
-.ticket{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 64px;background:var(--color-iris-tint);border:2px solid var(--color-ink);border-radius:var(--radius-card);box-shadow:var(--shadow-sticker-sm)}
-.ticket::before,.ticket::after{content:"";position:absolute;right:52px;width:24px;height:24px;border-radius:50%;background:var(--color-paper);border:2px solid var(--color-ink)}
-.ticket::before{top:-13px;clip-path:inset(50% 0 0 0)}
-.ticket::after{bottom:-13px;clip-path:inset(0 0 50% 0)}
-.t-main{padding:var(--space-lg);border-right:2px dashed var(--color-ink)}
-.t-head{display:grid;grid-template-columns:44px minmax(0,1fr);gap:var(--space-md);align-items:start}
-.t-head svg{width:44px;height:44px}
-.t-head h4{font:700 20px/1.25 var(--font-display);margin-bottom:var(--space-xs)}
-.t-head p{font-size:16px;line-height:1.6;color:var(--color-ink-soft)}
-.t-stub{writing-mode:vertical-rl;display:grid;place-items:center;font:700 13px/1 var(--font-body);letter-spacing:.14em;color:var(--color-ink-soft)}
-.note{font:500 17px/1.4 var(--font-hand);color:var(--color-accent-ink);margin-top:var(--space-md)}
+.card{border:2px solid var(--color-ink);border-radius:var(--radius-card);padding:var(--space-md) var(--space-lg);box-shadow:var(--shadow-sticker-sm);display:grid;grid-template-columns:84px minmax(0,1fr);gap:var(--space-md);align-items:center;transition:transform .2s var(--ease-out)}
+.card:hover{transform:rotate(-1deg) translateY(-2px)}
+.card .toon{width:84px}
+.card h5{font:700 19px/1.25 var(--font-display);margin-bottom:2px}
+.card p{font-size:15.5px;line-height:1.55;color:var(--color-ink-soft)}
+.c1{background:var(--color-sun-tint)}.c2{background:var(--color-mint-tint)}
+.wish{position:relative;background:var(--color-iris-tint);border:2px solid var(--color-ink);border-radius:var(--radius-card);box-shadow:var(--shadow-sticker-sm);padding:var(--space-lg)}
+.cloud{display:grid;justify-items:center;gap:6px;text-align:center;background:none;border:0;width:100%;padding:var(--space-sm)}
+.cloud svg{width:150px;height:auto;transition:transform .2s var(--ease-spring)}
+.cloud:hover svg{transform:scale(1.05)}
+.cloud.poke svg{animation:poke .35s var(--ease-spring)}
+@keyframes poke{0%{transform:scale(1)}40%{transform:scale(.88,1.1)}100%{transform:scale(1)}}
+.cloud b{font:700 19px/1.3 var(--font-display)}
+.cloud span{font:500 15px/1.3 var(--font-hand);color:var(--color-accent-ink)}
+.wbody{display:none}
+.wish.but .cloud{display:none}
+.wish.but .wbody{display:block;animation:poof .6s var(--ease-spring) both}
+@keyframes poof{from{opacity:0;transform:scale(.6) translateY(20px)}to{opacity:1;transform:none}}
+.butrow{display:grid;grid-template-columns:96px minmax(0,1fr);gap:var(--space-md);align-items:center}
+.butrow .toon{width:96px}
+.say{font:700 19px/1.3 var(--font-display)}
+.say small{display:block;font:500 15px/1.5 var(--font-body);color:var(--color-ink-soft);margin-top:4px}
+.note{font:500 16px/1.4 var(--font-hand);color:var(--color-accent-ink);margin-top:var(--space-md)}
 .opts{display:flex;flex-wrap:wrap;gap:var(--space-sm);margin:var(--space-md) 0}
-.opt{background:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:var(--radius-pill);padding:9px 16px;min-height:44px;font-weight:500;font-size:15px;line-height:1.3;text-align:left;transition:transform var(--dur-fast) var(--ease-out),background-color var(--dur-fast) var(--ease-out)}
+.opt{background:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:var(--radius-pill);padding:9px 16px;min-height:44px;font-weight:500;font-size:15px;line-height:1.3;text-align:left;transition:transform .12s var(--ease-out),background-color .12s}
 .opt:hover{transform:translateY(-2px)}
 .opt[aria-pressed="true"]{background:var(--color-ink);color:var(--color-paper-2);font-weight:700}
 .own{display:none;width:100%;margin-bottom:var(--space-md);padding:12px 16px;border:2px solid var(--color-ink);border-radius:14px;font:inherit;font-size:16px;background:var(--color-paper-2)}
 .own:focus-visible{outline:none;border-color:var(--color-accent-ink);box-shadow:0 0 0 3px var(--color-accent-mark)}
 .own.show{display:block}
-.send{background:var(--color-accent);color:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:var(--radius-pill);padding:12px 24px;min-height:48px;font:700 16px/1 var(--font-body);box-shadow:var(--shadow-sticker-sm);white-space:nowrap;transition:transform var(--dur-fast) var(--ease-out),box-shadow var(--dur-fast) var(--ease-out)}
-.send:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--color-ink)}
+.send{background:var(--color-accent);color:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:var(--radius-pill);padding:12px 24px;min-height:48px;font:700 16px/1 var(--font-body);box-shadow:var(--shadow-sticker-sm);transition:transform .12s var(--ease-out)}
+.send:hover{transform:translate(-1px,-1px)}
 .send:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--color-ink)}
 .send:disabled{background:var(--color-mute-btn);color:var(--color-ink-soft);cursor:not-allowed;transform:none;box-shadow:none;border-color:var(--color-ink-mute)}
 .hint-pick{font-size:14px;color:var(--color-ink-soft);margin-top:var(--space-sm)}
-.done{display:none;margin-top:var(--space-md);font:500 17px/1.5 var(--font-hand);color:var(--color-ink)}
-.stamp{display:none;position:absolute;right:88px;bottom:22px;border:3px solid var(--color-accent-ink);color:var(--color-accent-ink);border-radius:10px;padding:6px 12px;font:800 18px/1 var(--font-display);letter-spacing:.06em;transform:rotate(-8deg);background:var(--color-paper-2)}
+.done{display:none;margin-top:var(--space-md);font:500 17px/1.5 var(--font-hand)}
+.stamp{display:none;position:absolute;right:20px;bottom:20px;border:3px solid var(--color-accent-ink);color:var(--color-accent-ink);border-radius:10px;padding:6px 12px;font:800 16px/1.22 var(--font-display);letter-spacing:.06em;transform:rotate(-8deg);background:var(--color-paper-2)}
 .used .stamp{display:block;animation:stamp .25s var(--ease-out) both}
 .used .done{display:block}
-.used .t-main{padding-bottom:72px}
-.used .opts,.used .send,.used .hint-pick,.used .own{display:none}
-@keyframes stamp{from{opacity:0;transform:rotate(-8deg) scale(1.4)}to{opacity:1;transform:rotate(-8deg) scale(1)}}
+.used .wbody{padding-bottom:56px}
+.used .opts,.used .send,.used .hint-pick,.used .own,.used .note{display:none}
+@keyframes stamp{from{opacity:0;transform:rotate(-8deg) scale(1.5)}to{opacity:1;transform:rotate(-8deg) scale(1)}}
+.lock{display:none;position:absolute;z-index:3;top:150px;left:50%;translate:-50% 0;rotate:-3deg;white-space:nowrap;background:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:999px;box-shadow:var(--shadow-sticker-sm);padding:10px 18px;font:700 17px/1.2 var(--font-hand);color:var(--color-accent-ink)}
 
-/* memories */
-.memories{max-width:1120px;margin:var(--space-4xl) auto 0}
-.memories .sub{font:500 18px/1.4 var(--font-hand);color:var(--color-ink-soft);margin:-12px 0 var(--space-lg)}
-.strip{display:flex;align-items:flex-start;gap:var(--space-lg);overflow-x:auto;scroll-snap-type:x mandatory;padding:var(--space-md) var(--space-sm) var(--space-xl)}
-.pc{flex:0 0 200px;scroll-snap-align:start;background:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:6px;box-shadow:var(--shadow-sticker-sm);padding:12px 12px 16px;transform:rotate(var(--r))}
-.pc .ph{height:150px;border-radius:3px;display:grid;place-items:end start;padding:12px;background:var(--bg);border:1.5px solid var(--color-ink)}
-.pc .ph b{font:800 26px/1 var(--font-display);letter-spacing:-.02em;color:var(--color-ink)}
-.pc figcaption{font:500 16px/1.35 var(--font-hand);margin-top:10px}
-.pc figcaption small{display:block;font:500 14px/1.3 var(--font-body);color:var(--color-ink-soft);margin-top:2px}
-.pc.photo img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:3px;border:1.5px solid var(--color-ink)}
-.pc .ph{aspect-ratio:3/4;height:auto}
+/* ---------- 3 · sections ---------- */
+.sec{max-width:1140px;margin:var(--space-4xl) auto 0}
+.shead{text-align:center;margin-bottom:var(--space-2xl);display:grid;gap:10px;justify-items:center}
+.shead h4{font:800 clamp(28px,3.4vw,40px)/1.22 var(--font-display);max-width:20ch}
+.shead p{font:500 18px/1.4 var(--font-hand);color:var(--color-ink-soft)}
+.shead .toon{width:130px}
+.rv{opacity:0;transform:translateY(28px) rotate(var(--rr,0deg));transition:opacity .7s var(--ease-out),transform .7s var(--ease-out);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:rotate(var(--r,0deg))}
+.strip{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--space-xl) var(--space-lg)}
+.pc{width:196px;background:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:6px;box-shadow:var(--shadow-sticker-sm);padding:12px 12px 14px;position:relative;cursor:zoom-in}
+.pc::before{content:"";position:absolute;top:-10px;left:50%;width:60px;height:20px;translate:-50% 0;rotate:-3deg;background:var(--color-gold);opacity:.7}
+.pc:hover{z-index:2}
+.pc.in:hover{transform:rotate(0) scale(1.06)}
+.pc .ph{aspect-ratio:3/4;display:grid;place-items:end start;padding:12px;background:var(--bg);border:1.5px solid var(--color-ink);border-radius:3px}
+.pc .ph b{font:800 24px/1.22 var(--font-display)}
+.pc:not(.photo){cursor:default}
 .pc:not(.photo):not(.next) .ph{aspect-ratio:auto;height:110px}
 .pc.next .ph{background:repeating-linear-gradient(45deg,var(--color-paper-2) 0 10px,var(--bg) 10px 20px)}
-
+.pc img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:3px;border:1.5px solid var(--color-ink)}
+.pc figcaption{font:500 16px/1.35 var(--font-hand);margin-top:10px}
+.pc figcaption small{display:block;font:500 13.5px/1.3 var(--font-body);color:var(--color-ink-soft);margin-top:2px}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:70;display:none;place-items:center;background:oklch(25% .03 40 / .82);padding:var(--space-lg);touch-action:pan-y}
+.lb.on{display:grid}
+.lb figure{max-width:min(560px,92vw);background:var(--color-paper-2);border:2.5px solid var(--color-ink);border-radius:8px;padding:14px 14px 16px;box-shadow:var(--shadow-sticker);animation:pop .3s var(--ease-spring)}
+@keyframes pop{from{transform:scale(.85);opacity:0}to{transform:none;opacity:1}}
+.lb img{display:block;width:100%;max-height:72vh;object-fit:contain;border-radius:4px}
+.lb figcaption{font:500 18px/1.4 var(--font-hand);margin-top:10px;text-align:center}
+.lb .x,.lb .lp,.lb .ln{position:fixed;width:48px;height:48px;border-radius:50%;border:2px solid var(--color-ink);background:var(--color-paper-2);display:grid;place-items:center;box-shadow:var(--shadow-sticker-sm)}
+.lb .x{top:18px;right:18px;font:700 22px/1 var(--font-body)}
+.lb .lp{left:18px;top:50%}.lb .ln{right:18px;top:50%}
 /* journeys */
-.journey{max-width:1120px;margin:var(--space-4xl) auto 0}
-.journey h3{font:800 clamp(24px,2.6vw,30px)/1.1 var(--font-display);letter-spacing:-.02em;margin-bottom:var(--space-lg)}
-.journey .sub{font:500 18px/1.4 var(--font-hand);color:var(--color-ink-soft);margin:-12px 0 var(--space-xl)}
 .wed{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-xl)}
 .wcard{background:var(--color-paper-2);border:2.5px solid var(--color-ink);border-radius:var(--radius-card);box-shadow:var(--shadow-sticker);overflow:hidden;display:grid;grid-template-rows:240px auto}
 .wcard>img,.wcard .sun,.wcard .sun svg{width:100%;height:240px;object-fit:cover;border-bottom:2.5px solid var(--color-ink)}
+.wcard>img{object-position:50% 25%}
 .wcard .sun svg{border:0}
-.wbody{padding:var(--space-lg) var(--space-xl) var(--space-xl)}
-.wdate{font:700 15px/1 var(--font-body);letter-spacing:.08em;color:var(--color-accent-ink)}
-.wbody h4{font:800 clamp(24px,2.4vw,30px)/1.1 var(--font-display);letter-spacing:-.02em;margin:var(--space-sm) 0}
-.wbody p{color:var(--color-ink-soft);font-size:16px;line-height:1.6}
+.wb{padding:var(--space-lg) var(--space-xl) var(--space-xl)}
+.wdate{font:700 14px/1 var(--font-body);letter-spacing:.1em;color:var(--color-accent-ink)}
+.wb h5{font:800 clamp(24px,2.4vw,30px)/1.22 var(--font-display);margin:var(--space-sm) 0}
+.wb p{color:var(--color-ink-soft);font-size:16px;line-height:1.6}
 .wcount{margin-top:var(--space-md);font:500 18px/1.2 var(--font-hand)!important;color:var(--color-ink)!important}
-.wcount b{font:800 40px/1 var(--font-display);color:var(--color-accent-ink);letter-spacing:-.03em;margin-right:4px}
+.wcount b{font:800 42px/1.22 var(--font-display);color:var(--color-accent-ink);margin-right:4px}
 .logos{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-evenly;gap:var(--space-xl) var(--space-3xl);background:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:var(--radius-card);padding:var(--space-lg) var(--space-xl);margin-bottom:var(--space-xl)}
-.logos img{height:64px;width:auto}
+.logos img{height:60px;width:auto}
 .road{list-style:none;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--space-md);counter-reset:r}
-.road li{position:relative;background:var(--color-iris-tint);border:2px solid var(--color-ink);border-radius:18px;padding:var(--space-lg) var(--space-md) var(--space-md);box-shadow:var(--shadow-sticker-sm);display:grid;gap:6px;align-content:start}
+.road li{position:relative;background:var(--color-iris-tint);border:2px solid var(--color-ink);border-radius:16px;padding:var(--space-lg) var(--space-md) var(--space-md);box-shadow:var(--shadow-sticker-sm);display:grid;gap:6px;align-content:start}
 .road li::before{counter-increment:r;content:counter(r);position:absolute;top:-14px;left:16px;width:28px;height:28px;border-radius:50%;background:var(--color-ink);color:var(--color-paper-2);display:grid;place-items:center;font:700 14px/1 var(--font-body)}
 .road .rd{font:500 15px/1.2 var(--font-hand);color:var(--color-accent-ink)}
 .road b{font:700 17px/1.25 var(--font-display)}
 .road li>span:last-child{font-size:14px;line-height:1.5;color:var(--color-ink-soft)}
-.road .goal{background:var(--color-accent-ink);color:var(--color-paper-2)}
-.road .goal .rd,.road .goal>span:last-child{color:var(--color-paper-2)}
-@media (max-width:900px){.road{grid-template-columns:minmax(0,1fr)}.wed{grid-template-columns:minmax(0,1fr)}.logos img{height:44px}}
-
-/* closing */
-.closing{max-width:720px;margin:var(--space-4xl) auto 0;text-align:center}
-.count{display:inline-block;background:var(--color-paper-2);border:2.5px solid var(--color-ink);border-radius:var(--radius-card);box-shadow:var(--shadow-sticker);padding:var(--space-xl) var(--space-2xl)}
-.count .n{display:block;font:800 clamp(56px,8vw,88px)/1 var(--font-display);letter-spacing:-.04em;color:var(--color-accent-ink)}
-.count .l{display:block;font:500 20px/1.4 var(--font-hand);margin-top:var(--space-sm)}
-.count .d{display:block;font-size:14px;color:var(--color-ink-soft);margin-top:var(--space-xs)}
-.promise{font:700 24px/1.4 var(--font-hand)}
-.again{margin-top:var(--space-lg)}
+.road .goal{background:var(--color-lacquer);color:var(--color-paper-2)}
+.road .goal .rd,.road .goal>span:last-child{color:var(--color-gold-light)}
+/* epilogue */
+.epi{max-width:720px;margin:var(--space-4xl) auto 0;text-align:center;position:relative}
+.forgive{position:relative;min-height:330px;display:grid;justify-items:center;gap:var(--space-md)}
+.fface{width:170px;height:170px;position:relative}
+.fface .toon{position:absolute;inset:0;transition:opacity .4s,transform .5s var(--ease-spring)}
+.fface .after{opacity:0;transform:scale(.6)}
+.forgiven .fface .before{opacity:0;transform:scale(.6)}
+.forgiven .fface .after{opacity:1;transform:none}
+.fq{font:800 clamp(24px,3vw,32px)/1.22 var(--font-display)}
+.fbtns{position:relative;display:flex;gap:var(--space-md);justify-content:center;min-height:56px;width:100%}
+.yes,.no{border:2px solid var(--color-ink);border-radius:var(--radius-pill);padding:12px 26px;min-height:50px;font:700 17px/1 var(--font-body);box-shadow:var(--shadow-sticker-sm)}
+.yes{background:var(--color-accent);color:var(--color-paper-2)}
+.no{background:var(--color-paper-2);transition:transform .25s var(--ease-spring)}
+.fsmall{font:500 15px/1.3 var(--font-hand);color:var(--color-ink-mute);min-height:20px}
+.ending{display:none}
+.forgiven .fq,.forgiven .fbtns,.forgiven .fsmall{display:none}
+.forgiven .ending{display:block;animation:poof .7s var(--ease-spring) both}
+.promise{font:700 23px/1.45 var(--font-hand);max-width:34ch;margin:0 auto}
+.het{font:800 clamp(44px,6vw,64px)/1.22 var(--font-display);color:var(--color-accent-ink);letter-spacing:.2em;margin:var(--space-xl) 0 var(--space-sm);padding-left:.2em}
 .again button{background:none;border:0;font:500 15px/1 var(--font-hand);color:var(--color-ink-mute);text-decoration:underline;text-underline-offset:4px;padding:var(--space-sm)}
-.again button:hover{color:var(--color-ink)}
+.heart{position:fixed;width:22px;height:22px;pointer-events:none;z-index:55}
+.petal{position:fixed;width:16px;height:16px;pointer-events:none;z-index:55}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -6px}}
 
 @media (min-width:1100px){
-  .strip{flex-wrap:wrap;justify-content:center;overflow:visible;row-gap:var(--space-2xl)}
-  .layout{grid-template-columns:minmax(0,640px) 400px;justify-content:center;gap:var(--space-3xl);align-items:start}
+  .layout{grid-template-columns:minmax(0,660px) 400px;justify-content:center;gap:var(--space-3xl);align-items:start}
   .side{position:sticky;top:var(--space-2xl)}
   #app:not(.promised) .side>*:not(.lock){filter:blur(6px);opacity:.45;pointer-events:none;user-select:none}
   #app:not(.promised) .lock{display:block}
   .side>*{transition:filter .6s var(--ease-out),opacity .6s var(--ease-out)}
-  .read{padding-top:84px}
 }
+@media (max-width:1299px){.music{padding:6px}.music #musicLabel{display:none}}
+.sgwrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:var(--space-xl);align-items:start}
+.map{position:relative;margin:0;border:2px solid var(--color-ink);border-radius:20px;overflow:hidden;box-shadow:var(--shadow-sticker);background:var(--color-sea);touch-action:pan-y}
+.mapsvg{display:block;width:100%;height:auto}
+.map figcaption{font:500 16px/1.35 var(--font-hand);color:var(--color-ink);background:var(--color-paper-2);border-top:2px solid var(--color-ink);padding:10px 14px;text-align:center;min-height:3.2em;display:grid;place-items:center}
+.fly{position:absolute;left:0;top:0;width:13%;aspect-ratio:1;translate:-50% -50%;cursor:grab;touch-action:none;filter:drop-shadow(2px 3px 0 color-mix(in oklch,var(--color-ink) 30%,transparent));z-index:2;outline-offset:4px}
+.fly .toon{width:100%;height:auto;display:block;rotate:var(--tilt,0deg);transition:rotate .2s}
+.fly.drag{cursor:grabbing}
+.fly:focus-visible{outline:3px solid var(--color-accent);border-radius:50%}
+#stops circle{fill:var(--color-paper-2);stroke:var(--color-ink);stroke-width:2;transition:fill .3s}
+#stops circle.on{fill:var(--color-gold)}
+#lion .lionpop{transform:scale(0);transform-box:fill-box;transform-origin:center;transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
+.map.arrived #lion .lionpop{transform:scale(1)}
+.sgwrap .road{grid-template-columns:minmax(0,1fr);gap:var(--space-lg);padding-top:14px}
+.sgwrap .road li{transition:background .3s,transform .3s}
+.sgwrap .road li.here{background:var(--color-sun-tint);transform:translateX(6px)}
+.sgwrap .road li.goal.here{background:var(--color-lacquer)}
+@media (max-width:900px){.sgwrap{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:900px){.road{grid-template-columns:minmax(0,1fr)}.wed{grid-template-columns:minmax(0,1fr)}.logos img{height:42px}}
 @media (max-width:640px){
   body{font-size:16px}
-  .music{top:10px;right:10px;bottom:auto;left:auto;padding:6px}
-  .music #musicLabel{display:none}
-  .read{padding-top:84px}
-  .stamp{right:80px}
-  .funny{width:150px;margin-right:0}
+  .music{top:12px;right:12px;bottom:auto;left:auto}
+  .tf{width:104px}
+  .funny{float:none;width:170px;margin:0 auto var(--space-xl)}
+  .card{grid-template-columns:64px minmax(0,1fr)}.card .toon{width:64px}
+  .butrow{grid-template-columns:72px minmax(0,1fr)}.butrow .toon{width:72px}
+  .pc{width:calc(50% - 12px)}
+  .tree{height:370px}
+  .lb .lp,.lb .ln{top:auto;bottom:22px}
 }
 @media (prefers-reduced-motion:reduce){
-  .disc{animation:none}
-  .flap,.peek,.env{transition:none}
-  .is-open .flap{transform:none}
-  .is-open .peek{transform:none}
-  .stage .env,.is-open .seal{animation:none}
-  .gate{transition:none}
-  .is-read .letter,.is-read .letter .r,.used .stamp{animation:fade .15s linear both;animation-delay:0s}
-  @keyframes fade{from{opacity:0}to{opacity:1}}
+  *,*::before,*::after{animation:none!important;transition-duration:.01s!important;transition-delay:0s!important}
+  .rv{opacity:1;transform:none}
 }
-.w1>img{object-position:50% 25%}
-.used .note{display:none}
-@media(max-width:640px){.ticket{grid-template-columns:minmax(0,1fr) 40px}.ticket::before,.ticket::after{right:28px}.t-stub{font-size:11px}}
-
-/* ---------- nhân vật ---------- */
-.toon{display:block;width:100%;height:auto;overflow:visible}
-.gate-toons{display:flex;gap:4px;align-items:flex-end}
-.gate-toons .toon{width:150px}
-.gate-toons .toon:first-child{animation:huff 1.8s ease-in-out infinite}
-.gate-toons .toon:last-child{animation:sob .5s ease-in-out infinite alternate}
-.tf{float:right;width:150px;margin:0 -6px var(--space-sm) var(--space-md)}
-.card{grid-template-columns:84px minmax(0,1fr)}
-.card svg.toon{width:84px;height:84px}
-.jt{float:right;width:150px;margin:-34px 0 0 var(--space-md)}
-.journey .wed,.journey .logos{clear:both}
-.ct{width:200px;margin:0 auto var(--space-md)}
-.ct .toon,.jt .toon,.tf .toon{animation:bob 3.2s ease-in-out infinite}
-@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -6px}}
-@keyframes huff{0%,100%{rotate:0deg}50%{rotate:-4deg}}
-@keyframes sob{from{translate:0 0}to{translate:0 2px}}
-@media(max-width:640px){.gate-toons .toon{width:118px}.tf{width:108px}.jt{width:104px;margin-top:-18px}.card{grid-template-columns:64px minmax(0,1fr)}.card svg.toon{width:64px;height:64px}}
-@media(prefers-reduced-motion:reduce){.toon,.gate-toons .toon{animation:none!important}}
-.lock{display:none;position:absolute;z-index:3;top:140px;left:50%;translate:-50% 0;rotate:-3deg;white-space:nowrap;background:var(--color-paper-2);border:2px solid var(--color-ink);border-radius:999px;box-shadow:var(--shadow-sticker-sm);padding:10px 18px;font:700 18px/1.2 var(--font-hand);color:var(--color-accent-ink)}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="orn" viewBox="0 0 48 48"><path d="M4 44V18C4 10 10 4 18 4h26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M10 40V20c0-6 4-10 10-10h20" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><path d="M18 4c8 0 11 8 5 11-4 2-7-3-3-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M4 18c0 8 8 11 11 5 2-4-3-7-4-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="div" viewBox="0 0 220 22"><path d="M4 11h78M138 11h78" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M90 11c0-6 8-8 11-3 2 4-2 7-5 5M130 11c0-6-8-8-11-3-2 4 2 7 5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M110 3l6 8-6 8-6-8z" fill="currentColor"/></symbol>
+  <symbol id="heart" viewBox="0 0 24 24"><path d="M12 21C5 15 2 11.5 2 8a5 5 0 0 1 10-1 5 5 0 0 1 10 1c0 3.5-3 7-10 13z"/></symbol>
+</svg>
+<label class="haptic" aria-hidden="true"><input type="checkbox" switch tabindex="-1" id="hapticSw"></label>
 <main id="app">
-  <div class="gate" id="gate"><div class="gate-in"><div class="gate-toons"><svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Nê khoanh tay giận dỗi"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round"><ellipse cx="100" cy="178" rx="44" ry="6" style="fill:var(--color-ink);opacity:.12;stroke:none"/><g transform="translate(100 128)"><path d="M-15,-2C-21,8-22,22-21,30L21,30C22,22 21,8 15,-2Z" style="fill:var(--color-paper-2)"/><path d="M-6,-2C-3,4 3,4 6,-2"/><path d="M-14,30L-14,44L-3,44L-2,30M2,30L3,44L14,44L14,30" style="fill:var(--color-paper-2)"/><ellipse cx="-9" cy="46" rx="7" ry="3" style="fill:var(--color-ink)"/><ellipse cx="9" cy="46" rx="7" ry="3" style="fill:var(--color-ink)"/><path d="M-19,6L13,14M19,6L-13,14" style="stroke-width:10"/><path d="M-19,6L13,14" style="stroke:#F6D2B8;stroke-width:5"/><path d="M19,6L-13,14" style="stroke:#F6D2B8;stroke-width:5"/></g><g transform="translate(102 88) rotate(-8) scale(-1 1)"><path d="M-28,-4C-34,14-32,36-24,42L24,42C32,36 34,14 28,-4Z" style="fill:var(--color-ink)"/><path d="M-26,0C-27,-16-14,-25 1,-25C16,-24 27,-15 26,1C26,17 14,25 0,25C-15,24-27,15-26,0Z" style="fill:#F6D2B8"/><path d="M-28,2C-31,-22-14,-34 1,-33C18,-33 32,-22 28,2C26,-8 22,-13 16,-14C10,-10 4,-12 0,-16C-6,-11-14,-11-18,-14C-23,-12-26,-6-28,2Z" style="fill:var(--color-ink)"/><path d="M-15,2L-6,2M6,2L15,2"/><path d="M-16,-6L-6,-3M16,-6L6,-3"/><g style="fill:none;stroke-width:2.2"><circle cx="-10" cy="3" r="7.5"/><circle cx="10" cy="3" r="7.5"/></g><path d="M-2,3L2,3"/><path d="M-4,15C-2,12 2,12 4,15"/><ellipse cx="-17" cy="12" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/><ellipse cx="17" cy="12" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/><ellipse cx="-21" cy="13" rx="9" ry="7" style="fill:var(--color-accent-mark)"/><ellipse cx="21" cy="13" rx="9" ry="7" style="fill:var(--color-accent-mark)"/></g><g transform="translate(140 48) scale(1.2)"><path d="M-8,-3C-3,-3-3,-3-3,-8M3,-8C3,-3 3,-3 8,-3M8,3C3,3 3,3 3,8M-3,8C-3,3-3,3-8,3" style="stroke:var(--color-accent);stroke-width:3.2"/></g><path d="M58,96C50,92 48,86 52,80M64,108C54,108 48,104 46,98"/><text x="132" y="158" font-size="20" transform="rotate(8 132 158)" style="fill:var(--color-ink);stroke:none;font:700 20px 'Comic Sans MS','Chalkboard SE',cursive">hứ!</text></g></svg><svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Hái quỳ xin lỗi, khóc huhu"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round"><ellipse cx="100" cy="176" rx="52" ry="6" style="fill:var(--color-ink);opacity:.12;stroke:none"/><path d="M70,150C66,166 78,174 100,174C124,174 136,166 130,150Z" style="fill:var(--color-iris-tint)"/><ellipse cx="74" cy="172" rx="10" ry="5" style="fill:var(--color-ink)"/><ellipse cx="126" cy="172" rx="10" ry="5" style="fill:var(--color-ink)"/><g transform="translate(100 118)"><path d="M-17,-4C-24,8-25,22-24,32L24,32C25,22 24,8 17,-4Z" style="fill:var(--color-ink)"/><path d="M-6,-4C-3,1 3,1 6,-4" style="fill:var(--color-sun-tint)"/><path d="M-19,8L13,16M19,8L-13,16" style="stroke-width:10"/><path d="M-19,8L13,16" style="stroke:#F6D2B8;stroke-width:5"/><path d="M19,8L-13,16" style="stroke:#F6D2B8;stroke-width:5"/></g><g transform="translate(100 84) rotate(14)"><path d="M-27,6C-30,-24-16,-33 2,-33L5,-46L11,-34L19,-43L20,-30C30,-24 31,-10 27,6Z" style="fill:var(--color-ink)"/><path d="M-27,0C-28,-16-15,-25 1,-25C17,-24 28,-15 27,1C27,17 15,26 0,26C-16,25-28,15-27,0Z" style="fill:#F6D2B8"/><path d="M-27,-2C-26,-18-14,-27 0,-28L4,-38L9,-27C14,-27 24,-22 27,-4C20,-14 12,-17 6,-16C2,-12-10,-18-18,-12C-22,-10-25,-6-27,-2Z" style="fill:var(--color-ink)"/><path d="M-15,-2L-7,2L-15,6M15,-2L7,2L15,6"/><path d="M-9,10C-9,24 9,24 9,10C4,13-4,13-9,10Z" style="fill:var(--color-accent)"/><ellipse cx="-17" cy="11" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/><ellipse cx="17" cy="11" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/><path d="M-14,5C-26,2-32,14-30,30M14,5C26,2 32,14 30,30" style="stroke-width:8"/><path d="M-14,5C-26,2-32,14-30,30M14,5C26,2 32,14 30,30" style="stroke:var(--color-iris-tint);stroke-width:4"/></g><g transform="translate(136 54) scale(1.2)"><path d="M0,-9C3,-3 6,1 5,4C4,8-4,8-5,4C-6,1-3,-3 0,-9Z" style="fill:var(--color-iris-tint)"/></g><path d="M48,104L40,100M46,118L37,118M152,104L160,100M154,118L163,118"/><text x="18" y="46" font-size="22" transform="rotate(-12 18 46)" style="fill:var(--color-ink);stroke:none;font:700 22px 'Comic Sans MS','Chalkboard SE',cursive">huhu</text><text x="142" y="34" font-size="16" transform="rotate(10 142 34)" style="fill:var(--color-ink);stroke:none;font:700 16px 'Comic Sans MS','Chalkboard SE',cursive">huhu</text></g></svg></div><p>Nê ơi,</p><b>bật loa lên nha</b><button class="send" id="start">Ok, mở đi anh</button></div></div>
+
+  <!-- 0 · bìa sách -->
+  <div class="gate" id="gate">
+    <div class="cover" id="cover">
+      <svg class="orn tl"><use href="#orn"/></svg><svg class="orn tr"><use href="#orn"/></svg><svg class="orn bl"><use href="#orn"/></svg><svg class="orn br"><use href="#orn"/></svg>
+      <div class="cv">
+        <p class="kicker">truyện cổ tích nhà mình</p>
+        <h1>Sự tích Nguyên Tấm và hoàng tử Hái</h1>
+        <div class="duo"><svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Nê làm cô Tấm, áo tứ thân, xách giỏ, phụng phịu"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round"><ellipse cx="98" cy="182" rx="46" ry="6" style="fill:var(--color-ink);opacity:.12;stroke:none"/><g transform="translate(-2 2)"><g transform="translate(96 128)"><path d="M-12,34L-14,48L14,48L12,34Z" style="fill:var(--color-ink)"/><ellipse cx="-7" cy="49" rx="6" ry="3" style="fill:var(--color-ink)"/><ellipse cx="7" cy="49" rx="6" ry="3" style="fill:var(--color-ink)"/><path d="M-15,-2C-22,8-23,26-21,40L21,40C23,26 22,8 15,-2Z" style="fill:var(--color-mint-tint)"/><path d="M-8,-2L0,16L8,-2Z" style="fill:var(--color-accent)"/><path d="M-6,-2L-2,38M6,-2L2,38"/><path d="M-20,20L20,20L20,26L-20,26Z" style="fill:var(--color-accent)"/><path d="M-4,26L-8,38M4,26L8,38" style="stroke:var(--color-accent);stroke-width:4"/><path d="M-15,4C-24,14-22,22-14,22" style="stroke-width:11"/><path d="M-15,4C-24,14-22,22-14,22" style="stroke:var(--color-mint-tint);stroke-width:5.4"/><circle cx="-13" cy="22" r="5.5" style="fill:#FBE3D1"/><path d="M15,4C24,12 30,20 34,26" style="stroke-width:11"/><path d="M15,4C24,12 30,20 34,26" style="stroke:var(--color-mint-tint);stroke-width:5.4"/></g><path d="M140,150C140,128 160,128 160,150" style="stroke-width:3.4"/><circle cx="134" cy="138" r="7" style="fill:color-mix(in oklch,var(--color-sun-tint) 50%,var(--color-accent))"/><path d="M131,131L137,132L134,128Z" style="fill:var(--color-mint-tint)"/><path d="M122,148L178,148L172,172L128,172Z" style="fill:color-mix(in oklch,var(--color-sun-tint) 55%,var(--color-accent))"/><path d="M126,158L176,158M132,148L136,172M150,148L150,172M168,148L164,172" style="stroke-width:1.8"/><circle cx="130" cy="152" r="5.5" style="fill:#FBE3D1"/><g transform="translate(96 88) rotate(-6)"><path d="M-31,8C-36,16-35,24-28,28L-16,24Z" style="fill:var(--color-ink)"/><circle cx="-32" cy="25" r="8" style="fill:var(--color-ink)"/><path d="M-36,20L-28,28" style="stroke:var(--color-accent);stroke-width:3"/><g transform="scale(1.12)"><path d="M-31,0C-32,-18-17,-28 0,-28C18,-28 31,-18 31,-3C37,3 36,17 27,21C19,28 8,30-2,30C-19,30-31,18-31,0Z" style="fill:#FBE3D1"/><path d="M-33,4C-36,-22-17,-35 1,-35C20,-35 37,-22 33,4C31,-8 26,-13 19,-15C12,-10 5,-12 0,-17C-7,-11-16,-11-21,-15C-27,-12-31,-6-33,4Z" style="fill:var(--color-ink)"/><circle cx="-15" cy="2" r="5.5" style="fill:var(--color-ink)"/><circle cx="-13.075" cy="0.07500000000000018" r="1.87" style="fill:#fff;stroke:none"/><circle cx="5" cy="2" r="5.5" style="fill:var(--color-ink)"/><circle cx="6.925" cy="0.07500000000000018" r="1.87" style="fill:#fff;stroke:none"/><path d="M-16,-10L-7,-11M7,-11L16,-10" style="stroke-width:4.6"/><g style="fill:none;stroke-width:2.4"><circle cx="-11" cy="2" r="9.5"/><circle cx="11" cy="2" r="9.5"/></g><path d="M-2,2L2,2"/><ellipse cx="0" cy="15" rx="3.4" ry="4" style="fill:var(--color-accent)"/><ellipse cx="-21" cy="14" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/><ellipse cx="22" cy="14" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/><ellipse cx="-17" cy="13" rx="7" ry="5" style="fill:var(--color-accent-mark)"/><ellipse cx="17" cy="13" rx="7" ry="5" style="fill:var(--color-accent-mark)"/><path d="M-34,-2C-37,-30-17,-41 1,-40C20,-40 38,-30 34,-2L29,-7C29,-26 16,-33 1,-33C-14,-33-28,-26-29,-7Z" style="fill:var(--color-accent)"/><path d="M32,-8C40,-14 44,-6 40,-2C46,0 44,8 38,6L34,-2Z" style="fill:var(--color-accent)"/></g></g><path d="M60,72C54,70 52,64 54,58"/><path d="M56,86L48,88"/></g></g></svg><svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Hái làm hoàng tử, giơ chiếc hài đỏ, cười ngượng"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round"><ellipse cx="90" cy="182" rx="40" ry="6" style="fill:var(--color-ink);opacity:.12;stroke:none"/><g transform="translate(172 26) scale(0.9)"><path d="M0,-10C1,-2 2,-1 10,0C2,1 1,2 0,10C-1,2-2,1-10,0C-2,-1-1,-2 0,-10Z" style="fill:var(--color-sun-tint)"/></g><g transform="translate(176 84) scale(0.55)"><path d="M0,-10C1,-2 2,-1 10,0C2,1 1,2 0,10C-1,2-2,1-10,0C-2,-1-1,-2 0,-10Z" style="fill:var(--color-sun-tint)"/></g><g transform="translate(88 122)"><path d="M-13,38L-13,52L-3,52L-2,38M2,38L3,52L13,52L13,38" style="fill:var(--color-paper-2)"/><ellipse cx="-8" cy="54" rx="7" ry="3" style="fill:var(--color-ink)"/><ellipse cx="8" cy="54" rx="7" ry="3" style="fill:var(--color-ink)"/><path d="M-15,-2C-22,10-23,28-21,42L21,42C23,28 22,10 15,-2Z" style="fill:var(--color-accent)"/><path d="M-6,-2C-3,4 3,4 6,-2" style="fill:var(--color-sun-tint)"/><path d="M0,4L0,40"/><g style="fill:var(--color-sun-tint);stroke:none"><circle cx="-9" cy="14" r="2"/><circle cx="9" cy="20" r="2"/><circle cx="-10" cy="24" r="1.6"/><circle cx="10" cy="10" r="1.6"/></g><path d="M-15,4C-28,12-28,24-16,26" style="stroke-width:11"/><path d="M-15,4C-28,12-28,24-16,26" style="stroke:var(--color-accent);stroke-width:5.4"/><circle cx="-16" cy="26" r="5.5" style="fill:#FBE3D1"/><path d="M14,4C30,0 40,-26 44,-46" style="stroke-width:11"/><path d="M14,4C30,0 40,-26 44,-46" style="stroke:var(--color-accent);stroke-width:5.4"/></g><g transform="translate(88 84) rotate(-4)"><g transform="scale(1.12)"><path d="M-31,0C-32,-18-17,-28 0,-28C18,-28 31,-18 31,-3C37,3 36,17 27,21C19,28 8,30-2,30C-19,30-31,18-31,0Z" style="fill:#FBE3D1"/><path d="M-32,0C-35,-24-18,-35 0,-35L4,-49L11,-36L20,-45L21,-32C32,-26 35,-12 32,-2C27,-14 17,-18 9,-17C3,-12-12,-19-21,-13C-26,-10-30,-6-32,0Z" style="fill:var(--color-ink)"/><path d="M-16,4C-13,-3-9,-3-6,4M6,4C9,-3 13,-3 16,4" style="stroke-width:3.6"/><path d="M-16,-10L-7,-11M7,-11L16,-10" style="stroke-width:4.6"/><path d="M-10,11C-5,21 5,21 10,11Z" style="fill:var(--color-paper-2)"/><path d="M-8,14L8,14"/><ellipse cx="-20" cy="12" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/><ellipse cx="21" cy="12" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/><path d="M-6,-34L-10,-50L-2,-42L5,-54L11,-42L19,-49L17,-33Z" style="fill:var(--color-sun-tint)"/><circle cx="5" cy="-39" r="2.4" style="fill:var(--color-accent)"/></g></g><g transform="translate(58 70) scale(1)"><path d="M0,-9C3,-3 6,1 5,4C4,8-4,8-5,4C-6,1-3,-3 0,-9Z" style="fill:var(--color-iris-tint)"/></g><circle cx="132" cy="76" r="6.5" style="fill:#FBE3D1"/><g transform="translate(146 54) rotate(-14) scale(1.1)"><path d="M-26,8C-28,-2-27,-12-20,-15C-14,-12-6,-12 0,-15C8,-9 16,-5 23,-7C28,-9 29,-14 26,-18C32,-19 35,-12 33,-6C31,2 24,8 14,8Z" style="fill:var(--color-accent)"/><ellipse cx="-11" cy="-13" rx="10" ry="3" style="fill:var(--color-mint-tint)"/><path d="M-27,5L16,5C24,5 29,2 33,-4C33,4 26,11 14,11L-25,11C-28,11-28,6-27,5Z" style="fill:var(--color-paper-2)"/><g style="fill:var(--color-sun-tint);stroke:none"><circle cx="8" cy="-2" r="2.6"/><circle cx="8" cy="-7" r="1.4"/><circle cx="13" cy="-2" r="1.4"/><circle cx="3" cy="-2" r="1.4"/><circle cx="8" cy="3" r="1.4"/><circle cx="-20" cy="-2" r="1.3"/><circle cx="-14" cy="0" r="1.3"/><circle cx="-8" cy="1" r="1.3"/><circle cx="22" cy="-1" r="1.3"/></g></g></g></svg></div>
+        <p class="by">kể bởi Chồng Vai Cót</p>
+        <button class="open" id="start">Mở sách ra nè</button>
+        <p class="tip">bật loa lên nha Nê, hoặc kéo bìa qua trái</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1 · quả thị -->
   <section class="stage">
     <div class="intro">
-      <h1>Nê ơi, anh có cái này cho em</h1>
-      <button class="open-btn" id="open" aria-label="Mở thư anh gửi Nê">
-        <div class="env">
-          <div class="env-back"></div>
-          <div class="peek" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-          <div class="pocket"></div>
-          <div class="to">Gửi Nê<small>từ Chồng Vai Cót</small></div>
-          <div class="flap"></div>
-          <div class="seal">N</div>
-        </div>
-      </button>
-      <p class="hint"><svg viewBox="0 0 34 28" fill="none" aria-hidden="true"><path d="M3 24C9 22 20 18 28 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M21 6.5 28.5 5 29 12.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span id="hintTxt">kéo con tem ra để mở thư nha</span></p>
+      <p class="kicker">mở đầu</p>
+      <h2>Thị ơi thị rụng bị Nê</h2>
+      <p class="rhyme">Nê đem Nê đọc chứ Nê không ăn</p>
+      <div class="tree" id="tree">
+        <svg class="branch" viewBox="0 0 440 120" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M-10 46C80 30 150 58 220 52S360 20 450 36" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round"/>
+          <g stroke="currentColor" stroke-width="2.4" stroke-linejoin="round">
+            <path d="M120 44c-20-26 6-40 22-30-2 18-8 26-22 30z" style="fill:var(--color-mint-tint)"/>
+            <path d="M300 32c4-30 34-30 38-14-14 12-24 16-38 14z" style="fill:var(--color-mint-tint)"/>
+            <path d="M232 54c24 4 34 26 20 34-14-6-20-18-20-34z" style="fill:var(--color-mint-tint)"/>
+            <path d="M60 42c-10 22-34 18-36 4 12-8 22-8 36-4z" style="fill:var(--color-mint-tint)"/>
+            <path d="M380 30c18 14 10 36-6 34-4-14-2-24 6-34z" style="fill:var(--color-mint-tint)"/>
+          </g>
+        </svg>
+        <svg class="stem" id="stem" aria-hidden="true"><path id="stemPath" d="" fill="none" stroke="var(--color-ink)" stroke-width="4" stroke-linecap="round"/></svg>
+        <button class="thi" id="thi" aria-label="Quả thị. Kéo xuống hoặc bấm Enter để hái và mở sách"><svg viewBox="0 0 100 100" class="toon" role="img" aria-label="Quả thị vàng cười"><g style="fill:none;stroke:var(--color-ink);stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round"><path d="M50,30C74,28 92,40 90,62C88,82 70,88 50,88C30,88 12,82 10,62C8,40 26,28 50,30Z" style="fill:color-mix(in oklch,var(--color-sun-tint) 50%,var(--color-accent))"/><path d="M22,46C18,52 18,58 19,62" style="stroke:var(--color-paper-2);stroke-width:3.4;opacity:.7"/><path d="M50,34C42,24 26,24 24,32C30,38 42,38 50,34C58,38 70,38 76,32C74,24 58,24 50,34ZM50,34C42,36 38,44 42,48C46,46 50,40 50,34C50,40 54,46 58,48C62,44 58,36 50,34Z" style="fill:var(--color-mint-tint)"/><path d="M50,32L53,20" style="stroke-width:5"/><circle cx="37" cy="62" r="5.4" style="fill:var(--color-ink)"/><circle cx="63" cy="62" r="5.4" style="fill:var(--color-ink)"/><g style="fill:#fff;stroke:none"><circle cx="39" cy="60" r="1.9"/><circle cx="65" cy="60" r="1.9"/></g><ellipse cx="27" cy="71" rx="6" ry="3.6" style="fill:#F7B5C8;stroke:none"/><ellipse cx="73" cy="71" rx="6" ry="3.6" style="fill:#F7B5C8;stroke:none"/><path d="M44,70C47,75 53,75 56,70"/></g></svg></button>
+        <div class="ground"></div>
+        <div class="bup" id="bup" aria-hidden="true">bụp!</div>
+      </div>
+      <p class="hint"><svg viewBox="0 0 22 30" fill="none" aria-hidden="true"><path d="M11 3v22M3 17l8 9 8-9" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span id="hintTxt">kéo trái thị xuống cho rụng nha</span></p>
     </div>
   </section>
 
-  <button class="music" id="music" aria-pressed="false" aria-label="Bật hoặc tắt nhạc">
-    <svg class="disc" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="var(--color-ink)"/><circle cx="14" cy="14" r="9" fill="none" stroke="var(--color-ink-soft)" stroke-width="1"/><circle cx="14" cy="14" r="4.5" fill="var(--color-accent)"/><circle cx="14" cy="14" r="1.3" fill="var(--color-paper-2)"/></svg>
-    <span id="musicLabel">nhạc</span>
-  </button>
+  <button class="music" id="music" aria-pressed="false" aria-label="Bật hoặc tắt nhạc"><svg class="disc" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="var(--color-ink)"/><circle cx="14" cy="14" r="9" fill="none" stroke="var(--color-ink-soft)" stroke-width="1"/><circle cx="14" cy="14" r="4.5" fill="var(--color-accent)"/><circle cx="14" cy="14" r="1.3" fill="var(--color-paper-2)"/></svg><span id="musicLabel">nhạc</span></button>
+  <div class="prog" id="prog" aria-hidden="true"><i></i><span class="shoe"><svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Chiếc hài thêu đỏ"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><ellipse cx="100" cy="158" rx="66" ry="6" style="fill:var(--color-ink);opacity:.12;stroke:none"/><g transform="translate(92 108) scale(2.6)"><path d="M-26,8C-28,-2-27,-12-20,-15C-14,-12-6,-12 0,-15C8,-9 16,-5 23,-7C28,-9 29,-14 26,-18C32,-19 35,-12 33,-6C31,2 24,8 14,8Z" style="fill:var(--color-accent)"/><ellipse cx="-11" cy="-13" rx="10" ry="3" style="fill:var(--color-mint-tint)"/><path d="M-27,5L16,5C24,5 29,2 33,-4C33,4 26,11 14,11L-25,11C-28,11-28,6-27,5Z" style="fill:var(--color-paper-2)"/><g style="fill:var(--color-sun-tint);stroke:none"><circle cx="8" cy="-2" r="2.6"/><circle cx="8" cy="-7" r="1.4"/><circle cx="13" cy="-2" r="1.4"/><circle cx="3" cy="-2" r="1.4"/><circle cx="8" cy="3" r="1.4"/><circle cx="-20" cy="-2" r="1.3"/><circle cx="-14" cy="0" r="1.3"/><circle cx="-8" cy="1" r="1.3"/><circle cx="22" cy="-1" r="1.3"/></g></g><g transform="translate(170 46) scale(1.6)"><path d="M0,-10C1,-2 2,-1 10,0C2,1 1,2 0,10C-1,2-2,1-10,0C-2,-1-1,-2 0,-10Z" style="fill:var(--color-sun-tint)"/></g><g transform="translate(40 52) scale(1)"><path d="M0,-10C1,-2 2,-1 10,0C2,1 1,2 0,10C-1,2-2,1-10,0C-2,-1-1,-2 0,-10Z" style="fill:var(--color-accent-mark)"/></g><g transform="translate(158 82) scale(0.8)"><path d="M0,-10C1,-2 2,-1 10,0C2,1 1,2 0,10C-1,2-2,1-10,0C-2,-1-1,-2 0,-10Z" style="fill:var(--color-sun-tint)"/></g></g></svg></span></div>
 
+  <!-- 2 · cuốn sách -->
   <section class="read">
     <div class="layout">
-      <div class="sheet">
-        <article class="letter" tabindex="-1" id="letter" aria-roledescription="thư nhiều trang">
-          <div class="pages" id="pages"><div class="track" id="track">
-            <div class="pg" role="group" aria-roledescription="trang" aria-label="Trang 1 / 4">
-              <p class="date r" style="--i:0">21/10/2026</p>
-              <h2 class="r" style="--i:0">Anh xin lỗi <span class="u">Nê</span></h2>
-              <div class="tf"><svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Hái quỳ xin lỗi, khóc huhu"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round"><ellipse cx="100" cy="176" rx="52" ry="6" style="fill:var(--color-ink);opacity:.12;stroke:none"/><path d="M70,150C66,166 78,174 100,174C124,174 136,166 130,150Z" style="fill:var(--color-iris-tint)"/><ellipse cx="74" cy="172" rx="10" ry="5" style="fill:var(--color-ink)"/><ellipse cx="126" cy="172" rx="10" ry="5" style="fill:var(--color-ink)"/><g transform="translate(100 118)"><path d="M-17,-4C-24,8-25,22-24,32L24,32C25,22 24,8 17,-4Z" style="fill:var(--color-ink)"/><path d="M-6,-4C-3,1 3,1 6,-4" style="fill:var(--color-sun-tint)"/><path d="M-19,8L13,16M19,8L-13,16" style="stroke-width:10"/><path d="M-19,8L13,16" style="stroke:#F6D2B8;stroke-width:5"/><path d="M19,8L-13,16" style="stroke:#F6D2B8;stroke-width:5"/></g><g transform="translate(100 84) rotate(14)"><path d="M-27,6C-30,-24-16,-33 2,-33L5,-46L11,-34L19,-43L20,-30C30,-24 31,-10 27,6Z" style="fill:var(--color-ink)"/><path d="M-27,0C-28,-16-15,-25 1,-25C17,-24 28,-15 27,1C27,17 15,26 0,26C-16,25-28,15-27,0Z" style="fill:#F6D2B8"/><path d="M-27,-2C-26,-18-14,-27 0,-28L4,-38L9,-27C14,-27 24,-22 27,-4C20,-14 12,-17 6,-16C2,-12-10,-18-18,-12C-22,-10-25,-6-27,-2Z" style="fill:var(--color-ink)"/><path d="M-15,-2L-7,2L-15,6M15,-2L7,2L15,6"/><path d="M-9,10C-9,24 9,24 9,10C4,13-4,13-9,10Z" style="fill:var(--color-accent)"/><ellipse cx="-17" cy="11" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/><ellipse cx="17" cy="11" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/><path d="M-14,5C-26,2-32,14-30,30M14,5C26,2 32,14 30,30" style="stroke-width:8"/><path d="M-14,5C-26,2-32,14-30,30M14,5C26,2 32,14 30,30" style="stroke:var(--color-iris-tint);stroke-width:4"/></g><g transform="translate(136 54) scale(1.2)"><path d="M0,-9C3,-3 6,1 5,4C4,8-4,8-5,4C-6,1-3,-3 0,-9Z" style="fill:var(--color-iris-tint)"/></g><path d="M48,104L40,100M46,118L37,118M152,104L160,100M154,118L163,118"/><text x="18" y="46" font-size="22" transform="rotate(-12 18 46)" style="fill:var(--color-ink);stroke:none;font:700 22px 'Comic Sans MS','Chalkboard SE',cursive">huhu</text><text x="142" y="34" font-size="16" transform="rotate(10 142 34)" style="fill:var(--color-ink);stroke:none;font:700 16px 'Comic Sans MS','Chalkboard SE',cursive">huhu</text></g></svg></div>
-              <p class="r" style="--i:1">Nê ơi,</p>
-              <p class="r" style="--i:2">Hôm qua là 20/10, ngày của em, mà anh lại không có quà gì cho em. Anh biết em buồn. Một ngày lẽ ra phải dành cho em, anh lại để nó trôi qua như mọi ngày khác. Anh sai, anh nhận hết.</p>
-              <p class="r" style="--i:3">Em lúc nào cũng để ý tới anh, từ mấy chuyện nhỏ xíu. Vậy mà tới ngày của em, anh lại là người quên.</p>
-              <p class="turn r" style="--i:4">kéo qua trang sau nha →</p>
+      <div>
+        <article class="book" id="letter" tabindex="-1" aria-roledescription="sách nhiều trang">
+          <div class="pages" id="pages">
+            <div class="pg" role="group" aria-roledescription="trang" aria-label="Chương 1 / 4">
+              <svg class="orn tr"><use href="#orn"/></svg>
+              <p class="date">21/10/2026</p>
+              <p class="chap">chương 1</p>
+              <h3>Hoàng tử làm chuyện dại</h3>
+              <div class="tf"><svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Hái quỳ xin lỗi, khóc huhu"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round"><ellipse cx="100" cy="176" rx="52" ry="6" style="fill:var(--color-ink);opacity:.12;stroke:none"/><path d="M70,150C66,166 78,174 100,174C124,174 136,166 130,150Z" style="fill:var(--color-sun-tint)"/><ellipse cx="74" cy="172" rx="10" ry="5" style="fill:var(--color-ink)"/><ellipse cx="126" cy="172" rx="10" ry="5" style="fill:var(--color-ink)"/><g transform="translate(100 118)"><path d="M-17,-4C-24,8-25,22-24,32L24,32C25,22 24,8 17,-4Z" style="fill:#9EC5F5"/><path d="M-6,-4C-3,1 3,1 6,-4"/><path d="M-19,8L13,16M19,8L-13,16" style="stroke-width:10"/><path d="M-19,8L13,16" style="stroke:#FBE3D1;stroke-width:5"/><path d="M19,8L-13,16" style="stroke:#FBE3D1;stroke-width:5"/></g><g transform="translate(100 84) rotate(14)"><g transform="scale(1.12)"><path d="M-31,0C-32,-18-17,-28 0,-28C18,-28 31,-18 31,-3C37,3 36,17 27,21C19,28 8,30-2,30C-19,30-31,18-31,0Z" style="fill:#FBE3D1"/><path d="M-32,0C-35,-24-18,-35 0,-35L4,-49L11,-36L20,-45L21,-32C32,-26 35,-12 32,-2C27,-14 17,-18 9,-17C3,-12-12,-19-21,-13C-26,-10-30,-6-32,0Z" style="fill:var(--color-ink)"/><path d="M-16,-2L-7,2L-16,6M16,-2L7,2L16,6" style="stroke-width:3.6"/><path d="M-16,-8L-7,-12M7,-12L16,-8" style="stroke-width:4.6"/><path d="M-10,10C-10,26 10,26 10,10C4,13-4,13-10,10Z" style="fill:var(--color-accent)"/><path d="M-5,22C-2,19 2,19 5,22" style="fill:#F7B5C8"/><ellipse cx="-20" cy="12" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/><ellipse cx="21" cy="12" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/><path d="M-14,5C-26,2-32,14-30,30M14,5C26,2 32,14 30,30" style="stroke-width:8"/><path d="M-14,5C-26,2-32,14-30,30M14,5C26,2 32,14 30,30" style="stroke:var(--color-iris-tint);stroke-width:4"/></g></g><g transform="translate(136 54) scale(1.2)"><path d="M0,-9C3,-3 6,1 5,4C4,8-4,8-5,4C-6,1-3,-3 0,-9Z" style="fill:var(--color-iris-tint)"/></g><path d="M48,104L40,100M46,118L37,118M152,104L160,100M154,118L163,118"/><text x="18" y="46" font-size="22" transform="rotate(-12 18 46)" style="fill:var(--color-ink);stroke:none;font:700 22px 'Comic Sans MS','Chalkboard SE',cursive">huhu</text><text x="142" y="34" font-size="16" transform="rotate(10 142 34)" style="fill:var(--color-ink);stroke:none;font:700 16px 'Comic Sans MS','Chalkboard SE',cursive">huhu</text></g></svg></div>
+              <p class="lead">Ngày xửa ngày xưa, à không, mới hôm qua thôi, 20/10, có một hoàng tử tên Hái quên mất ngày của cô Tấm nhà mình.</p>
+              <p>Không quà, không hoa, không gì hết. Anh biết em buồn. Một ngày lẽ ra phải dành cho em, anh lại để nó trôi qua như mọi ngày khác. Anh sai, anh nhận hết.</p>
+              <p>Em lúc nào cũng để ý tới anh, từ mấy chuyện nhỏ xíu. Vậy mà tới ngày của em, anh lại là người quên.</p>
+              <p class="turn">kéo lật trang nha <span>→</span></p>
             </div>
-            <div class="pg" role="group" aria-roledescription="trang" aria-label="Trang 2 / 4">
-              <h2>Nhớ lại một chút</h2>
-              <p>Lúc làm cái thư này, anh ngồi coi lại hình của hai đứa. Từ chuyến Đài Bắc, chuyến đi xa đầu tiên của mình, tới cái tối anh cầu hôn em ở Thái.</p>
-              <p>Rồi dạm ngõ, đính hôn, ra Huế chụp ảnh cưới, rồi còn đi thêm bao nhiêu chỗ nữa. Hình anh để ở dưới cho em coi.</p>
-              <p>Coi lại mới thấy, chỗ nào cũng có em đi bên cạnh anh. Coi hết đống hình mới thấy anh may cỡ nào.</p>
+            <div class="pg" role="group" aria-roledescription="trang" aria-label="Chương 2 / 4">
+              <svg class="orn tr"><use href="#orn"/></svg>
+              <p class="chap">chương 2</p>
+              <h3>Chiếc hài và những chuyến đi</h3>
+              <div class="tf"><svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Chiếc hài thêu đỏ"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><ellipse cx="100" cy="158" rx="66" ry="6" style="fill:var(--color-ink);opacity:.12;stroke:none"/><g transform="translate(92 108) scale(2.6)"><path d="M-26,8C-28,-2-27,-12-20,-15C-14,-12-6,-12 0,-15C8,-9 16,-5 23,-7C28,-9 29,-14 26,-18C32,-19 35,-12 33,-6C31,2 24,8 14,8Z" style="fill:var(--color-accent)"/><ellipse cx="-11" cy="-13" rx="10" ry="3" style="fill:var(--color-mint-tint)"/><path d="M-27,5L16,5C24,5 29,2 33,-4C33,4 26,11 14,11L-25,11C-28,11-28,6-27,5Z" style="fill:var(--color-paper-2)"/><g style="fill:var(--color-sun-tint);stroke:none"><circle cx="8" cy="-2" r="2.6"/><circle cx="8" cy="-7" r="1.4"/><circle cx="13" cy="-2" r="1.4"/><circle cx="3" cy="-2" r="1.4"/><circle cx="8" cy="3" r="1.4"/><circle cx="-20" cy="-2" r="1.3"/><circle cx="-14" cy="0" r="1.3"/><circle cx="-8" cy="1" r="1.3"/><circle cx="22" cy="-1" r="1.3"/></g></g><g transform="translate(170 46) scale(1.6)"><path d="M0,-10C1,-2 2,-1 10,0C2,1 1,2 0,10C-1,2-2,1-10,0C-2,-1-1,-2 0,-10Z" style="fill:var(--color-sun-tint)"/></g><g transform="translate(40 52) scale(1)"><path d="M0,-10C1,-2 2,-1 10,0C2,1 1,2 0,10C-1,2-2,1-10,0C-2,-1-1,-2 0,-10Z" style="fill:var(--color-accent-mark)"/></g><g transform="translate(158 82) scale(0.8)"><path d="M0,-10C1,-2 2,-1 10,0C2,1 1,2 0,10C-1,2-2,1-10,0C-2,-1-1,-2 0,-10Z" style="fill:var(--color-sun-tint)"/></g></g></svg></div>
+              <p class="lead">Trong truyện, hoàng tử tìm ra cô Tấm nhờ một chiếc hài. Ngoài đời thì khỏi tìm, anh tên Hái, anh tự tới luôn.</p>
+              <p>Lúc làm cuốn sách này, anh ngồi coi lại hình của hai đứa. Từ chuyến Đài Bắc, chuyến đi xa đầu tiên của mình, tới cái tối anh cầu hôn em ở Thái.</p>
+              <p>Rồi dạm ngõ, đính hôn, ra Huế chụp ảnh cưới, rồi còn đi thêm bao nhiêu chỗ nữa. Chỗ nào cũng có em đi bên cạnh. Coi hết mới thấy anh may cỡ nào.</p>
+              <p class="turn">hình để ở dưới, đọc hết rồi coi nha <span>→</span></p>
             </div>
-            <div class="pg" role="group" aria-roledescription="trang" aria-label="Trang 3 / 4">
-              <h2>Mình còn đi xa nữa</h2>
-              <p>Còn mấy tháng nữa là mình cưới, cưới xong là cùng qua Singapore đi học.</p>
-              <div class="tf"><svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Hái ngủ gật khi học GMAT, Nê chọc bút chì"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round"><path d="M10,148L190,148L184,160L16,160Z" style="fill:var(--color-sun-tint)"/><path d="M30,160L30,190M170,160L170,190"/><path d="M24,146C40,138 56,140 66,146C76,140 92,138 104,146L104,150L24,150Z" style="fill:var(--color-paper-2)"/><path d="M66,146L66,150"/><text x="32" y="172" font-size="14" transform="rotate(0 32 172)" style="fill:var(--color-ink);stroke:none;font:700 14px 'Comic Sans MS','Chalkboard SE',cursive">GMAT</text><g transform="translate(48 126) rotate(-70)"><path d="M-15,-2C-20,8-21,22-19,30L19,30C21,22 20,8 15,-2Z" style="fill:var(--color-ink)"/></g><g transform="translate(68 118) rotate(-62)"><path d="M-27,6C-30,-24-16,-33 2,-33L5,-46L11,-34L19,-43L20,-30C30,-24 31,-10 27,6Z" style="fill:var(--color-ink)"/><path d="M-27,0C-28,-16-15,-25 1,-25C17,-24 28,-15 27,1C27,17 15,26 0,26C-16,25-28,15-27,0Z" style="fill:#F6D2B8"/><path d="M-27,-2C-26,-18-14,-27 0,-28L4,-38L9,-27C14,-27 24,-22 27,-4C20,-14 12,-17 6,-16C2,-12-10,-18-18,-12C-22,-10-25,-6-27,-2Z" style="fill:var(--color-ink)"/><path d="M-15,3C-12,6-8,6-5,3M5,3C8,6 12,6 15,3"/><path d="M-4,14L4,14"/><path d="M3,14C4,19 7,21 5,23" style="fill:var(--color-iris-tint)"/><ellipse cx="-17" cy="11" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/><ellipse cx="17" cy="11" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/></g><path d="M64,52C56,52 52,40 62,36C62,24 86,22 90,32C100,26 114,36 106,46C112,56 96,62 88,56C82,62 68,60 64,52Z" style="fill:var(--color-paper-2)"/><text x="70" y="50" font-size="14" transform="rotate(-8 70 50)" style="fill:var(--color-ink);stroke:none;font:700 14px 'Comic Sans MS','Chalkboard SE',cursive">zzz</text><circle cx="66" cy="70" r="4" style="fill:var(--color-paper-2)"/><circle cx="68" cy="82" r="2.5" style="fill:var(--color-paper-2)"/><g transform="translate(150 116)"><path d="M-15,-2C-21,8-22,22-21,30L21,30C22,22 21,8 15,-2Z" style="fill:var(--color-paper-2)"/><path d="M-6,-2C-3,4 3,4 6,-2"/></g><g transform="translate(150 82)"><path d="M-28,-4C-34,14-32,34-24,40L24,40C32,34 34,14 28,-4Z" style="fill:var(--color-ink)"/><path d="M-26,0C-27,-16-14,-25 1,-25C16,-24 27,-15 26,1C26,17 14,25 0,25C-15,24-27,15-26,0Z" style="fill:#F6D2B8"/><path d="M-28,2C-31,-22-14,-34 1,-33C18,-33 32,-22 28,2C26,-8 22,-13 16,-14C10,-10 4,-12 0,-16C-6,-11-14,-11-18,-14C-23,-12-26,-6-28,2Z" style="fill:var(--color-ink)"/><path d="M-15,2L-6,2M6,2L15,2"/><path d="M-16,-6L-6,-3M16,-6L6,-3"/><g style="fill:none;stroke-width:2.2"><circle cx="-10" cy="3" r="7.5"/><circle cx="10" cy="3" r="7.5"/></g><path d="M-2,3L2,3"/><path d="M-4,15C-2,12 2,12 4,15"/><ellipse cx="-17" cy="12" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/><ellipse cx="17" cy="12" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/></g><g transform="translate(176 50) scale(1)"><path d="M-8,-3C-3,-3-3,-3-3,-8M3,-8C3,-3 3,-3 8,-3M8,3C3,3 3,3 3,8M-3,8C-3,3-3,3-8,3" style="stroke:var(--color-accent);stroke-width:3.2"/></g><path d="M136,124C124,126 112,122 104,116" style="fill:#F6D2B8"/><path d="M106,110L84,98L82,104L104,118Z" style="fill:var(--color-sun-tint)"/><path d="M84,98L76,98L82,104Z" style="fill:var(--color-ink)"/><path d="M70,92L64,88M72,102L64,104"/></g></svg></div><p>Em vừa đi làm, vừa lo hồ sơ, tối về còn ngồi học GMAT với anh. Anh biết em cố nhiều lắm.</p>
-              <p>Mình còn đi chung với nhau lâu lắm. Nên năm nay anh phải sửa cho bằng được. Sau này em kể lại năm mình đính hôn, em kể chuyện cái thư này chứ đừng kể chuyện anh quên.</p>
+            <div class="pg" role="group" aria-roledescription="trang" aria-label="Chương 3 / 4">
+              <svg class="orn tr"><use href="#orn"/></svg>
+              <p class="chap">chương 3</p>
+              <h3>Lâu đài ở Rừng Thông Mơ</h3>
+              <p class="lead">Còn mấy tháng nữa là hoàng tử rước cô Tấm về dinh, ở Rừng Thông Mơ rồi về Sunrise Tây Ninh. Cưới xong là hai đứa cùng qua Singapore đi học.</p>
+              <div class="tf"><svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Hái ngủ gật khi học GMAT, Nê chọc bút chì"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round"><path d="M10,148L190,148L184,160L16,160Z" style="fill:var(--color-sun-tint)"/><path d="M30,160L30,190M170,160L170,190"/><path d="M24,146C40,138 56,140 66,146C76,140 92,138 104,146L104,150L24,150Z" style="fill:var(--color-paper-2)"/><path d="M66,146L66,150"/><text x="32" y="172" font-size="14" transform="rotate(0 32 172)" style="fill:var(--color-ink);stroke:none;font:700 14px 'Comic Sans MS','Chalkboard SE',cursive">GMAT</text><g transform="translate(48 126) rotate(-70)"><path d="M-15,-2C-20,8-21,22-19,30L19,30C21,22 20,8 15,-2Z" style="fill:#9EC5F5"/></g><g transform="translate(68 118) rotate(-62)"><g transform="scale(1.12)"><path d="M-31,0C-32,-18-17,-28 0,-28C18,-28 31,-18 31,-3C37,3 36,17 27,21C19,28 8,30-2,30C-19,30-31,18-31,0Z" style="fill:#FBE3D1"/><path d="M-32,0C-35,-24-18,-35 0,-35L4,-49L11,-36L20,-45L21,-32C32,-26 35,-12 32,-2C27,-14 17,-18 9,-17C3,-12-12,-19-21,-13C-26,-10-30,-6-32,0Z" style="fill:var(--color-ink)"/><path d="M-16,3C-13,7-9,7-6,3M6,3C9,7 13,7 16,3" style="stroke-width:3.6"/><path d="M-16,-10L-7,-11M7,-11L16,-10" style="stroke-width:4.6"/><ellipse cx="0" cy="15" rx="3" ry="3.6" style="fill:var(--color-accent)"/><path d="M3,17C4,21 7,23 5,25" style="fill:#9EC5F5"/><ellipse cx="-20" cy="12" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/><ellipse cx="21" cy="12" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/></g></g><path d="M64,52C56,52 52,40 62,36C62,24 86,22 90,32C100,26 114,36 106,46C112,56 96,62 88,56C82,62 68,60 64,52Z" style="fill:var(--color-paper-2)"/><text x="70" y="50" font-size="14" transform="rotate(-8 70 50)" style="fill:var(--color-ink);stroke:none;font:700 14px 'Comic Sans MS','Chalkboard SE',cursive">zzz</text><circle cx="66" cy="70" r="4" style="fill:var(--color-paper-2)"/><circle cx="68" cy="82" r="2.5" style="fill:var(--color-paper-2)"/><g transform="translate(150 116)"><path d="M-13,0C-20,8-23,18-22,26L22,26C23,18 20,8 13,0Z" style="fill:#C9B8F0"/><path d="M-6,0C-3,4 3,4 6,0"/></g><g transform="translate(150 82)"><g transform="scale(1.12)"><path d="M-32,-4C-38,14-36,36-27,42L27,42C36,36 38,14 32,-4Z" style="fill:var(--color-ink)"/><path d="M-31,0C-32,-18-17,-28 0,-28C18,-28 31,-18 31,-3C37,3 36,17 27,21C19,28 8,30-2,30C-19,30-31,18-31,0Z" style="fill:#FBE3D1"/><path d="M-33,4C-36,-22-17,-35 1,-35C20,-35 37,-22 33,4C31,-8 26,-13 19,-15C12,-10 5,-12 0,-17C-7,-11-16,-11-21,-15C-27,-12-31,-6-33,4Z" style="fill:var(--color-ink)"/><path d="M-16,1C-16,7-6,7-6,1Z" style="fill:var(--color-ink)"/><path d="M6,1C6,7 16,7 16,1Z" style="fill:var(--color-ink)"/><path d="M-16,-12L-6,-8M6,-8L16,-12" style="stroke-width:4.6"/><g style="fill:none;stroke-width:2.4"><circle cx="-11" cy="2" r="9.5"/><circle cx="11" cy="2" r="9.5"/></g><path d="M-2,2L2,2"/><ellipse cx="0" cy="15" rx="3.4" ry="4" style="fill:var(--color-accent)"/><ellipse cx="-21" cy="14" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/><ellipse cx="22" cy="14" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/></g></g><g transform="translate(176 50) scale(1)"><path d="M-8,-3C-3,-3-3,-3-3,-8M3,-8C3,-3 3,-3 8,-3M8,3C3,3 3,3 3,8M-3,8C-3,3-3,3-8,3" style="stroke:var(--color-accent);stroke-width:3.2"/></g><path d="M136,124C124,126 112,122 104,116" style="fill:#FBE3D1"/><path d="M106,110L84,98L82,104L104,118Z" style="fill:var(--color-sun-tint)"/><path d="M84,98L76,98L82,104Z" style="fill:var(--color-ink)"/><path d="M70,92L64,88M72,102L64,104"/></g></svg></div>
+              <p>Em vừa đi làm, vừa lo hồ sơ, tối về còn ngồi học GMAT với anh. Anh biết em cố nhiều lắm.</p>
+              <p>Mình còn đi chung với nhau lâu lắm. Nên năm nay anh phải sửa cho bằng được. Sau này em kể lại năm mình đính hôn, em kể chuyện cuốn sách này chứ đừng kể chuyện anh quên.</p>
+              <p class="turn">còn một chương nữa <span>→</span></p>
             </div>
-            <div class="pg" role="group" aria-roledescription="trang" aria-label="Trang 4 / 4">
-              <h2>Anh hứa</h2>
-              <figure class="funny vid"><video style="object-position:center 35%" src="photos/mat-le.mp4" poster="photos/mat-le.jpg" autoplay muted loop playsinline preload="auto" aria-label="Hái và Nguyên làm mắt lé"></video><figcaption>hai đứa mắt lé, coi cho đỡ giận nha</figcaption></figure>
-              <p>Anh không hứa gì lớn lao. Anh chỉ hứa sẽ nhớ những ngày quan trọng với em, và để ý tới em nhiều hơn, như cách em vẫn luôn để ý tới anh.</p>
-              <p>Ba điều anh bù cho em đây nè. Cái nào anh cũng làm thật.</p>
+            <div class="pg" role="group" aria-roledescription="trang" aria-label="Chương 4 / 4">
+              <svg class="orn tr"><use href="#orn"/></svg>
+              <p class="chap">chương 4</p>
+              <h3>Lời hứa của hoàng tử</h3>
+              <figure class="funny"><video src="photos/mat-le.mp4" poster="photos/mat-le.jpg" autoplay muted loop playsinline preload="auto" aria-label="Hái và Nê làm mắt lé"></video><figcaption>hai đứa mắt lé, coi cho đỡ giận nha</figcaption></figure>
+              <p class="lead">Anh không hứa gì lớn lao. Anh chỉ hứa sẽ nhớ những ngày quan trọng với em, và để ý tới em nhiều hơn, như cách em vẫn luôn để ý tới anh.</p>
+              <p>Mấy món anh chuộc lỗi nằm ngay đây. Bụt cũng ghé cho em một điều ước. Cái nào anh cũng làm thật.</p>
               <p>Nên Nê đừng giận anh nữa nha. Tối nay mình còn học GMAT chung đó.</p>
               <p class="sign">Thương em,<span>Chồng Vai Cót</span></p>
             </div>
-          </div></div>
-          <nav class="pager" aria-label="Chuyển trang">
+          </div>
+          <nav class="pager" aria-label="Lật trang">
             <button class="pbtn" id="prev" aria-label="Trang trước"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M12.5 4 6.5 10l6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
             <span class="dots" id="dots"><i></i><i></i><i></i><i></i></span>
-            <span class="pnum" id="pnum">1 / 4</span>
+            <span class="pnum" id="pnum">chương 1 / 4</span>
             <button class="pbtn" id="next" aria-label="Trang sau"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M7.5 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           </nav>
         </article>
       </div>
 
       <aside class="side" aria-labelledby="pt">
-        <p class="lock" aria-hidden="true">đọc hết thư rồi mới được mở nha</p>
-        <h3 id="pt">Ba điều anh bù cho em</h3>
+        <p class="lock" aria-hidden="true">đọc hết chương 4 rồi mới mở nha</p>
+        <p class="kicker">hoàng tử chuộc lỗi</p>
+        <h4 class="h" id="pt">Mấy món anh bù cho em</h4>
         <div class="stack">
-          <div class="card c1">
-            <svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Hai người ăn tối dưới nến"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round"><g transform="translate(100 22) scale(1.3)"><path d="M0,6C-9,-1-9,-9-4,-9C-1,-9 0,-6 0,-5C0,-6 1,-9 4,-9C9,-9 9,-1 0,6Z" style="fill:var(--color-accent)"/></g><g transform="translate(76 36) scale(0.8)"><path d="M0,6C-9,-1-9,-9-4,-9C-1,-9 0,-6 0,-5C0,-6 1,-9 4,-9C9,-9 9,-1 0,6Z" style="fill:var(--color-accent-mark)"/></g><g transform="translate(126 34) scale(0.9)"><path d="M0,6C-9,-1-9,-9-4,-9C-1,-9 0,-6 0,-5C0,-6 1,-9 4,-9C9,-9 9,-1 0,6Z" style="fill:var(--color-accent-mark)"/></g><g transform="translate(52 120)"><path d="M-15,-2C-20,8-21,22-19,30L19,30C21,22 20,8 15,-2Z" style="fill:var(--color-ink)"/><path d="M-6,-2C-3,3 3,3 6,-2" style="fill:var(--color-sun-tint)"/></g><g transform="translate(52 90)"><path d="M-27,6C-30,-24-16,-33 2,-33L5,-46L11,-34L19,-43L20,-30C30,-24 31,-10 27,6Z" style="fill:var(--color-ink)"/><path d="M-27,0C-28,-16-15,-25 1,-25C17,-24 28,-15 27,1C27,17 15,26 0,26C-16,25-28,15-27,0Z" style="fill:#F6D2B8"/><path d="M-27,-2C-26,-18-14,-27 0,-28L4,-38L9,-27C14,-27 24,-22 27,-4C20,-14 12,-17 6,-16C2,-12-10,-18-18,-12C-22,-10-25,-6-27,-2Z" style="fill:var(--color-ink)"/><path d="M-15,3C-12,-3-8,-3-5,3M5,3C8,-3 12,-3 15,3"/><path d="M-6,12C-3,17 3,17 6,12"/><ellipse cx="-17" cy="11" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/><ellipse cx="17" cy="11" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/></g><g transform="translate(148 120)"><path d="M-15,-2C-21,8-22,22-21,30L21,30C22,22 21,8 15,-2Z" style="fill:var(--color-paper-2)"/><path d="M-6,-2C-3,4 3,4 6,-2"/></g><g transform="translate(148 90)"><path d="M-28,-4C-34,14-32,34-24,40L24,40C32,34 34,14 28,-4Z" style="fill:var(--color-ink)"/><path d="M-26,0C-27,-16-14,-25 1,-25C16,-24 27,-15 26,1C26,17 14,25 0,25C-15,24-27,15-26,0Z" style="fill:#F6D2B8"/><path d="M-28,2C-31,-22-14,-34 1,-33C18,-33 32,-22 28,2C26,-8 22,-13 16,-14C10,-10 4,-12 0,-16C-6,-11-14,-11-18,-14C-23,-12-26,-6-28,2Z" style="fill:var(--color-ink)"/><path d="M-15,3C-12,-3-8,-3-5,3M5,3C8,-3 12,-3 15,3"/><g style="fill:none;stroke-width:2.2"><circle cx="-10" cy="3" r="7.5"/><circle cx="10" cy="3" r="7.5"/></g><path d="M-2,3L2,3"/><path d="M-6,12C-3,17 3,17 6,12"/><ellipse cx="-17" cy="12" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/><ellipse cx="17" cy="12" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/></g><path d="M22,146L178,146L170,186L30,186Z" style="fill:var(--color-sun-tint)"/><path d="M30,156L170,156"/><path d="M58,138C58,150 82,150 82,138Z" style="fill:var(--color-iris-tint)"/><path d="M118,138C118,150 142,150 142,138Z" style="fill:var(--color-iris-tint)"/><path d="M66,130C64,126 68,124 66,120M126,130C124,126 128,124 126,120"/><path d="M95,108L105,108L105,140L95,140Z" style="fill:var(--color-paper-2)"/><path d="M100,108L100,104"/><path d="M100,90C106,96 104,104 100,104C96,104 94,96 100,90Z" style="fill:var(--color-accent)"/></g></svg>
-            <div><h4>Một buổi tối hẹn hò</h4><p>Em chọn ngày, còn lại để anh lo. Tối đó chỉ có hai đứa mình thôi.</p></div>
-          </div>
-          <div class="card c2">
-            <svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Hái run run tặng hoa"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round"><ellipse cx="92" cy="182" rx="40" ry="6" style="fill:var(--color-ink);opacity:.12;stroke:none"/><g transform="translate(88 128)"><path d="M-15,-2C-20,8-21,22-19,30L19,30C21,22 20,8 15,-2Z" style="fill:var(--color-ink)"/><path d="M-6,-2C-3,3 3,3 6,-2" style="fill:var(--color-sun-tint)"/><path d="M-14,30L-14,44L-3,44L-2,30M2,30L3,44L14,44L14,30" style="fill:var(--color-iris-tint)"/><ellipse cx="-9" cy="46" rx="7" ry="3" style="fill:var(--color-ink)"/><ellipse cx="9" cy="46" rx="7" ry="3" style="fill:var(--color-ink)"/></g><g transform="translate(86 86) rotate(-6)"><path d="M-27,6C-30,-24-16,-33 2,-33L5,-46L11,-34L19,-43L20,-30C30,-24 31,-10 27,6Z" style="fill:var(--color-ink)"/><path d="M-27,0C-28,-16-15,-25 1,-25C17,-24 28,-15 27,1C27,17 15,26 0,26C-16,25-28,15-27,0Z" style="fill:#F6D2B8"/><path d="M-27,-2C-26,-18-14,-27 0,-28L4,-38L9,-27C14,-27 24,-22 27,-4C20,-14 12,-17 6,-16C2,-12-10,-18-18,-12C-22,-10-25,-6-27,-2Z" style="fill:var(--color-ink)"/><circle cx="-10" cy="3" r="3" style="fill:var(--color-ink)"/><circle cx="10" cy="3" r="3" style="fill:var(--color-ink)"/><path d="M-16,-5L-6,-9M16,-5L6,-9"/><path d="M-11,11C-5,20 5,20 11,11Z" style="fill:var(--color-paper-2)"/><path d="M-9,14L9,14"/><ellipse cx="-17" cy="11" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/><ellipse cx="17" cy="11" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/></g><g transform="translate(116 58) scale(1)"><path d="M0,-9C3,-3 6,1 5,4C4,8-4,8-5,4C-6,1-3,-3 0,-9Z" style="fill:var(--color-iris-tint)"/></g><path d="M120,150L140,108L160,118Z" style="fill:var(--color-paper-2)"/><path d="M138,112C130,104 132,96 140,96M150,114C156,104 162,104 166,108" style="fill:var(--color-mint-tint)"/><circle cx="136" cy="98" r="9" style="fill:var(--color-accent)"/><circle cx="152" cy="94" r="9" style="fill:var(--color-sun-tint)"/><circle cx="160" cy="108" r="8" style="fill:var(--color-accent-mark)"/><circle cx="144" cy="108" r="7" style="fill:var(--color-accent)"/><path d="M98,136C112,138 124,136 132,132M76,138C82,148 110,148 130,140" style="fill:#F6D2B8"/><path d="M40,90L32,86M40,104L30,104M172,82L180,76M174,96L184,96"/><g transform="translate(176 140) scale(1)"><path d="M0,6C-9,-1-9,-9-4,-9C-1,-9 0,-6 0,-5C0,-6 1,-9 4,-9C9,-9 9,-1 0,6Z" style="fill:var(--color-accent-mark)"/></g></g></svg>
-            <div><h4>Hoa và quà cho em</h4><p>Anh gửi tới tận tay em. Ngày nào thì bí mật nha.</p></div>
-          </div>
-          <div class="ticket" id="ticket">
-            <div class="t-main">
-              <div class="t-head">
-                <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M5 13h34v6a3 3 0 0 0 0 6v6H5v-6a3 3 0 0 0 0-6z" fill="var(--color-paper-2)" stroke="var(--color-ink)" stroke-width="2.2" stroke-linejoin="round"/><path d="M28 14v16" stroke="var(--color-ink)" stroke-width="1.8" stroke-dasharray="2.5 2.5"/><path d="M16 18.5l1.6 3.3 3.6.5-2.6 2.5.6 3.6-3.2-1.7-3.2 1.7.6-3.6-2.6-2.5 3.6-.5z" fill="var(--color-accent)"/></svg>
-                <div><h4>Một phiếu điều ước</h4><p>Em chọn một điều, anh thực hiện.</p></div>
-              </div>
-              <p class="note">phiếu này dùng được một lần thôi đó, chọn kỹ nha</p>
+          <div class="card c1"><svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Hai người ăn tối dưới nến"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round"><g transform="translate(100 22) scale(1.3)"><path d="M0,6C-9,-1-9,-9-4,-9C-1,-9 0,-6 0,-5C0,-6 1,-9 4,-9C9,-9 9,-1 0,6Z" style="fill:var(--color-accent)"/></g><g transform="translate(76 36) scale(0.8)"><path d="M0,6C-9,-1-9,-9-4,-9C-1,-9 0,-6 0,-5C0,-6 1,-9 4,-9C9,-9 9,-1 0,6Z" style="fill:var(--color-accent-mark)"/></g><g transform="translate(126 34) scale(0.9)"><path d="M0,6C-9,-1-9,-9-4,-9C-1,-9 0,-6 0,-5C0,-6 1,-9 4,-9C9,-9 9,-1 0,6Z" style="fill:var(--color-accent-mark)"/></g><g transform="translate(52 120)"><path d="M-14,0C-19,8-20,18-18,26L18,26C20,18 19,8 14,0Z" style="fill:#9EC5F5"/><path d="M-6,0C-3,4 3,4 6,0"/></g><g transform="translate(52 90)"><g transform="scale(1.12)"><path d="M-31,0C-32,-18-17,-28 0,-28C18,-28 31,-18 31,-3C37,3 36,17 27,21C19,28 8,30-2,30C-19,30-31,18-31,0Z" style="fill:#FBE3D1"/><path d="M-32,0C-35,-24-18,-35 0,-35L4,-49L11,-36L20,-45L21,-32C32,-26 35,-12 32,-2C27,-14 17,-18 9,-17C3,-12-12,-19-21,-13C-26,-10-30,-6-32,0Z" style="fill:var(--color-ink)"/><path d="M-16,4C-13,-3-9,-3-6,4M6,4C9,-3 13,-3 16,4" style="stroke-width:3.6"/><path d="M-16,-10L-7,-11M7,-11L16,-10" style="stroke-width:4.6"/><path d="M-5,13C-2,17 2,17 5,13"/><ellipse cx="-20" cy="12" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/><ellipse cx="21" cy="12" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/></g></g><g transform="translate(148 120)"><path d="M-13,0C-20,8-23,18-22,26L22,26C23,18 20,8 13,0Z" style="fill:#C9B8F0"/><path d="M-6,0C-3,4 3,4 6,0"/></g><g transform="translate(148 90)"><g transform="scale(1.12)"><path d="M-32,-4C-38,14-36,36-27,42L27,42C36,36 38,14 32,-4Z" style="fill:var(--color-ink)"/><path d="M-31,0C-32,-18-17,-28 0,-28C18,-28 31,-18 31,-3C37,3 36,17 27,21C19,28 8,30-2,30C-19,30-31,18-31,0Z" style="fill:#FBE3D1"/><path d="M-33,4C-36,-22-17,-35 1,-35C20,-35 37,-22 33,4C31,-8 26,-13 19,-15C12,-10 5,-12 0,-17C-7,-11-16,-11-21,-15C-27,-12-31,-6-33,4Z" style="fill:var(--color-ink)"/><path d="M-16,4C-13,-3-9,-3-6,4M6,4C9,-3 13,-3 16,4" style="stroke-width:3.6"/><path d="M-16,-10L-7,-11M7,-11L16,-10" style="stroke-width:4.6"/><g style="fill:none;stroke-width:2.4"><circle cx="-11" cy="2" r="9.5"/><circle cx="11" cy="2" r="9.5"/></g><path d="M-2,2L2,2"/><path d="M-5,13C-2,17 2,17 5,13"/><ellipse cx="-21" cy="14" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/><ellipse cx="22" cy="14" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/></g></g><path d="M22,146L178,146L170,186L30,186Z" style="fill:var(--color-sun-tint)"/><path d="M30,156L170,156"/><path d="M58,138C58,150 82,150 82,138Z" style="fill:var(--color-iris-tint)"/><path d="M118,138C118,150 142,150 142,138Z" style="fill:var(--color-iris-tint)"/><path d="M66,130C64,126 68,124 66,120M126,130C124,126 128,124 126,120"/><path d="M95,108L105,108L105,140L95,140Z" style="fill:var(--color-paper-2)"/><path d="M100,108L100,104"/><path d="M100,90C106,96 104,104 100,104C96,104 94,96 100,90Z" style="fill:var(--color-accent)"/></g></svg><div><h5>Một buổi tối hẹn hò</h5><p>Em chọn ngày, còn lại để anh lo. Tối đó chỉ có hai đứa mình thôi.</p></div></div>
+          <div class="card c2"><svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Hái run run tặng hoa"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round"><ellipse cx="92" cy="182" rx="40" ry="6" style="fill:var(--color-ink);opacity:.12;stroke:none"/><g transform="translate(88 128)"><path d="M-14,0C-19,8-20,18-18,26L18,26C20,18 19,8 14,0Z" style="fill:#9EC5F5"/><path d="M-6,0C-3,4 3,4 6,0"/><path d="M-14,26L-14,34L-2,34L-1,26M1,26L2,34L14,34L14,26" style="fill:var(--color-sun-tint)"/><path d="M-10,34L-10,40M10,34L10,40" style="stroke-width:7"/><path d="M-10,34L-10,40M10,34L10,40" style="stroke:#FBE3D1;stroke-width:2.4"/><ellipse cx="-10" cy="42" rx="6.5" ry="3" style="fill:var(--color-paper-2)"/><ellipse cx="10" cy="42" rx="6.5" ry="3" style="fill:var(--color-paper-2)"/></g><g transform="translate(86 86) rotate(-6)"><g transform="scale(1.12)"><path d="M-31,0C-32,-18-17,-28 0,-28C18,-28 31,-18 31,-3C37,3 36,17 27,21C19,28 8,30-2,30C-19,30-31,18-31,0Z" style="fill:#FBE3D1"/><path d="M-32,0C-35,-24-18,-35 0,-35L4,-49L11,-36L20,-45L21,-32C32,-26 35,-12 32,-2C27,-14 17,-18 9,-17C3,-12-12,-19-21,-13C-26,-10-30,-6-32,0Z" style="fill:var(--color-ink)"/><circle cx="-11" cy="3" r="5" style="fill:var(--color-ink)"/><circle cx="-9.25" cy="1.25" r="1.7000000000000002" style="fill:#fff;stroke:none"/><circle cx="11" cy="3" r="5" style="fill:var(--color-ink)"/><circle cx="12.75" cy="1.25" r="1.7000000000000002" style="fill:#fff;stroke:none"/><path d="M-16,-8L-7,-12M7,-12L16,-8" style="stroke-width:4.6"/><path d="M-10,11C-5,21 5,21 10,11Z" style="fill:var(--color-paper-2)"/><path d="M-8,14L8,14"/><ellipse cx="-20" cy="12" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/><ellipse cx="21" cy="12" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/></g></g><g transform="translate(116 58) scale(1)"><path d="M0,-9C3,-3 6,1 5,4C4,8-4,8-5,4C-6,1-3,-3 0,-9Z" style="fill:var(--color-iris-tint)"/></g><path d="M120,150L140,108L160,118Z" style="fill:var(--color-paper-2)"/><path d="M138,112C130,104 132,96 140,96M150,114C156,104 162,104 166,108" style="fill:var(--color-mint-tint)"/><circle cx="136" cy="98" r="9" style="fill:var(--color-accent)"/><circle cx="152" cy="94" r="9" style="fill:var(--color-sun-tint)"/><circle cx="160" cy="108" r="8" style="fill:var(--color-accent-mark)"/><circle cx="144" cy="108" r="7" style="fill:var(--color-accent)"/><path d="M98,136C112,138 124,136 132,132M76,138C82,148 110,148 130,140" style="fill:#FBE3D1"/><path d="M40,90L32,86M40,104L30,104M172,82L180,76M174,96L184,96"/><g transform="translate(176 140) scale(1)"><path d="M0,6C-9,-1-9,-9-4,-9C-1,-9 0,-6 0,-5C0,-6 1,-9 4,-9C9,-9 9,-1 0,6Z" style="fill:var(--color-accent-mark)"/></g></g></svg><div><h5>Hoa và quà cho em</h5><p>Anh gửi tới tận tay em. Ngày nào thì bí mật nha.</p></div></div>
+          <div class="wish" id="ticket">
+            <button class="cloud" id="cloud" aria-label="Chạm vào đám mây để gọi Bụt">
+              <svg viewBox="0 0 160 90" aria-hidden="true"><path d="M30 78c-16 0-24-14-16-26-6-14 8-28 22-22 4-16 26-22 38-10 10-14 36-10 38 8 16-4 28 10 22 24 12 8 6 26-10 26z" fill="var(--color-paper-2)" stroke="var(--color-ink)" stroke-width="3" stroke-linejoin="round"/><path d="M52 52c4 4 10 4 14 0M94 52c4 4 10 4 14 0" stroke="var(--color-ink)" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg>
+              <b>Có một đám mây lạ</b>
+              <span id="cloudTxt">chạm vô đám mây 3 lần coi ai hiện ra</span>
+            </button>
+            <div class="wbody">
+              <div class="butrow"><svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Ông Bụt hiền từ ngồi trên mây hỏi: sao con khóc?"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round"><g transform="translate(32 46) scale(1.1)"><path d="M0,-10C1,-2 2,-1 10,0C2,1 1,2 0,10C-1,2-2,1-10,0C-2,-1-1,-2 0,-10Z" style="fill:var(--color-sun-tint)"/></g><g transform="translate(168 30) scale(0.8)"><path d="M0,-10C1,-2 2,-1 10,0C2,1 1,2 0,10C-1,2-2,1-10,0C-2,-1-1,-2 0,-10Z" style="fill:var(--color-sun-tint)"/></g><g transform="translate(28 112) scale(0.7)"><path d="M0,-10C1,-2 2,-1 10,0C2,1 1,2 0,10C-1,2-2,1-10,0C-2,-1-1,-2 0,-10Z" style="fill:var(--color-accent-mark)"/></g><g transform="translate(176 98) scale(0.6)"><path d="M0,-10C1,-2 2,-1 10,0C2,1 1,2 0,10C-1,2-2,1-10,0C-2,-1-1,-2 0,-10Z" style="fill:var(--color-sun-tint)"/></g><path d="M150,58L150,168" style="stroke-width:9"/><path d="M150,58L150,168" style="stroke:color-mix(in oklch,var(--color-sun-tint) 55%,var(--color-accent));stroke-width:4"/><path d="M150,60C140,58 138,44 148,40C158,36 164,48 156,52" style="stroke-width:5"/><path d="M58,166C54,132 70,104 100,104C130,104 146,132 142,166Z" style="fill:color-mix(in srgb,var(--color-accent) 55%,var(--color-ink))"/><path d="M100,106L100,160"/><circle cx="100" cy="34" r="8" style="fill:var(--color-paper-2)"/><path d="M93,40L107,40"/><ellipse cx="71" cy="76" rx="5" ry="7" style="fill:#FBE3D1"/><ellipse cx="129" cy="76" rx="5" ry="7" style="fill:#FBE3D1"/><path d="M71,72C70,48 84,40 100,40C116,40 130,48 129,72C130,92 116,102 100,102C84,102 70,92 71,72Z" style="fill:#FBE3D1"/><path d="M84,56C88,58 90,60 90,60M116,56C112,58 110,60 110,60" style="stroke-width:2"/><path d="M78,64C82,56 92,56 95,62C90,61 84,62 78,64ZM122,64C118,56 108,56 105,62C110,61 116,62 122,64Z" style="fill:var(--color-paper-2)"/><g transform="translate(100 70)"><path d="M-16,4C-13,-3-9,-3-6,4M6,4C9,-3 13,-3 16,4" style="stroke-width:3.6"/></g><ellipse cx="80" cy="82" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/><ellipse cx="120" cy="82" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/><path d="M76,82C74,104 82,130 96,146C98,140 100,140 100,148C104,140 104,138 106,144C120,128 128,104 124,82C116,94 108,90 100,90C92,90 84,94 76,82Z" style="fill:var(--color-paper-2)"/><path d="M86,90C92,84 108,84 114,90C108,94 92,94 86,90Z" style="fill:var(--color-paper-2)"/><path d="M96,96C99,98 101,98 104,96"/><path d="M92,112C94,120 96,126 98,130M108,112C106,120 104,126 102,130" style="stroke-width:1.8"/><circle cx="146" cy="120" r="7" style="fill:#FBE3D1"/><circle cx="56" cy="132" r="7" style="fill:#FBE3D1"/><path d="M30,176C18,176 18,158 32,158C30,144 50,140 58,150C64,138 84,138 90,150C98,140 116,140 120,152C128,140 150,142 150,156C166,152 178,166 168,176Z" style="fill:var(--color-paper-2)"/><path d="M52,168C60,170 66,168 70,164M118,168C126,170 132,168 136,164" style="stroke:var(--color-iris-tint);stroke-width:3"/></g></svg><p class="say">“Sao con khóc?”<small>Bụt cho con một điều ước. Hoàng tử Hái làm cho bằng được.</small></p></div>
+              <p class="note">ước được một lần thôi đó, chọn kỹ nha</p>
               <div class="opts" role="group" aria-label="Chọn điều ước">
                 <button class="opt" aria-pressed="false" data-w="Một ngày anh chiều em hết mình">Một ngày anh chiều em hết mình</button>
                 <button class="opt" aria-pressed="false" data-w="Một buổi massage, spa thư giãn">Một buổi massage, spa</button>
                 <button class="opt" aria-pressed="false" data-w="Một chuyến đi chơi ngắn của hai đứa">Một chuyến đi chơi ngắn</button>
                 <button class="opt" aria-pressed="false" data-w="__own">Điều khác, em tự ghi</button>
               </div>
-              <input class="own" id="own" type="text" maxlength="140" placeholder="Em muốn gì nè…" aria-label="Điều ước của em">
-              <button class="send" id="send" disabled>Gửi điều ước cho anh</button>
+              <input class="own" id="own" type="text" maxlength="140" placeholder="Em ước gì nè…" aria-label="Điều ước của em">
+              <button class="send" id="send" disabled>Gửi điều ước cho Bụt</button>
               <p class="hint-pick" id="hintPick">chọn một điều trước nha</p>
               <p class="done" id="done" role="status"></p>
             </div>
-            <div class="t-stub" aria-hidden="true">N-001 · KHÔNG HẾT HẠN</div>
-            <div class="stamp" aria-hidden="true">ĐÃ CHỌN</div>
+            <div class="stamp" aria-hidden="true">BỤT ĐÃ DUYỆT</div>
           </div>
         </div>
       </aside>
     </div>
 
-    <section class="memories" aria-labelledby="mt">
-      <h3 id="mt">Mấy chỗ mình đã đi cùng nhau</h3>
-      <p class="sub">và mấy chỗ sắp đi nữa</p>
-      <div class="strip">
-        <figure class="pc" style="--r:-2deg;--bg:var(--color-sun-tint)"><div class="ph"><b>Đài Bắc</b></div><figcaption>chuyến đi xa đầu tiên<small>05/2025</small></figcaption></figure>
-        <figure class="pc photo" style="--r:1.5deg"><img src="photos/thailan.jpg" alt="Hái hôn má Nguyên ở Thái Lan" loading="lazy" width="600" height="800"><figcaption>Thái Lan</figcaption></figure>
-        <figure class="pc photo" style="--r:-1deg"><img src="photos/cauhon.jpg" alt="Nguyên khoe nhẫn cầu hôn dưới đèn đêm" loading="lazy" width="600" height="800"><figcaption>cái tối em gật đầu<small>ở Thái</small></figcaption></figure>
-        <figure class="pc photo" style="--r:2deg"><img src="photos/damngo.jpg" alt="Hai đứa selfie ngày dạm ngõ" loading="lazy" width="600" height="800"><figcaption>dạm ngõ<small>2025</small></figcaption></figure>
-        <figure class="pc photo" style="--r:-1.5deg"><img src="photos/08.jpg" alt="Hái và Nguyên ngồi ghế gỗ trong vườn" loading="lazy" width="600" height="800"><figcaption>ngồi vườn, nắm tay</figcaption></figure>
-        <figure class="pc photo" style="--r:1deg"><img src="photos/04.jpg" alt="Hai đứa áo dài trắng khoe nhẫn" loading="lazy" width="600" height="800"><figcaption>khoe nhẫn nè<small>đính hôn · 06/02/2026</small></figcaption></figure>
-        <figure class="pc photo" style="--r:-2deg"><img src="photos/05.jpg" alt="Hái ghé sát má Nguyên trước phông đỏ" loading="lazy" width="600" height="800"><figcaption>Hái và Nê<small>đính hôn · 06/02/2026</small></figcaption></figure>
-        <figure class="pc photo" style="--r:1.5deg"><img src="photos/06.jpg" alt="Hái hôn Nguyên giữa mưa cánh hoa" loading="lazy" width="600" height="800"><figcaption>mưa cánh hoa<small>đính hôn · 06/02/2026</small></figcaption></figure>
-        <figure class="pc photo" style="--r:-1deg"><img src="photos/07.jpg" alt="Hai đứa cụng ly ở tiệc tối" loading="lazy" width="600" height="800"><figcaption>cụng ly tối đó<small>đính hôn · 06/02/2026</small></figcaption></figure>
-        <figure class="pc photo" style="--r:2deg"><img src="photos/01.jpg" alt="Hai đứa mặc cổ phục đỏ, Nguyên cầm hoa vàng" loading="lazy" width="600" height="800"><figcaption>cổ phục đỏ ở Huế<small>chụp ảnh cưới · 06/2026</small></figcaption></figure>
-        <figure class="pc photo" style="--r:-1.5deg"><img src="photos/02.jpg" alt="Hái áp má ôm Nguyên" loading="lazy" width="600" height="800"><figcaption>váy trắng, ngọc trai<small>chụp ảnh cưới · 06/2026</small></figcaption></figure>
-        <figure class="pc photo" style="--r:1deg"><img src="photos/03.jpg" alt="Hai đứa giơ tay trước biển chiều" loading="lazy" width="600" height="800"><figcaption>biển chiều<small>chụp ảnh cưới · 06/2026</small></figcaption></figure>
-        <figure class="pc" style="--r:-2deg;--bg:var(--color-mint-tint)"><div class="ph"><b>Mũi Né</b></div><figcaption>đi biển cùng gia đình<small>07/2026</small></figcaption></figure>
-        <figure class="pc photo" style="--r:1.5deg"><img src="photos/vungtau.jpg" alt="Hai đứa ló mặt qua bảng Bạch Tuyết ở Vũng Tàu" loading="lazy" width="600" height="800"><figcaption>hoàng tử và Bạch Tuyết<small>Vũng Tàu</small></figcaption></figure>
-        <figure class="pc" style="--r:-1deg;--bg:var(--color-sun-tint)"><div class="ph"><b>Kuala Lumpur</b></div><figcaption>ba ngày ở KL<small>09/2026</small></figcaption></figure>
-        <figure class="pc photo" style="--r:-1.5deg"><img src="photos/dalat.jpg" alt="Hai đứa đứng trên ban công ở Đà Lạt" loading="lazy" width="600" height="800"><figcaption>Đà Lạt</figcaption></figure>
-        <figure class="pc photo" style="--r:1deg"><img src="photos/bmt.jpg" alt="Hai đứa mặc đồ thổ cẩm ở Buôn Ma Thuột" loading="lazy" width="600" height="800"><figcaption>thử đồ Tây Nguyên<small>Buôn Ma Thuột</small></figcaption></figure>
-        <figure class="pc photo" style="--r:-2deg"><img src="photos/chaybo.jpg" alt="Hai đứa đeo số chạy trước bảng WaterRun" loading="lazy" width="600" height="800"><figcaption>chạy WaterRun cùng nhau<small>Sài Gòn</small></figcaption></figure>
-        <figure class="pc photo" style="--r:1.5deg"><img src="photos/sitecheck.jpg" alt="Hai đứa ở Rừng Thông Mơ" loading="lazy" width="600" height="800"><figcaption>đi coi chỗ cưới<small>Rừng Thông Mơ, Đà Lạt</small></figcaption></figure>
-        <figure class="pc photo" style="--r:2deg"><img style="object-position:58% center" src="photos/namdu.jpg" alt="Hái ôm Nguyên ngược nắng ở biển Nam Du" loading="lazy" width="900" height="600"><figcaption>Nam Du<small>10/2026</small></figcaption></figure>
-        <figure class="pc next" style="--r:-1deg;--bg:var(--color-iris-tint)"><div class="ph"><b>Hàn Quốc</b></div><figcaption>sắp đi nè<small>21/11/2026</small></figcaption></figure>
-        <figure class="pc next" style="--r:2deg;--bg:var(--color-accent-mark)"><div class="ph"><b>Đà Lạt</b></div><figcaption>ngày em thành vợ anh<small>03/04/2027</small></figcaption></figure>
+    <section class="sec" aria-labelledby="mt">
+      <div class="shead"><p class="kicker">phụ lục</p><h4 id="mt">Những trang kỷ niệm</h4><p>bấm vô hình để coi lớn, có mấy chỗ sắp đi nữa</p><svg class="divider"><use href="#div"/></svg></div>
+      <div class="strip" id="strip">
+        <figure class="pc rv" style="--r:-2deg;--bg:var(--color-sun-tint)"><div class="ph"><b>Đài Bắc</b></div><figcaption>chuyến đi xa đầu tiên<small>05/2025</small></figcaption></figure>
+        <figure class="pc photo rv" style="--r:1.5deg"><img src="photos/thailan.jpg" alt="Hái hôn má Nê ở Thái Lan" loading="lazy" width="600" height="800"><figcaption>Thái Lan</figcaption></figure>
+        <figure class="pc photo rv" style="--r:-1deg"><img src="photos/cauhon.jpg" alt="Nê khoe nhẫn cầu hôn dưới đèn đêm" loading="lazy" width="600" height="800"><figcaption>cái tối em gật đầu<small>ở Thái</small></figcaption></figure>
+        <figure class="pc photo rv" style="--r:2deg"><img src="photos/damngo.jpg" alt="Hai đứa selfie ngày dạm ngõ" loading="lazy" width="600" height="800"><figcaption>dạm ngõ<small>2025</small></figcaption></figure>
+        <figure class="pc photo rv" style="--r:-1.5deg"><img src="photos/08.jpg" alt="Hái và Nê ngồi ghế gỗ trong vườn" loading="lazy" width="600" height="800"><figcaption>ngồi vườn, nắm tay</figcaption></figure>
+        <figure class="pc photo rv" style="--r:1deg"><img src="photos/04.jpg" alt="Hai đứa áo dài trắng khoe nhẫn" loading="lazy" width="600" height="800"><figcaption>khoe nhẫn nè<small>đính hôn · 06/02/2026</small></figcaption></figure>
+        <figure class="pc photo rv" style="--r:-2deg"><img src="photos/05.jpg" alt="Hái ghé sát má Nê trước phông đỏ" loading="lazy" width="600" height="800"><figcaption>Hái và Nê<small>đính hôn · 06/02/2026</small></figcaption></figure>
+        <figure class="pc photo rv" style="--r:1.5deg"><img src="photos/06.jpg" alt="Hái hôn Nê giữa mưa cánh hoa" loading="lazy" width="600" height="800"><figcaption>mưa cánh hoa<small>đính hôn · 06/02/2026</small></figcaption></figure>
+        <figure class="pc photo rv" style="--r:-1deg"><img src="photos/07.jpg" alt="Hai đứa cụng ly ở tiệc tối" loading="lazy" width="600" height="800"><figcaption>cụng ly tối đó<small>đính hôn · 06/02/2026</small></figcaption></figure>
+        <figure class="pc photo rv" style="--r:2deg"><img src="photos/01.jpg" alt="Hai đứa mặc cổ phục đỏ, Nê cầm hoa vàng" loading="lazy" width="600" height="800"><figcaption>cổ phục đỏ ở Huế<small>chụp ảnh cưới · 06/2026</small></figcaption></figure>
+        <figure class="pc photo rv" style="--r:-1.5deg"><img src="photos/02.jpg" alt="Hái áp má ôm Nê" loading="lazy" width="600" height="800"><figcaption>váy trắng, ngọc trai<small>chụp ảnh cưới · 06/2026</small></figcaption></figure>
+        <figure class="pc photo rv" style="--r:1deg"><img src="photos/03.jpg" alt="Hai đứa giơ tay trước biển chiều" loading="lazy" width="600" height="800"><figcaption>biển chiều<small>chụp ảnh cưới · 06/2026</small></figcaption></figure>
+        <figure class="pc rv" style="--r:-2deg;--bg:var(--color-mint-tint)"><div class="ph"><b>Mũi Né</b></div><figcaption>đi biển cùng gia đình<small>07/2026</small></figcaption></figure>
+        <figure class="pc photo rv" style="--r:1.5deg"><img src="photos/vungtau.jpg" alt="Hai đứa ló mặt qua bảng Bạch Tuyết ở Vũng Tàu" loading="lazy" width="600" height="800"><figcaption>hoàng tử và Bạch Tuyết<small>Vũng Tàu</small></figcaption></figure>
+        <figure class="pc rv" style="--r:-1deg;--bg:var(--color-sun-tint)"><div class="ph"><b>Kuala Lumpur</b></div><figcaption>ba ngày ở KL<small>09/2026</small></figcaption></figure>
+        <figure class="pc photo rv" style="--r:-1.5deg"><img src="photos/dalat.jpg" alt="Hai đứa đứng trên ban công ở Đà Lạt" loading="lazy" width="600" height="800"><figcaption>Đà Lạt</figcaption></figure>
+        <figure class="pc photo rv" style="--r:1deg"><img src="photos/bmt.jpg" alt="Hai đứa mặc đồ thổ cẩm ở Buôn Ma Thuột" loading="lazy" width="600" height="800"><figcaption>thử đồ Tây Nguyên<small>Buôn Ma Thuột</small></figcaption></figure>
+        <figure class="pc photo rv" style="--r:-2deg"><img src="photos/chaybo.jpg" alt="Hai đứa đeo số chạy trước bảng WaterRun" loading="lazy" width="600" height="800"><figcaption>chạy WaterRun cùng nhau<small>Sài Gòn</small></figcaption></figure>
+        <figure class="pc photo rv" style="--r:1.5deg"><img src="photos/sitecheck.jpg" alt="Hai đứa ở Rừng Thông Mơ" loading="lazy" width="600" height="800"><figcaption>đi coi chỗ cưới<small>Rừng Thông Mơ, Đà Lạt</small></figcaption></figure>
+        <figure class="pc photo rv" style="--r:2deg"><img style="object-position:58% center" src="photos/namdu.jpg" alt="Hái ôm Nê ngược nắng ở biển Nam Du" loading="lazy" width="900" height="600"><figcaption>Nam Du<small>10/2026</small></figcaption></figure>
+        <figure class="pc next rv" style="--r:-1deg;--bg:var(--color-iris-tint)"><div class="ph"><b>Hàn Quốc</b></div><figcaption>sắp đi nè<small>21/11/2026</small></figcaption></figure>
+        <figure class="pc next rv" style="--r:2deg;--bg:var(--color-accent-mark)"><div class="ph"><b>Đà Lạt</b></div><figcaption>ngày em thành vợ anh<small>03/04/2027</small></figcaption></figure>
       </div>
     </section>
 
-    <section class="journey" aria-labelledby="wt">
-      <div class="jt"><svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Đám cưới áo dài, nắm tay dưới cây thông"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round"><circle cx="34" cy="34" r="14" style="fill:var(--color-sun-tint)"/><path d="M34,10L34,4M14,20L8,16M54,20L60,16M10,36L4,36"/><path d="M100,20L72,62L86,62L64,96L82,96L58,130L142,130L118,96L136,96L114,62L128,62Z" style="fill:var(--color-mint-tint)"/><path d="M94,130L94,150L106,150L106,130Z" style="fill:var(--color-sun-tint)"/><ellipse cx="100" cy="186" rx="70" ry="6" style="fill:var(--color-ink);opacity:.12;stroke:none"/><g transform="translate(64 130)"><path d="M-15,-2C-20,8-21,22-19,30L19,30C21,22 20,8 15,-2Z" style="fill:var(--color-ink)"/><path d="M-7,-2L0,14L7,-2Z" style="fill:var(--color-paper-2)"/><path d="M-5,0L0,4L5,0L5,6L0,4L-5,6Z" style="fill:var(--color-accent)"/><path d="M-14,30L-14,46L-3,46L-2,30M2,30L3,46L14,46L14,30" style="fill:var(--color-ink)"/><ellipse cx="-9" cy="48" rx="7" ry="3" style="fill:var(--color-ink)"/><ellipse cx="9" cy="48" rx="7" ry="3" style="fill:var(--color-ink)"/></g><g transform="translate(64 98)"><path d="M-27,6C-30,-24-16,-33 2,-33L5,-46L11,-34L19,-43L20,-30C30,-24 31,-10 27,6Z" style="fill:var(--color-ink)"/><path d="M-27,0C-28,-16-15,-25 1,-25C17,-24 28,-15 27,1C27,17 15,26 0,26C-16,25-28,15-27,0Z" style="fill:#F6D2B8"/><path d="M-27,-2C-26,-18-14,-27 0,-28L4,-38L9,-27C14,-27 24,-22 27,-4C20,-14 12,-17 6,-16C2,-12-10,-18-18,-12C-22,-10-25,-6-27,-2Z" style="fill:var(--color-ink)"/><path d="M-15,3C-12,-3-8,-3-5,3M5,3C8,-3 12,-3 15,3"/><path d="M-6,12C-3,17 3,17 6,12"/><ellipse cx="-17" cy="11" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/><ellipse cx="17" cy="11" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/></g><g transform="translate(136 130)"><path d="M-14,-2C-20,8-20,22-18,30L18,30C20,22 20,8 14,-2Z" style="fill:var(--color-accent)"/><path d="M-14,26L-16,48L-4,48L-3,30L3,30L4,48L16,48L14,26" style="fill:var(--color-paper-2)"/><path d="M-6,-2C-3,4 3,4 6,-2" style="fill:var(--color-accent-mark)"/></g><g transform="translate(136 98)"><path d="M-28,-4C-34,14-32,34-24,40L24,40C32,34 34,14 28,-4Z" style="fill:var(--color-ink)"/><path d="M-26,0C-27,-16-14,-25 1,-25C16,-24 27,-15 26,1C26,17 14,25 0,25C-15,24-27,15-26,0Z" style="fill:#F6D2B8"/><path d="M-28,2C-31,-22-14,-34 1,-33C18,-33 32,-22 28,2C26,-8 22,-13 16,-14C10,-10 4,-12 0,-16C-6,-11-14,-11-18,-14C-23,-12-26,-6-28,2Z" style="fill:var(--color-ink)"/><path d="M-15,3C-12,-3-8,-3-5,3M5,3C8,-3 12,-3 15,3"/><g style="fill:none;stroke-width:2.2"><circle cx="-10" cy="3" r="7.5"/><circle cx="10" cy="3" r="7.5"/></g><path d="M-2,3L2,3"/><path d="M-6,12C-3,17 3,17 6,12"/><ellipse cx="-17" cy="12" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/><ellipse cx="17" cy="12" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/></g><path d="M80,140C92,150 108,150 120,140" style="fill:#F6D2B8"/><circle cx="100" cy="148" r="5" style="fill:#F6D2B8"/><g transform="translate(100 166) scale(1)"><path d="M0,6C-9,-1-9,-9-4,-9C-1,-9 0,-6 0,-5C0,-6 1,-9 4,-9C9,-9 9,-1 0,6Z" style="fill:var(--color-accent)"/></g></g></svg></div><h3 id="wt">Hành trình cưới của mình</h3>
-      <p class="sub">hai mốc lớn nhất năm sau</p>
+    <section class="sec" aria-labelledby="wt">
+      <div class="shead"><div class="rv"><svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Đám cưới áo dài, nắm tay dưới cây thông"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round"><circle cx="34" cy="34" r="14" style="fill:var(--color-sun-tint)"/><path d="M34,10L34,4M14,20L8,16M54,20L60,16M10,36L4,36"/><path d="M100,20L72,62L86,62L64,96L82,96L58,130L142,130L118,96L136,96L114,62L128,62Z" style="fill:var(--color-mint-tint)"/><path d="M94,130L94,150L106,150L106,130Z" style="fill:var(--color-sun-tint)"/><ellipse cx="100" cy="186" rx="70" ry="6" style="fill:var(--color-ink);opacity:.12;stroke:none"/><g transform="translate(60 130)"><path d="M-15,-2C-20,8-21,22-19,30L19,30C21,22 20,8 15,-2Z" style="fill:var(--color-ink)"/><path d="M-7,-2L0,14L7,-2Z" style="fill:var(--color-paper-2)"/><path d="M-5,0L0,4L5,0L5,6L0,4L-5,6Z" style="fill:var(--color-accent)"/><path d="M-14,30L-14,46L-3,46L-2,30M2,30L3,46L14,46L14,30" style="fill:var(--color-ink)"/><ellipse cx="-9" cy="48" rx="7" ry="3" style="fill:var(--color-ink)"/><ellipse cx="9" cy="48" rx="7" ry="3" style="fill:var(--color-ink)"/></g><g transform="translate(58 96) scale(.9)"><g transform="scale(1.12)"><path d="M-31,0C-32,-18-17,-28 0,-28C18,-28 31,-18 31,-3C37,3 36,17 27,21C19,28 8,30-2,30C-19,30-31,18-31,0Z" style="fill:#FBE3D1"/><path d="M-32,0C-35,-24-18,-35 0,-35L4,-49L11,-36L20,-45L21,-32C32,-26 35,-12 32,-2C27,-14 17,-18 9,-17C3,-12-12,-19-21,-13C-26,-10-30,-6-32,0Z" style="fill:var(--color-ink)"/><path d="M-16,4C-13,-3-9,-3-6,4M6,4C9,-3 13,-3 16,4" style="stroke-width:3.6"/><path d="M-16,-10L-7,-11M7,-11L16,-10" style="stroke-width:4.6"/><path d="M-5,13C-2,17 2,17 5,13"/><ellipse cx="-20" cy="12" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/><ellipse cx="21" cy="12" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/></g></g><g transform="translate(140 130)"><path d="M-14,-2C-20,8-20,22-18,30L18,30C20,22 20,8 14,-2Z" style="fill:var(--color-accent)"/><path d="M-14,26L-16,48L-4,48L-3,30L3,30L4,48L16,48L14,26" style="fill:var(--color-paper-2)"/><path d="M-6,-2C-3,4 3,4 6,-2" style="fill:var(--color-accent-mark)"/></g><g transform="translate(142 96) scale(.9)"><g transform="scale(1.12)"><path d="M-32,-4C-38,14-36,36-27,42L27,42C36,36 38,14 32,-4Z" style="fill:var(--color-ink)"/><path d="M-31,0C-32,-18-17,-28 0,-28C18,-28 31,-18 31,-3C37,3 36,17 27,21C19,28 8,30-2,30C-19,30-31,18-31,0Z" style="fill:#FBE3D1"/><path d="M-33,4C-36,-22-17,-35 1,-35C20,-35 37,-22 33,4C31,-8 26,-13 19,-15C12,-10 5,-12 0,-17C-7,-11-16,-11-21,-15C-27,-12-31,-6-33,4Z" style="fill:var(--color-ink)"/><path d="M-16,4C-13,-3-9,-3-6,4M6,4C9,-3 13,-3 16,4" style="stroke-width:3.6"/><path d="M-16,-10L-7,-11M7,-11L16,-10" style="stroke-width:4.6"/><g style="fill:none;stroke-width:2.4"><circle cx="-11" cy="2" r="9.5"/><circle cx="11" cy="2" r="9.5"/></g><path d="M-2,2L2,2"/><path d="M-5,13C-2,17 2,17 5,13"/><ellipse cx="-21" cy="14" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/><ellipse cx="22" cy="14" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/></g></g><path d="M74,140C90,152 110,152 126,140" style="fill:#FBE3D1"/><circle cx="100" cy="148" r="5" style="fill:#FBE3D1"/><g transform="translate(100 166) scale(1)"><path d="M0,6C-9,-1-9,-9-4,-9C-1,-9 0,-6 0,-5C0,-6 1,-9 4,-9C9,-9 9,-1 0,6Z" style="fill:var(--color-accent)"/></g></g></svg></div><p class="kicker">hồi sắp tới</p><h4 id="wt">Hoàng tử rước cô Tấm về dinh</h4><p>hai mốc lớn nhất năm sau</p><svg class="divider"><use href="#div"/></svg></div>
       <div class="wed">
-        <article class="wcard w1">
+        <article class="wcard rv">
           <img src="photos/sitecheck.jpg" alt="Hai đứa đi coi Rừng Thông Mơ" loading="lazy">
-          <div class="wbody">
-            <p class="wdate">03/04/2027</p>
-            <h4>Rừng Thông Mơ, Đà Lạt</h4>
-            <p>Lễ vow và tiệc giữa rừng thông. Chỗ này hai đứa đi coi tận nơi rồi.</p>
-            <p class="wcount"><b data-to="2027-04-03">—</b> ngày nữa</p>
-          </div>
+          <div class="wb"><p class="wdate">03/04/2027</p><h5>Rừng Thông Mơ, Đà Lạt</h5><p>Lễ vow và tiệc giữa rừng thông. Chỗ này hai đứa đi coi tận nơi rồi.</p><p class="wcount"><b data-to="2027-04-03">0</b> ngày nữa</p></div>
         </article>
-        <article class="wcard w2">
+        <article class="wcard rv" style="--d:.15s">
           <div class="sun" aria-hidden="true"><svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMax slice"><rect width="320" height="200" fill="var(--color-sun-tint)"/><circle cx="160" cy="150" r="62" fill="var(--color-accent-mark)"/><circle cx="160" cy="150" r="40" fill="var(--color-accent)"/><path d="M0 150h320v50H0z" fill="var(--color-env)"/><path d="M0 150h320" stroke="var(--color-ink)" stroke-width="2.5"/><path d="M40 170h60M140 182h90M240 168h50" stroke="var(--color-ink)" stroke-width="2" stroke-linecap="round" opacity=".5"/></svg></div>
-          <div class="wbody">
-            <p class="wdate">15–16/05/2027</p>
-            <h4>Sunrise, Tây Ninh</h4>
-            <p>15/05 tiệc tối nhà gái. 16/05 lễ Vu Quy, Tân Hôn và tiệc nhà trai. Về quê em làm đám cưới chính.</p>
-            <p class="wcount"><b data-to="2027-05-16">—</b> ngày nữa</p>
-          </div>
+          <div class="wb"><p class="wdate">15–16/05/2027</p><h5>Sunrise, Tây Ninh</h5><p>15/05 tiệc tối nhà gái. 16/05 lễ Vu Quy, Tân Hôn và tiệc nhà trai. Về quê em làm đám cưới chính.</p><p class="wcount"><b data-to="2027-05-16">0</b> ngày nữa</p></div>
         </article>
       </div>
     </section>
 
-    <section class="journey" aria-labelledby="st">
-      <div class="jt"><svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Hai người vẫy tay trên máy bay đi Singapore"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round"><circle cx="176" cy="30" r="12" style="fill:var(--color-sun-tint)"/><g transform="translate(-10 -18)"><path d="M134,70C134,60 150,58 154,64C158,56 174,58 172,68C178,70 176,78 170,78L138,78C130,78 130,70 134,70Z" style="fill:var(--color-paper-2)"/></g><path d="M24,118L8,82L26,84L46,112Z" style="fill:var(--color-accent)"/><path d="M96,146L74,184L96,184L126,146Z" style="fill:var(--color-paper-2)"/><path d="M20,112C20,98 60,92 110,92C160,92 192,104 192,126C192,146 160,152 110,152C60,152 20,140 20,112Z" style="fill:var(--color-paper-2)"/><path d="M30,136C80,142 150,142 188,134" style="stroke:var(--color-accent);stroke-width:4"/><circle cx="84" cy="118" r="25" style="fill:var(--color-iris-tint)"/><circle cx="146" cy="118" r="25" style="fill:var(--color-iris-tint)"/><g transform="translate(84 120) scale(.72)"><path d="M-27,6C-30,-24-16,-33 2,-33L5,-46L11,-34L19,-43L20,-30C30,-24 31,-10 27,6Z" style="fill:var(--color-ink)"/><path d="M-27,0C-28,-16-15,-25 1,-25C17,-24 28,-15 27,1C27,17 15,26 0,26C-16,25-28,15-27,0Z" style="fill:#F6D2B8"/><path d="M-27,-2C-26,-18-14,-27 0,-28L4,-38L9,-27C14,-27 24,-22 27,-4C20,-14 12,-17 6,-16C2,-12-10,-18-18,-12C-22,-10-25,-6-27,-2Z" style="fill:var(--color-ink)"/><path d="M-15,3C-12,-3-8,-3-5,3M5,3C8,-3 12,-3 15,3"/><path d="M-8,11C-6,22 6,22 8,11Z" style="fill:var(--color-accent)"/><ellipse cx="-17" cy="11" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/><ellipse cx="17" cy="11" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/></g><g transform="translate(146 118) scale(.7)"><path d="M-26,0C-27,-16-14,-25 1,-25C16,-24 27,-15 26,1C26,17 14,25 0,25C-15,24-27,15-26,0Z" style="fill:#F6D2B8"/><path d="M-28,2C-31,-22-14,-34 1,-33C18,-33 32,-22 28,2C26,-8 22,-13 16,-14C10,-10 4,-12 0,-16C-6,-11-14,-11-18,-14C-23,-12-26,-6-28,2Z" style="fill:var(--color-ink)"/><path d="M-15,3C-12,-3-8,-3-5,3M5,3C8,-3 12,-3 15,3"/><g style="fill:none;stroke-width:2.2"><circle cx="-10" cy="3" r="7.5"/><circle cx="10" cy="3" r="7.5"/></g><path d="M-2,3L2,3"/><path d="M-8,11C-6,22 6,22 8,11Z" style="fill:var(--color-accent)"/><ellipse cx="-17" cy="12" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/><ellipse cx="17" cy="12" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/></g><path d="M68,104L62,90M162,102L168,88" style="fill:#F6D2B8"/><circle cx="62" cy="88" r="6" style="fill:#F6D2B8"/><circle cx="168" cy="86" r="6" style="fill:#F6D2B8"/><path d="M54,86L48,80M56,96L48,98M176,86L182,80M174,96L182,98"/><text x="46" y="46" font-size="18" transform="rotate(-6 46 46)" style="fill:var(--color-accent);stroke:none;font:700 18px 'Comic Sans MS','Chalkboard SE',cursive">Singapore!</text></g></svg></div><h3 id="st">Rồi mình cùng qua Singapore</h3>
-      <p class="sub">mục tiêu: tháng 8/2027 hai đứa nhập học cùng đợt</p>
-      <div class="logos"><img src="logos/nus.png" alt="NUS"><img src="logos/ntu.png" alt="NTU"><img src="logos/smu.png" alt="SMU"></div>
-      <ol class="road">
-        <li><span class="rd">tối nào cũng vậy</span><b>Học GMAT chung</b><span>8 giờ tối, hai đứa ngồi học cùng nhau</span></li>
-        <li><span class="rd">24–27/12/2026</span><b>Qua Singapore một chuyến</b><span>đi coi Singapore trước</span></li>
-        <li><span class="rd">đầu 2027</span><b>Thi GMAT</b><span>anh đặt lịch thi từ đầu tháng 11</span></li>
-        <li><span class="rd">tháng 1 đến 3/2027</span><b>Nộp hồ sơ</b><span>anh nộp trước, em nộp sau, hai đứa canh nhau</span></li>
-        <li class="goal"><span class="rd">08/2027</span><b>Cùng nhập học ở Singapore</b><span>cưới xong là mình đi</span></li>
-      </ol>
+    <section class="sec" aria-labelledby="st">
+      <div class="shead"><div class="rv"><svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Hai người vẫy tay trên máy bay đi Singapore"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round"><circle cx="176" cy="30" r="12" style="fill:var(--color-sun-tint)"/><g transform="translate(-10 -18)"><path d="M134,70C134,60 150,58 154,64C158,56 174,58 172,68C178,70 176,78 170,78L138,78C130,78 130,70 134,70Z" style="fill:var(--color-paper-2)"/></g><path d="M24,118L8,82L26,84L46,112Z" style="fill:var(--color-accent)"/><path d="M96,146L74,184L96,184L126,146Z" style="fill:var(--color-paper-2)"/><path d="M20,112C20,98 60,92 110,92C160,92 192,104 192,126C192,146 160,152 110,152C60,152 20,140 20,112Z" style="fill:var(--color-paper-2)"/><path d="M30,136C80,142 150,142 188,134" style="stroke:var(--color-accent);stroke-width:4"/><circle cx="84" cy="118" r="25" style="fill:#9EC5F5"/><circle cx="146" cy="118" r="25" style="fill:#9EC5F5"/><g transform="translate(84 122) scale(.6)"><g transform="scale(1.12)"><path d="M-31,0C-32,-18-17,-28 0,-28C18,-28 31,-18 31,-3C37,3 36,17 27,21C19,28 8,30-2,30C-19,30-31,18-31,0Z" style="fill:#FBE3D1"/><path d="M-32,0C-35,-24-18,-35 0,-35L4,-49L11,-36L20,-45L21,-32C32,-26 35,-12 32,-2C27,-14 17,-18 9,-17C3,-12-12,-19-21,-13C-26,-10-30,-6-32,0Z" style="fill:var(--color-ink)"/><path d="M-16,4C-13,-3-9,-3-6,4M6,4C9,-3 13,-3 16,4" style="stroke-width:3.6"/><path d="M-16,-10L-7,-11M7,-11L16,-10" style="stroke-width:4.6"/><path d="M-8,11C-6,23 6,23 8,11Z" style="fill:var(--color-accent)"/><ellipse cx="-20" cy="12" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/><ellipse cx="21" cy="12" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/></g></g><g transform="translate(146 120) scale(.58)"><g transform="scale(1.12)"><path d="M-31,0C-32,-18-17,-28 0,-28C18,-28 31,-18 31,-3C37,3 36,17 27,21C19,28 8,30-2,30C-19,30-31,18-31,0Z" style="fill:#FBE3D1"/><path d="M-33,4C-36,-22-17,-35 1,-35C20,-35 37,-22 33,4C31,-8 26,-13 19,-15C12,-10 5,-12 0,-17C-7,-11-16,-11-21,-15C-27,-12-31,-6-33,4Z" style="fill:var(--color-ink)"/><path d="M-16,4C-13,-3-9,-3-6,4M6,4C9,-3 13,-3 16,4" style="stroke-width:3.6"/><path d="M-16,-10L-7,-11M7,-11L16,-10" style="stroke-width:4.6"/><g style="fill:none;stroke-width:2.4"><circle cx="-11" cy="2" r="9.5"/><circle cx="11" cy="2" r="9.5"/></g><path d="M-2,2L2,2"/><path d="M-8,11C-6,23 6,23 8,11Z" style="fill:var(--color-accent)"/><ellipse cx="-21" cy="14" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/><ellipse cx="22" cy="14" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/></g></g><path d="M68,104L62,90M162,102L168,88" style="fill:#FBE3D1"/><circle cx="62" cy="88" r="6" style="fill:#FBE3D1"/><circle cx="168" cy="86" r="6" style="fill:#FBE3D1"/><path d="M54,86L48,80M56,96L48,98M176,86L182,80M174,96L182,98"/><text x="46" y="46" font-size="18" transform="rotate(-6 46 46)" style="fill:var(--color-accent);stroke:none;font:700 18px 'Comic Sans MS','Chalkboard SE',cursive">Singapore!</text></g></svg></div><p class="kicker">chuyến phiêu lưu mới</p><h4 id="st">Rồi quả thị bay tới quốc đảo Sư Tử</h4><p>mục tiêu: tháng 8/2027 hai đứa nhập học cùng đợt</p><svg class="divider"><use href="#div"/></svg></div>
+      <div class="logos rv"><img src="logos/ntu.png" alt="NTU"><img src="logos/nus.png" alt="NUS"><img src="logos/smu.png" alt="SMU"></div>
+      <div class="sgwrap">
+        <figure class="map rv" id="map">
+          <svg class="mapsvg" viewBox="0 0 400 520" role="img" aria-label="Bản đồ: quả thị bay từ Sài Gòn xuống Singapore">
+            <rect width="400" height="520" fill="var(--color-sea)"/>
+            <g class="waves" fill="none" stroke="var(--color-sea-ink)" stroke-width="2" stroke-linecap="round" opacity=".55">
+              <path d="M300 170q8-6 16 0t16 0"/><path d="M340 300q8-6 16 0t16 0"/><path d="M230 230q8-6 16 0t16 0"/><path d="M60 300q8-6 16 0t16 0"/><path d="M300 420q8-6 16 0t16 0"/><path d="M200 330q8-6 16 0t16 0"/>
+            </g>
+            <g class="land" fill="var(--color-land)" stroke="var(--color-ink)" stroke-width="2.6" stroke-linejoin="round">
+              <path d="M-4 -4H372L356 28L320 52L280 64L268 84L264 96L236 116L208 136L192 128L196 88L180 64L168 56L140 40L120 20L112 -4Z"/>
+              <path d="M-4 170L16 192L52 204L88 232L118 262L136 288L138 328L150 380L166 410L156 422L130 418L-4 420Z"/>
+              <path d="M-4 470L30 464L70 476L110 500L130 524H-4Z"/>
+              <ellipse cx="160" cy="434" rx="13" ry="6"/>
+              <circle cx="196" cy="452" r="4"/><circle cx="212" cy="444" r="3"/>
+            </g>
+            <path id="route" d="M268 50C330 120 340 210 290 280S170 360 160 432" fill="none" stroke="var(--color-ink)" stroke-width="2.4" stroke-dasharray="2 9" stroke-linecap="round" opacity=".55"/>
+            <path id="trail" d="M268 50C330 120 340 210 290 280S170 360 160 432" fill="none" stroke="var(--color-accent)" stroke-width="4" stroke-linecap="round"/>
+            <g id="stops"></g>
+            <g class="city" font-family="var(--font-hand)" font-size="17" fill="var(--color-ink)">
+              <circle cx="268" cy="50" r="6" fill="var(--color-accent)" stroke="var(--color-ink)" stroke-width="2"/>
+              <text x="254" y="38" text-anchor="end">Sài Gòn</text>
+              <text x="182" y="470">Singapore</text>
+            </g>
+            <g id="lion" transform="translate(110 470)">
+              <g class="lionpop">
+                <circle r="27" fill="var(--color-gold)" stroke="var(--color-ink)" stroke-width="2.6" stroke-dasharray="9 3"/>
+                <circle r="17" fill="#FBE3D1" stroke="var(--color-ink)" stroke-width="2.4"/>
+                <circle cx="-6" cy="-3" r="2.2" fill="var(--color-ink)"/><circle cx="6" cy="-3" r="2.2" fill="var(--color-ink)"/>
+                <path d="M-3 3h6l-3 3z" fill="var(--color-ink)"/><path d="M-6 8q6 5 12 0" fill="none" stroke="var(--color-ink)" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="-11" cy="4" r="3" fill="#F7B5C8"/><circle cx="11" cy="4" r="3" fill="#F7B5C8"/>
+              </g>
+            </g>
+          </svg>
+          <div class="fly" id="fly" role="slider" tabindex="0" aria-label="Quả thị bay qua Singapore. Kéo hoặc bấm mũi tên phải" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><svg viewBox="0 0 100 100" class="toon" role="img" aria-label="Quả thị vàng cười"><g style="fill:none;stroke:var(--color-ink);stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round"><path d="M50,30C74,28 92,40 90,62C88,82 70,88 50,88C30,88 12,82 10,62C8,40 26,28 50,30Z" style="fill:color-mix(in oklch,var(--color-sun-tint) 50%,var(--color-accent))"/><path d="M22,46C18,52 18,58 19,62" style="stroke:var(--color-paper-2);stroke-width:3.4;opacity:.7"/><path d="M50,34C42,24 26,24 24,32C30,38 42,38 50,34C58,38 70,38 76,32C74,24 58,24 50,34ZM50,34C42,36 38,44 42,48C46,46 50,40 50,34C50,40 54,46 58,48C62,44 58,36 50,34Z" style="fill:var(--color-mint-tint)"/><path d="M50,32L53,20" style="stroke-width:5"/><circle cx="37" cy="62" r="5.4" style="fill:var(--color-ink)"/><circle cx="63" cy="62" r="5.4" style="fill:var(--color-ink)"/><g style="fill:#fff;stroke:none"><circle cx="39" cy="60" r="1.9"/><circle cx="65" cy="60" r="1.9"/></g><ellipse cx="27" cy="71" rx="6" ry="3.6" style="fill:#F7B5C8;stroke:none"/><ellipse cx="73" cy="71" rx="6" ry="3.6" style="fill:#F7B5C8;stroke:none"/><path d="M44,70C47,75 53,75 56,70"/></g></svg></div>
+          <figcaption id="mapcap">cô Tấm chui vô quả thị rồi. Cuộn xuống từ từ, hoặc nắm quả thị kéo nó bay đi</figcaption>
+        </figure>
+        <ol class="road" id="road">
+          <li class="rv"><span class="rd">tối nào cũng vậy</span><b>Học GMAT chung</b><span>8 giờ tối, hai đứa ngồi học cùng nhau</span></li>
+          <li class="rv" style="--d:.08s"><span class="rd">24–27/12/2026</span><b>Qua Singapore một chuyến</b><span>đi coi Singapore trước</span></li>
+          <li class="rv" style="--d:.16s"><span class="rd">đầu 2027</span><b>Thi GMAT</b><span>anh đặt lịch thi từ đầu tháng 11</span></li>
+          <li class="rv" style="--d:.24s"><span class="rd">tháng 1 đến 3/2027</span><b>Nộp hồ sơ</b><span>anh nộp trước, em nộp sau, hai đứa canh nhau</span></li>
+          <li class="goal rv" style="--d:.32s"><span class="rd">08/2027</span><b>Cùng nhập học ở Singapore</b><span>cưới xong là mình đi</span></li>
+          </ol>
+      </div>
     </section>
 
-    <section class="closing">
-      <div class="ct"><svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Nê tha thứ, ôm Hái, Hái khóc vì vui"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round"><g transform="translate(26 44) scale(1.4)"><path d="M0,6C-9,-1-9,-9-4,-9C-1,-9 0,-6 0,-5C0,-6 1,-9 4,-9C9,-9 9,-1 0,6Z" style="fill:var(--color-accent)"/></g><g transform="translate(172 40) scale(1.2)"><path d="M0,6C-9,-1-9,-9-4,-9C-1,-9 0,-6 0,-5C0,-6 1,-9 4,-9C9,-9 9,-1 0,6Z" style="fill:var(--color-accent-mark)"/></g><g transform="translate(100 22) scale(1.1)"><path d="M0,6C-9,-1-9,-9-4,-9C-1,-9 0,-6 0,-5C0,-6 1,-9 4,-9C9,-9 9,-1 0,6Z" style="fill:var(--color-accent)"/></g><ellipse cx="100" cy="184" rx="60" ry="6" style="fill:var(--color-ink);opacity:.12;stroke:none"/><g transform="translate(80 130)"><path d="M-15,-2C-20,8-21,22-19,30L19,30C21,22 20,8 15,-2Z" style="fill:var(--color-ink)"/><path d="M-6,-2C-3,3 3,3 6,-2" style="fill:var(--color-sun-tint)"/><path d="M-14,30L-14,44L-3,44L-2,30M2,30L3,44L14,44L14,30" style="fill:var(--color-iris-tint)"/><ellipse cx="-9" cy="46" rx="7" ry="3" style="fill:var(--color-ink)"/><ellipse cx="9" cy="46" rx="7" ry="3" style="fill:var(--color-ink)"/></g><g transform="translate(122 132)"><path d="M-15,-2C-21,8-22,22-21,30L21,30C22,22 21,8 15,-2Z" style="fill:var(--color-paper-2)"/><path d="M-6,-2C-3,4 3,4 6,-2"/><path d="M-14,30L-14,44L-3,44L-2,30M2,30L3,44L14,44L14,30" style="fill:var(--color-paper-2)"/><ellipse cx="-9" cy="46" rx="7" ry="3" style="fill:var(--color-ink)"/><ellipse cx="9" cy="46" rx="7" ry="3" style="fill:var(--color-ink)"/></g><g transform="translate(78 92) rotate(-8)"><path d="M-27,6C-30,-24-16,-33 2,-33L5,-46L11,-34L19,-43L20,-30C30,-24 31,-10 27,6Z" style="fill:var(--color-ink)"/><path d="M-27,0C-28,-16-15,-25 1,-25C17,-24 28,-15 27,1C27,17 15,26 0,26C-16,25-28,15-27,0Z" style="fill:#F6D2B8"/><path d="M-27,-2C-26,-18-14,-27 0,-28L4,-38L9,-27C14,-27 24,-22 27,-4C20,-14 12,-17 6,-16C2,-12-10,-18-18,-12C-22,-10-25,-6-27,-2Z" style="fill:var(--color-ink)"/><path d="M-15,-2L-7,2L-15,6M15,-2L7,2L15,6"/><path d="M-9,10C-9,24 9,24 9,10C4,13-4,13-9,10Z" style="fill:var(--color-accent)"/><ellipse cx="-17" cy="11" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/><ellipse cx="17" cy="11" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/><path d="M-14,5C-26,2-32,14-30,30M14,5C26,2 32,14 30,30" style="stroke-width:8"/><path d="M-14,5C-26,2-32,14-30,30M14,5C26,2 32,14 30,30" style="stroke:var(--color-iris-tint);stroke-width:4"/></g><g transform="translate(124 96) rotate(10)"><path d="M-28,-4C-34,14-32,34-24,40L24,40C32,34 34,14 28,-4Z" style="fill:var(--color-ink)"/><path d="M-26,0C-27,-16-14,-25 1,-25C16,-24 27,-15 26,1C26,17 14,25 0,25C-15,24-27,15-26,0Z" style="fill:#F6D2B8"/><path d="M-28,2C-31,-22-14,-34 1,-33C18,-33 32,-22 28,2C26,-8 22,-13 16,-14C10,-10 4,-12 0,-16C-6,-11-14,-11-18,-14C-23,-12-26,-6-28,2Z" style="fill:var(--color-ink)"/><path d="M-15,3C-12,-3-8,-3-5,3M5,3C8,-3 12,-3 15,3"/><g style="fill:none;stroke-width:2.2"><circle cx="-10" cy="3" r="7.5"/><circle cx="10" cy="3" r="7.5"/></g><path d="M-2,3L2,3"/><path d="M-6,12C-3,17 3,17 6,12"/><ellipse cx="-17" cy="12" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/><ellipse cx="17" cy="12" rx="5" ry="3" style="fill:var(--color-accent-mark);stroke:none"/></g><path d="M110,136C96,148 74,150 60,140" style="fill:#F6D2B8"/><circle cx="60" cy="139" r="5" style="fill:#F6D2B8"/><path d="M40,70L30,64M160,72L170,66"/></g></svg></div>
-      <p class="promise">20/10 năm sau, em đã là vợ anh rồi. Từ năm đó, 20/10 nào anh cũng nhớ. Hứa đó.</p>
-      <div class="again"><button id="again">đọc lại từ đầu</button></div>
+    <section class="epi" aria-labelledby="ft">
+      <div class="shead"><p class="kicker">vĩ thanh</p><svg class="divider"><use href="#div"/></svg></div>
+      <div class="forgive" id="forgive">
+        <div class="fface"><div class="toon before"><svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Nê khoanh tay giận dỗi"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round"><ellipse cx="100" cy="178" rx="44" ry="6" style="fill:var(--color-ink);opacity:.12;stroke:none"/><g transform="translate(100 128)"><path d="M-13,0C-20,8-23,18-22,26L22,26C23,18 20,8 13,0Z" style="fill:#C9B8F0"/><path d="M-6,0C-3,4 3,4 6,0"/><path d="M-14,26L-14,34L-2,34L-1,26M1,26L2,34L14,34L14,26" style="fill:var(--color-paper-2)"/><path d="M-10,34L-10,40M10,34L10,40" style="stroke-width:7"/><path d="M-10,34L-10,40M10,34L10,40" style="stroke:#FBE3D1;stroke-width:2.4"/><ellipse cx="-10" cy="42" rx="6.5" ry="3" style="fill:var(--color-paper-2)"/><ellipse cx="10" cy="42" rx="6.5" ry="3" style="fill:var(--color-paper-2)"/><path d="M-19,6L13,14M19,6L-13,14" style="stroke-width:10"/><path d="M-19,6L13,14" style="stroke:#FBE3D1;stroke-width:5"/><path d="M19,6L-13,14" style="stroke:#FBE3D1;stroke-width:5"/></g><g transform="translate(102 88) rotate(-8) scale(-1 1)"><g transform="scale(1.12)"><path d="M-32,-4C-38,14-36,36-27,42L27,42C36,36 38,14 32,-4Z" style="fill:var(--color-ink)"/><path d="M-31,0C-32,-18-17,-28 0,-28C18,-28 31,-18 31,-3C37,3 36,17 27,21C19,28 8,30-2,30C-19,30-31,18-31,0Z" style="fill:#FBE3D1"/><path d="M-33,4C-36,-22-17,-35 1,-35C20,-35 37,-22 33,4C31,-8 26,-13 19,-15C12,-10 5,-12 0,-17C-7,-11-16,-11-21,-15C-27,-12-31,-6-33,4Z" style="fill:var(--color-ink)"/><path d="M-16,1C-16,7-6,7-6,1Z" style="fill:var(--color-ink)"/><path d="M6,1C6,7 16,7 16,1Z" style="fill:var(--color-ink)"/><path d="M-16,-12L-6,-8M6,-8L16,-12" style="stroke-width:4.6"/><g style="fill:none;stroke-width:2.4"><circle cx="-11" cy="2" r="9.5"/><circle cx="11" cy="2" r="9.5"/></g><path d="M-2,2L2,2"/><ellipse cx="0" cy="15" rx="3.4" ry="4" style="fill:var(--color-accent)"/><ellipse cx="-21" cy="14" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/><ellipse cx="22" cy="14" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/><ellipse cx="-22" cy="14" rx="9" ry="7" style="fill:#F7B5C8"/><ellipse cx="23" cy="14" rx="9" ry="7" style="fill:#F7B5C8"/></g></g><g transform="translate(140 48) scale(1.2)"><path d="M-8,-3C-3,-3-3,-3-3,-8M3,-8C3,-3 3,-3 8,-3M8,3C3,3 3,3 3,8M-3,8C-3,3-3,3-8,3" style="stroke:var(--color-accent);stroke-width:3.2"/></g><path d="M58,96C50,92 48,86 52,80M64,108C54,108 48,104 46,98"/><text x="132" y="158" font-size="20" transform="rotate(8 132 158)" style="fill:var(--color-ink);stroke:none;font:700 20px 'Comic Sans MS','Chalkboard SE',cursive">hứ!</text></g></svg></div><div class="toon after"><svg viewBox="0 0 200 200" class="toon" role="img" aria-label="Nê tha thứ, ôm Hái, Hái khóc vì vui"><g style="fill:none;stroke:var(--color-ink);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round"><g transform="translate(26 44) scale(1.4)"><path d="M0,6C-9,-1-9,-9-4,-9C-1,-9 0,-6 0,-5C0,-6 1,-9 4,-9C9,-9 9,-1 0,6Z" style="fill:var(--color-accent)"/></g><g transform="translate(172 40) scale(1.2)"><path d="M0,6C-9,-1-9,-9-4,-9C-1,-9 0,-6 0,-5C0,-6 1,-9 4,-9C9,-9 9,-1 0,6Z" style="fill:var(--color-accent-mark)"/></g><g transform="translate(100 22) scale(1.1)"><path d="M0,6C-9,-1-9,-9-4,-9C-1,-9 0,-6 0,-5C0,-6 1,-9 4,-9C9,-9 9,-1 0,6Z" style="fill:var(--color-accent)"/></g><ellipse cx="100" cy="184" rx="60" ry="6" style="fill:var(--color-ink);opacity:.12;stroke:none"/><g transform="translate(72 130)"><path d="M-14,0C-19,8-20,18-18,26L18,26C20,18 19,8 14,0Z" style="fill:#9EC5F5"/><path d="M-6,0C-3,4 3,4 6,0"/><path d="M-14,26L-14,34L-2,34L-1,26M1,26L2,34L14,34L14,26" style="fill:var(--color-sun-tint)"/><path d="M-10,34L-10,40M10,34L10,40" style="stroke-width:7"/><path d="M-10,34L-10,40M10,34L10,40" style="stroke:#FBE3D1;stroke-width:2.4"/><ellipse cx="-10" cy="42" rx="6.5" ry="3" style="fill:var(--color-paper-2)"/><ellipse cx="10" cy="42" rx="6.5" ry="3" style="fill:var(--color-paper-2)"/></g><g transform="translate(130 132)"><path d="M-13,0C-20,8-23,18-22,26L22,26C23,18 20,8 13,0Z" style="fill:#C9B8F0"/><path d="M-6,0C-3,4 3,4 6,0"/><path d="M-14,26L-14,34L-2,34L-1,26M1,26L2,34L14,34L14,26" style="fill:var(--color-paper-2)"/><path d="M-10,34L-10,40M10,34L10,40" style="stroke-width:7"/><path d="M-10,34L-10,40M10,34L10,40" style="stroke:#FBE3D1;stroke-width:2.4"/><ellipse cx="-10" cy="42" rx="6.5" ry="3" style="fill:var(--color-paper-2)"/><ellipse cx="10" cy="42" rx="6.5" ry="3" style="fill:var(--color-paper-2)"/></g><g transform="translate(66 92) rotate(-10) scale(.92)"><g transform="scale(1.12)"><path d="M-31,0C-32,-18-17,-28 0,-28C18,-28 31,-18 31,-3C37,3 36,17 27,21C19,28 8,30-2,30C-19,30-31,18-31,0Z" style="fill:#FBE3D1"/><path d="M-32,0C-35,-24-18,-35 0,-35L4,-49L11,-36L20,-45L21,-32C32,-26 35,-12 32,-2C27,-14 17,-18 9,-17C3,-12-12,-19-21,-13C-26,-10-30,-6-32,0Z" style="fill:var(--color-ink)"/><path d="M-16,-2L-7,2L-16,6M16,-2L7,2L16,6" style="stroke-width:3.6"/><path d="M-16,-8L-7,-12M7,-12L16,-8" style="stroke-width:4.6"/><path d="M-10,10C-10,26 10,26 10,10C4,13-4,13-10,10Z" style="fill:var(--color-accent)"/><path d="M-5,22C-2,19 2,19 5,22" style="fill:#F7B5C8"/><ellipse cx="-20" cy="12" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/><ellipse cx="21" cy="12" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/><path d="M-14,5C-26,2-32,14-30,30M14,5C26,2 32,14 30,30" style="stroke-width:8"/><path d="M-14,5C-26,2-32,14-30,30M14,5C26,2 32,14 30,30" style="stroke:var(--color-iris-tint);stroke-width:4"/></g></g><g transform="translate(136 96) rotate(10) scale(.92)"><g transform="scale(1.12)"><path d="M-32,-4C-38,14-36,36-27,42L27,42C36,36 38,14 32,-4Z" style="fill:var(--color-ink)"/><path d="M-31,0C-32,-18-17,-28 0,-28C18,-28 31,-18 31,-3C37,3 36,17 27,21C19,28 8,30-2,30C-19,30-31,18-31,0Z" style="fill:#FBE3D1"/><path d="M-33,4C-36,-22-17,-35 1,-35C20,-35 37,-22 33,4C31,-8 26,-13 19,-15C12,-10 5,-12 0,-17C-7,-11-16,-11-21,-15C-27,-12-31,-6-33,4Z" style="fill:var(--color-ink)"/><path d="M-16,4C-13,-3-9,-3-6,4M6,4C9,-3 13,-3 16,4" style="stroke-width:3.6"/><path d="M-16,-10L-7,-11M7,-11L16,-10" style="stroke-width:4.6"/><g style="fill:none;stroke-width:2.4"><circle cx="-11" cy="2" r="9.5"/><circle cx="11" cy="2" r="9.5"/></g><path d="M-2,2L2,2"/><path d="M-5,13C-2,17 2,17 5,13"/><ellipse cx="-21" cy="14" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/><ellipse cx="22" cy="14" rx="6.5" ry="4" style="fill:#F7B5C8;stroke:none"/></g></g><path d="M118,136C100,150 72,152 54,140" style="fill:#FBE3D1"/><circle cx="54" cy="139" r="5" style="fill:#FBE3D1"/><path d="M40,70L30,64M160,72L170,66"/></g></svg></div></div>
+        <h4 class="fq" id="ft">Vậy cô Tấm tha cho hoàng tử chưa?</h4>
+        <div class="fbtns" id="fbtns"><button class="yes" id="yes">Tha rồi</button><button class="no" id="no">Chưa</button></div>
+        <p class="fsmall" id="fsmall"></p>
+        <div class="ending">
+          <p class="promise">Và từ đó, hoàng tử Hái với cô Tấm Nguyên sống bên nhau. 20/10 năm sau, em đã là vợ anh rồi. Từ năm đó, 20/10 nào anh cũng nhớ. Hứa đó.</p>
+          <p class="het">HẾT</p>
+          <div class="again"><button id="again">đọc lại từ đầu</button></div>
+        </div>
+      </div>
     </section>
   </section>
 </main>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Xem hình">
+  <button class="x" id="lbx" aria-label="Đóng">×</button>
+  <button class="lp" id="lbp" aria-label="Hình trước"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M12.5 4 6.5 10l6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <figure><img id="lbi" alt=""><figcaption id="lbc"></figcaption></figure>
+  <button class="ln" id="lbn" aria-label="Hình sau"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M7.5 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+</div>
+
 <div id="yt" aria-hidden="true" style="position:fixed;width:1px;height:1px;left:-9999px;top:0;opacity:0;pointer-events:none"></div>
 <script src="musicbox.js"></script>
 <script>
-// Nhạc: YouTube (Xin Đừng Rời Xa Anh, Truzg Remix). Dự phòng MusicBox nếu YouTube không tải được.
+// Nhạc: YouTube (Xin Đừng Rời Xa Anh, Truzg Remix), bỏ 5 giây intro. Dự phòng MusicBox nếu YouTube không tải được.
 (function(){
-  const ID='HedP3E7ljhk';const SKIP=5;let yt=null,ready=false,failed=false,on=false;
+  const ID='HedP3E7ljhk',SKIP=5;let yt=null,ready=false,failed=false,on=false;
   window.onYouTubeIframeAPIReady=function(){
     yt=new YT.Player('yt',{videoId:ID,playerVars:{autoplay:0,controls:0,start:SKIP,playsinline:1},
       events:{onStateChange:e=>{if(e.data===0){yt.seekTo(SKIP,true);yt.playVideo();}},onReady:()=>{yt.cueVideoById({videoId:ID,startSeconds:SKIP});ready=true;yt.setVolume(70);if(on)yt.playVideo();},onError:()=>{failed=true;if(on)fb(true);}}});
@@ -499,123 +608,252 @@ svg{display:block}
     stop(){on=false;if(ready&&!failed)yt.pauseVideo();else fb(false);},
     toggle(){on?this.stop():this.start();},
     get isPlaying(){return on},
-    get t(){return yt&&yt.getCurrentTime?yt.getCurrentTime():-1},
-    seekEnd(){yt.seekTo(yt.getDuration()-2,true)},
-    get state(){return failed?"fallback":(yt&&yt.getPlayerState?yt.getPlayerState():"loading")}
+    get state(){return failed?'fallback':(yt&&yt.getPlayerState?yt.getPlayerState():'loading')}
   };
 })();
 </script>
 <script>
-const app=document.getElementById('app'),opts=[...document.querySelectorAll('.opt')],own=document.getElementById('own'),send=document.getElementById('send'),done=document.getElementById('done'),ticket=document.getElementById('ticket'),music=document.getElementById('music');
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const app=$('#app'),music=$('#music');
 const TO='thaiquang.nguyenle@gmail.com';
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 window.__goMail=window.__goMail||(u=>{location.href=u});
-let pick=null;
 
-// countdown (whole days, Asia/Ho_Chi_Minh-ish: local midnight)
-const t=new Date();t.setHours(0,0,0,0);
-document.querySelectorAll('[data-to]').forEach(e=>{const [y,m,d]=e.dataset.to.split('-').map(Number);e.textContent=Math.max(0,Math.round((new Date(y,m-1,d)-t)/864e5));});
+// haptic: Android dùng vibrate; iPhone (iOS 18+) bấm công tắc hệ thống ẩn để rung nhẹ
+const hsw=$('#hapticSw');
+function haptic(p=12){try{if(navigator.vibrate){navigator.vibrate(p);return}}catch(_){}try{hsw&&hsw.parentNode.click()}catch(_){}}
 
-function setMusic(on){music.setAttribute('aria-pressed',on);document.getElementById('musicLabel').textContent=on?'đang phát':'nhạc';}
-music.addEventListener('click',()=>{Song.toggle();setMusic(Song.isPlaying);});
+function setMusic(on){music.setAttribute('aria-pressed',on);$('#musicLabel').textContent=on?'đang phát':'nhạc';}
+music.addEventListener('click',()=>{Song.toggle();setMusic(Song.isPlaying);haptic(8)});
 
-function petals(x,y){
+function burst(x,y,kind='petal',n=16){
   if(reduce)return;
-  const cols=['var(--color-accent)','var(--color-accent-mark)','var(--color-sun-tint)'];
-  for(let i=0;i<14;i++){
+  const cols=['var(--color-accent)','var(--color-gold)','var(--color-accent-mark)'];
+  for(let i=0;i<n;i++){
     const s=document.createElementNS('http://www.w3.org/2000/svg','svg');
-    s.setAttribute('viewBox','0 0 16 16');s.setAttribute('class','petal');s.setAttribute('aria-hidden','true');
-    s.innerHTML='<path d="M8 1C12 4 13 9 8 15C3 9 4 4 8 1Z" fill="'+cols[i%3]+'" stroke="var(--color-ink)" stroke-width="1.2"/>';
+    s.setAttribute('class',kind);s.setAttribute('aria-hidden','true');
+    if(kind==='heart'){s.setAttribute('viewBox','0 0 24 24');s.innerHTML='<use href="#heart" fill="'+cols[i%3]+'" stroke="var(--color-ink)" stroke-width="1.6"/>'}
+    else{s.setAttribute('viewBox','0 0 16 16');s.innerHTML='<path d="M8 1C12 4 13 9 8 15C3 9 4 4 8 1Z" fill="'+cols[i%3]+'" stroke="var(--color-ink)" stroke-width="1.2"/>'}
     s.style.left=x+'px';s.style.top=y+'px';document.body.appendChild(s);
-    const a=Math.PI*(1.1+Math.random()*.8),d=120+Math.random()*180,dx=Math.cos(a)*d,dy=Math.sin(a)*d;
-    s.animate([{transform:'translate(0,0) rotate(0)',opacity:1},{transform:`translate(${dx}px,${dy}px) rotate(${Math.random()*360}deg)`,opacity:1,offset:.55},{transform:`translate(${dx*1.2}px,${dy+260}px) rotate(${Math.random()*540}deg)`,opacity:0}],{duration:1400,easing:'cubic-bezier(.2,.7,.3,1)',fill:'forwards'}).onfinish=()=>s.remove();
+    const a=Math.PI*(1.05+Math.random()*.9),d=110+Math.random()*190,dx=Math.cos(a)*d,dy=Math.sin(a)*d;
+    s.animate([{transform:'translate(0,0) scale(.6)',opacity:1},{transform:`translate(${dx}px,${dy}px) rotate(${Math.random()*300}deg) scale(1)`,opacity:1,offset:.55},{transform:`translate(${dx*1.2}px,${dy+260}px) rotate(${Math.random()*500}deg)`,opacity:0}],{duration:1500,easing:'cubic-bezier(.2,.7,.3,1)',fill:'forwards'}).onfinish=()=>s.remove();
   }
 }
 
-document.getElementById('start').addEventListener('click',()=>{
+// ---------- 0 · bìa: bấm nút hoặc kéo bìa qua trái ----------
+const cover=$('#cover');
+function begin(){
+  if(app.classList.contains('started'))return;
   try{Song.start();setMusic(true)}catch(_){}
-  app.classList.add('started');document.getElementById('open').focus({preventScroll:true});
-});
-const openBtn=document.getElementById('open'),seal=document.querySelector('.seal'),flap=document.querySelector('.flap'),peek=document.querySelector('.peek'),hintTxt=document.getElementById('hintTxt');
-function openEnv(){
-  if(app.classList.contains('is-open'))return;
-  if(!Song.isPlaying){try{Song.start();setMusic(true)}catch(_){}}
-  flap.style.transform='';peek.style.transform='';
-  app.classList.add('is-open');
-  const r=seal.getBoundingClientRect();
-  setTimeout(()=>petals(r.left+r.width/2,r.top),reduce?0:1000);
-  setTimeout(()=>app.classList.add('is-drop'),reduce?0:1700);
-  setTimeout(()=>{app.classList.add('is-read');scrollTo({top:0,behavior:'instant'});document.getElementById('letter').focus({preventScroll:true});},reduce?60:2250);
+  haptic(20);cover.style.transform='';app.classList.add('started');
+  setTimeout(()=>$('#thi').focus({preventScroll:true}),900);
 }
-// kéo con tem: kéo đủ xa thì tem bung ra, nắp thư mở; thả sớm thì tem bật về
-let drag=null,dragged=false;const PULL=110;
+$('#start').addEventListener('click',begin);
+(()=>{let x0=null,dx=0;
+  cover.addEventListener('pointerdown',e=>{if(e.target.closest('button'))return;x0=e.clientX;dx=0;cover.classList.add('drag');cover.setPointerCapture(e.pointerId)});
+  cover.addEventListener('pointermove',e=>{if(x0===null)return;dx=Math.min(0,e.clientX-x0);cover.style.transform=`rotateY(${Math.max(-110,dx/3)}deg)`});
+  const end=()=>{if(x0===null)return;x0=null;cover.classList.remove('drag');if(dx<-120)begin();else cover.style.transform=''};
+  cover.addEventListener('pointerup',end);cover.addEventListener('pointercancel',end);
+})();
+
+// ---------- 1 · quả thị: kéo xuống cho rụng ----------
+const tree=$('#tree'),thi=$('#thi'),stemPath=$('#stemPath'),stem=$('#stem'),hintTxt=$('#hintTxt');
+const PULL=130;let drag=null,dragged=false,opened=false,lastTick=0;
+function drawStem(dx=0,dy=0){
+  const W=tree.clientWidth,H=tree.clientHeight;stem.setAttribute('viewBox',`0 0 ${W} ${H}`);
+  const ax=W/2,ay=56,bx=W/2+dx,by=150+dy+14;
+  const sag=Math.min(30,Math.hypot(dx,dy)*.15);
+  stemPath.setAttribute('d',`M${ax} ${ay} Q${(ax+bx)/2+sag} ${(ay+by)/2} ${bx} ${by}`);
+}
 function setPull(dx,dy){
-  const p=Math.min(1,Math.hypot(dx,dy)/PULL);
-  seal.style.setProperty('--dx',dx+'px');seal.style.setProperty('--dy',dy+'px');
-  seal.style.setProperty('--rot',(dx/4)+'deg');seal.style.setProperty('--sc',1+p*.15);
-  flap.style.transform=`rotateX(${-p*38}deg)`;peek.style.transform=`translateY(${-p*14}%)`;
-  hintTxt.textContent=p<.35?'kéo con tem ra để mở thư nha':p<.8?'kéo nữa đi Nê…':'thả ra là mở nè';
+  const p=Math.min(1,Math.max(0,dy)/PULL*0.85+Math.hypot(dx,dy)/PULL*0.15);
+  thi.style.setProperty('--dx',dx+'px');thi.style.setProperty('--dy',dy+'px');
+  thi.style.setProperty('--rot',(dx/5)+'deg');thi.style.setProperty('--sx',1-p*.08);thi.style.setProperty('--sy',1+p*.12);
+  drawStem(dx,dy);
+  const tick=Math.floor(p*4);if(tick>lastTick){haptic(6);lastTick=tick}
+  hintTxt.textContent=p<.3?'kéo trái thị xuống cho rụng nha':p<.8?'kéo nữa đi Nê, sắp rụng rồi…':'thả tay ra là thị rụng nè';
   return p;
 }
-seal.addEventListener('pointerdown',e=>{
-  if(app.classList.contains('is-open'))return;
-  e.preventDefault();seal.setPointerCapture(e.pointerId);
-  drag={x:e.clientX,y:e.clientY,p:0};dragged=false;
-  [seal,flap,peek].forEach(el=>{el.classList.remove('back');el.classList.add('drag')});
-});
-seal.addEventListener('pointermove',e=>{
-  if(!drag)return;
-  let dx=e.clientX-drag.x,dy=e.clientY-drag.y;
-  const d=Math.hypot(dx,dy);if(d>4)dragged=true;
-  if(d>PULL*1.6){dx*=PULL*1.6/d;dy*=PULL*1.6/d;}
-  drag.p=setPull(dx,dy);
-});
+function openThi(){
+  if(opened)return;opened=true;
+  if(!Song.isPlaying){try{Song.start();setMusic(true)}catch(_){}}
+  app.classList.add('is-open');thi.classList.remove('drag','back');haptic([20,40,30]);
+  stemPath.setAttribute('d','');
+  const H=tree.clientHeight,cur=parseFloat(thi.style.getPropertyValue('--dy'))||0,fall=H-150-120-24-cur;
+  const a=thi.animate([{translate:'0 0',rotate:'0deg'},{translate:`0 ${fall}px`,rotate:'25deg',offset:.7},{translate:`0 ${fall-26}px`,rotate:'-8deg',offset:.85},{translate:`0 ${fall}px`,rotate:'0deg'}],{duration:reduce?10:900,easing:'cubic-bezier(.5,0,.75,0)',fill:'forwards'});
+  a.onfinish=()=>{
+    haptic(35);const r=thi.getBoundingClientRect();
+    thi.animate([{scale:'1 1'},{scale:'1.3 .7'},{scale:'0 0',opacity:0}],{duration:420,fill:'forwards',easing:'ease-in'});
+    $('#bup').animate([{opacity:0,transform:'scale(.5)'},{opacity:1,transform:'scale(1.15)'},{opacity:0,transform:'scale(1.3) translateY(-30px)'}],{duration:900,fill:'forwards'});
+    burst(r.left+r.width/2,r.top+r.height/2,'petal',20);
+    setTimeout(()=>{app.classList.add('is-read');scrollTo({top:0,behavior:'instant'});fitBook();$('#letter').focus({preventScroll:true})},reduce?50:1100);
+  };
+}
+thi.addEventListener('pointerdown',e=>{if(opened)return;e.preventDefault();thi.setPointerCapture(e.pointerId);drag={x:e.clientX,y:e.clientY,p:0};dragged=false;lastTick=0;thi.classList.remove('back');thi.classList.add('drag');haptic(6)});
+thi.addEventListener('pointermove',e=>{if(!drag)return;let dx=e.clientX-drag.x,dy=e.clientY-drag.y;const d=Math.hypot(dx,dy);if(d>4)dragged=true;if(d>PULL*1.4){dx*=PULL*1.4/d;dy*=PULL*1.4/d}drag.p=setPull(dx,dy)});
 function release(){
   if(!drag)return;const p=drag.p;drag=null;
-  [seal,flap,peek].forEach(el=>{el.classList.remove('drag');el.classList.add('back')});
-  if(p>=1){seal.style.setProperty('--sc',1.3);openEnv();}
-  else{seal.style.setProperty('--dx','0px');seal.style.setProperty('--dy','0px');seal.style.setProperty('--rot','0deg');seal.style.setProperty('--sc',1);flap.style.transform='';peek.style.transform='';hintTxt.textContent=dragged?'kéo xa thêm chút nữa nha':'kéo con tem ra để mở thư nha';}
+  if(p>=1){openThi();return}
+  thi.classList.remove('drag');thi.classList.add('back');
+  ['--dx','--dy','--rot'].forEach(v=>thi.style.setProperty(v,v==='--rot'?'0deg':'0px'));thi.style.setProperty('--sx',1);thi.style.setProperty('--sy',1);
+  const t0=performance.now();(function f(){const k=Math.min(1,(performance.now()-t0)/450);const s=Math.sin(k*Math.PI*3)*(1-k)*20;drawStem(0,-s);if(k<1)requestAnimationFrame(f)})();
+  hintTxt.textContent=dragged?'mạnh tay chút nữa, kéo xuống sâu hơn nha':'kéo trái thị xuống cho rụng nha';
 }
-seal.addEventListener('pointerup',release);seal.addEventListener('pointercancel',release);
-openBtn.addEventListener('click',e=>{
-  if(e.detail===0){openEnv();return;}            // bàn phím (Enter/Space) mở luôn
-  if(dragged){dragged=false;return;}
-  if(app.classList.contains('is-open'))return;
-  seal.classList.remove('nudge');void seal.offsetWidth;seal.classList.add('nudge');
-  hintTxt.textContent='không phải bấm đâu, kéo con tem ra nè';
+thi.addEventListener('pointerup',release);thi.addEventListener('pointercancel',release);
+thi.addEventListener('click',e=>{
+  if(e.detail===0){openThi();return}
+  if(dragged){dragged=false;return}
+  if(opened)return;thi.classList.remove('nudge');void thi.offsetWidth;thi.classList.add('nudge');haptic(10);
+  hintTxt.textContent='hông phải bấm đâu, nắm trái thị kéo xuống nè';
 });
-seal.addEventListener('animationend',()=>seal.classList.remove('nudge'));
-document.getElementById('again').addEventListener('click',()=>{app.classList.remove('is-open','is-read','is-drop','promised');['--dx','--dy','--rot','--sc'].forEach(v=>seal.style.removeProperty(v));[seal,flap,peek].forEach(el=>el.classList.remove('back','drag'));hintTxt.textContent='kéo con tem ra để mở thư nha';scrollTo({top:0,behavior:'instant'});});
+thi.addEventListener('animationend',e=>{if(e.animationName==='jiggle')thi.classList.remove('nudge')});
+addEventListener('resize',()=>{if(!opened)drawStem()});drawStem();
 
-function update(){const v=pick==='__own'?own.value.trim():pick;send.disabled=!v;document.getElementById('hintPick').style.visibility=v?'hidden':'visible';}
-opts.forEach(b=>b.addEventListener('click',()=>{
-  opts.forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');
-  pick=b.dataset.w;own.classList.toggle('show',pick==='__own');if(pick==='__own')own.focus();update();
-}));
+// ---------- 2 · cuốn sách: lật trang 3D ----------
+const pages=$('#pages'),pgs=$$('.pg'),n=pgs.length,dots=$$('#dots i'),prev=$('#prev'),next=$('#next'),pnum=$('#pnum');
+let cur=0;
+function fitBook(){
+  if(!app.classList.contains('is-read'))return;
+  const h=pgs[cur].scrollHeight;pages.style.height=h+'px';
+}
+function setSide(on){$$('.side>*:not(.lock)').forEach(el=>{if(on)el.removeAttribute('inert');else el.setAttribute('inert','')})}
+const wide=matchMedia('(min-width:1100px)');
+function go(k,quiet){
+  const was=cur;cur=Math.max(0,Math.min(n-1,k));
+  pgs.forEach((p,j)=>{p.classList.toggle('gone',j<cur);p.style.zIndex=n-j;p.style.transform='';if(j===cur)p.removeAttribute('inert');else p.setAttribute('inert','');p.setAttribute('aria-hidden',j!==cur);p.classList.toggle('cur',j===cur)});
+  dots.forEach((d,j)=>d.classList.toggle('on',j===cur));prev.disabled=cur===0;next.disabled=cur===n-1;pnum.textContent='chương '+(cur+1)+' / '+n;
+  if(cur===n-1&&!app.classList.contains('promised')){app.classList.add('promised');setSide(true)}
+  if(was!==cur&&!quiet)haptic(12);
+  fitBook();
+  if(was!==cur){const t=pages.getBoundingClientRect().top;if(t<0)scrollBy({top:t-90,behavior:reduce?'instant':'smooth'})}
+}
+prev.onclick=()=>go(cur-1);next.onclick=()=>go(cur+1);
+document.addEventListener('keydown',e=>{
+  if($('#lb').classList.contains('on')){if(e.key==='Escape')lbClose();if(e.key==='ArrowRight')lbGo(1);if(e.key==='ArrowLeft')lbGo(-1);return}
+  if(!app.classList.contains('is-read')||e.target.closest('input,.side'))return;
+  const r=pages.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;
+  if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1);
+});
+(()=>{let x0=null,dx=0;
+  pages.addEventListener('pointerdown',e=>{if(e.button!==0||e.target.closest('video'))return;x0=e.clientX;dx=0;pages.classList.add('drag');pages.setPointerCapture(e.pointerId)});
+  pages.addEventListener('pointermove',e=>{
+    if(x0===null)return;dx=e.clientX-x0;const w=pages.clientWidth;
+    if(dx<0&&cur<n-1)pgs[cur].style.transform=`rotateY(${Math.max(-172,dx/w*200)}deg)`;
+    else if(dx>0&&cur>0)pgs[cur-1].style.transform=`rotateY(${Math.min(0,-172+dx/w*200)}deg)`;
+  });
+  const end=()=>{if(x0===null)return;pages.classList.remove('drag');const w=pages.clientWidth;x0=null;
+    if(dx<-w*.18)go(cur+1);else if(dx>w*.18)go(cur-1);else go(cur,true)};
+  pages.addEventListener('pointerup',end);pages.addEventListener('pointercancel',end);
+})();
+addEventListener('resize',fitBook);
+document.fonts&&document.fonts.ready.then(fitBook);
+$('video').addEventListener('loadedmetadata',fitBook);
+go(0,true);
+if(wide.matches)setSide(false);
+
+// side: Bụt + điều ước
+const ticket=$('#ticket'),cloud=$('#cloud'),opts=$$('.opt'),own=$('#own'),send=$('#send'),done=$('#done');let pick=null,pokes=0;
+const cloudLines=['chạm vô đám mây 3 lần coi ai hiện ra','thêm 2 lần nữa…','1 lần nữa thôi…'];
+function showBut(){ticket.classList.add('but');haptic([15,30,15])}
+cloud.addEventListener('click',()=>{
+  pokes++;cloud.classList.remove('poke');void cloud.offsetWidth;cloud.classList.add('poke');haptic(10);
+  if(pokes>=3){const r=cloud.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,'petal',14);showBut();setTimeout(()=>$('.butrow').scrollIntoView({block:'nearest',behavior:'smooth'}),100)}
+  else $('#cloudTxt').textContent=cloudLines[pokes];
+});
+function update(){const v=pick==='__own'?own.value.trim():pick;send.disabled=!v;$('#hintPick').style.visibility=v?'hidden':'visible'}
+opts.forEach(b=>b.addEventListener('click',()=>{opts.forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');pick=b.dataset.w;own.classList.toggle('show',pick==='__own');if(pick==='__own')own.focus();update();haptic(8)}));
 own.addEventListener('input',update);
-function markUsed(v){done.textContent='Em đã chọn: '+v+'. Anh nhận rồi nha. Nếu mail không tự mở, em chụp màn hình này gửi anh là được.';ticket.classList.add('used');}
+function markUsed(v){done.textContent='Em ước: '+v+'. Bụt duyệt rồi, hoàng tử đang chạy đi làm nè. Nếu mail không tự mở, em chụp màn hình này gửi anh là được.';ticket.classList.add('used','but')}
 send.addEventListener('click',()=>{
   const v=pick==='__own'?own.value.trim():pick;if(!v)return;
   try{localStorage.setItem('ne-wish',v)}catch(_){}
-  markUsed(v);
-  window.__goMail('mailto:'+TO+'?subject='+encodeURIComponent('Phiếu điều ước của Nê')+'&body='+encodeURIComponent('Anh ơi, em chọn: '+v));
+  markUsed(v);haptic([20,40,20]);const r=send.getBoundingClientRect();burst(r.left+r.width/2,r.top,'heart',12);
+  window.__goMail('mailto:'+TO+'?subject='+encodeURIComponent('Điều ước của Nê')+'&body='+encodeURIComponent('Bụt ơi, Nê ước: '+v));
 });
-try{const w=localStorage.getItem('ne-wish');if(w)markUsed(w)}catch(_){}
+try{const w=localStorage.getItem('ne-wish');if(w){markUsed(w);app.classList.add('promised');setSide(true)}}catch(_){}
 
-// letter pages: drag / swipe / buttons / arrow keys
+// ---------- 3 · cuộn trang ----------
+const prog=$('#prog');
+addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;prog.style.setProperty('--p',(h>0?scrollY/h*100:0)+'%')},{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);
+  const b=e.target.querySelector('[data-to]');if(b)countUp(b)}}),{threshold:.15});
+$$('.rv').forEach(el=>io.observe(el));
+const today=new Date();today.setHours(0,0,0,0);
+function countUp(b){const [y,m,d]=b.dataset.to.split('-').map(Number);const target=Math.max(0,Math.round((new Date(y,m-1,d)-today)/864e5));
+  if(reduce){b.textContent=target;return}const t0=performance.now();(function f(){const k=Math.min(1,(performance.now()-t0)/1200);b.textContent=Math.round(target*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)})()}
+$$('[data-to]').forEach(b=>{const [y,m,d]=b.dataset.to.split('-').map(Number);b.textContent=Math.max(0,Math.round((new Date(y,m-1,d)-today)/864e5))});
+
+// lightbox
+const photos=$$('.pc.photo'),lb=$('#lb'),lbi=$('#lbi'),lbc=$('#lbc');let li=0;
+function lbShow(k){li=(k+photos.length)%photos.length;const f=photos[li],im=f.querySelector('img');lbi.src=im.src;lbi.alt=im.alt;lbc.innerHTML=f.querySelector('figcaption').innerHTML.replace('<small>',' · ').replace('</small>','')}
+function lbGo(d){lbShow(li+d);haptic(8)}
+function lbClose(){lb.classList.remove('on');photos[li].focus&&photos[li].focus()}
+photos.forEach((f,k)=>{f.tabIndex=0;f.setAttribute('role','button');f.addEventListener('click',()=>{lbShow(k);lb.classList.add('on');haptic(8);$('#lbx').focus()});f.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();f.click()}})});
+$('#lbx').onclick=lbClose;$('#lbp').onclick=()=>lbGo(-1);$('#lbn').onclick=()=>lbGo(1);
+lb.addEventListener('click',e=>{if(e.target===lb)lbClose()});
+(()=>{let x0=null;lb.addEventListener('pointerdown',e=>{x0=e.clientX});lb.addEventListener('pointerup',e=>{if(x0===null)return;const d=e.clientX-x0;x0=null;if(Math.abs(d)>50)lbGo(d<0?1:-1)})})();
+
+// ---------- 4 · bản đồ: quả thị bay qua quốc đảo Sư Tử ----------
 (()=>{
-  const pages=document.getElementById('pages'),track=document.getElementById('track'),n=track.children.length,dots=[...document.querySelectorAll('#dots i')],prev=document.getElementById('prev'),next=document.getElementById('next'),pnum=document.getElementById('pnum');
-  let i=0,x0=null,dx=0;
-  function go(k){i=Math.max(0,Math.min(n-1,k));if(i===n-1)app.classList.add('promised');track.style.transform=`translateX(${-i*100}%)`;dots.forEach((d,j)=>d.classList.toggle('on',j===i));prev.disabled=i===0;next.disabled=i===n-1;pnum.textContent=(i+1)+' / '+n;[...track.children].forEach((c,j)=>c.setAttribute('aria-hidden',j!==i));}
-  prev.onclick=()=>go(i-1);next.onclick=()=>go(i+1);
-  document.addEventListener('keydown',e=>{if(!app.classList.contains('is-read')||e.target.tagName==='INPUT')return;{const r=document.getElementById('pages').getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;}if(e.key==='ArrowRight')go(i+1);if(e.key==='ArrowLeft')go(i-1);});
-  pages.addEventListener('pointerdown',e=>{if(e.button!==0)return;x0=e.clientX;dx=0;pages.classList.add('drag');pages.setPointerCapture(e.pointerId);});
-  pages.addEventListener('pointermove',e=>{if(x0===null)return;dx=e.clientX-x0;track.style.transform=`translateX(calc(${-i*100}% + ${dx}px))`;});
-  const end=()=>{if(x0===null)return;pages.classList.remove('drag');const w=pages.clientWidth;if(dx<-w*.15)go(i+1);else if(dx>w*.15)go(i-1);else go(i);x0=null;};
-  pages.addEventListener('pointerup',end);pages.addEventListener('pointercancel',end);
-  document.getElementById('again').addEventListener('click',()=>go(0));
-  go(0);
+  const map=$('#map'),fly=$('#fly'),route=$('#route'),trail=$('#trail'),road=$$('#road li'),cap=$('#mapcap'),svg=map.querySelector('svg');
+  const L=route.getTotalLength(),STOPS=[0,.27,.5,.74,1];let p=0,shown=-1,arrived=false,drag=false;
+  trail.style.strokeDasharray=L;trail.style.strokeDashoffset=L;
+  const g=$('#stops');STOPS.forEach(f=>{const q=route.getPointAtLength(f*L);const c=document.createElementNS('http://www.w3.org/2000/svg','circle');c.setAttribute('cx',q.x);c.setAttribute('cy',q.y);c.setAttribute('r',f===0||f===1?0:6.5);g.appendChild(c)});
+  const dots=[...g.children];
+  const samples=[];for(let i=0;i<=200;i++){const q=route.getPointAtLength(i/200*L);samples.push([q.x,q.y])}
+  function toPx(x,y){const r=svg.getBoundingClientRect(),m=map.getBoundingClientRect();return [x/400*r.width+r.left-m.left,y/520*r.height+r.top-m.top]}
+  const lines=['cô Tấm chui vô quả thị rồi. Cuộn xuống từ từ, hoặc nắm quả thị kéo nó bay đi','bay ngang biển Đông nè','sắp tới rồi, ráng chút nữa','tới quốc đảo Sư Tử rồi! 08/2027 hai đứa nhập học'];
+  function set(v,fromDrag){
+    v=Math.max(0,Math.min(1,v));if(!fromDrag&&v<p)return;p=v;
+    const q=route.getPointAtLength(p*L),q2=route.getPointAtLength(Math.min(L,p*L+4));
+    const [x,y]=toPx(q.x,q.y);fly.style.left=x+'px';fly.style.top=y+'px';
+    fly.style.setProperty('--tilt',(Math.atan2(q2.y-q.y,q2.x-q.x)*180/Math.PI-90)*.25+'deg');
+    trail.style.strokeDashoffset=L*(1-p);fly.setAttribute('aria-valuenow',Math.round(p*100));
+    let k=-1;STOPS.forEach((f,i)=>{if(p>=f-.001)k=i});
+    road.forEach((li,i)=>li.classList.toggle('here',i<=k));dots.forEach((d,i)=>d.classList.toggle('on',i<=k));
+    if(k>shown){if(shown>=0)haptic(10);shown=k}
+    if(k<shown)shown=k;
+    cap.textContent=p>=1?lines[3]:p>.6?lines[2]:p>.08?lines[1]:lines[0];
+    if(p>=1&&!arrived){arrived=true;map.classList.add('arrived');haptic([25,40,25,40,50]);const r=fly.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,'heart',16)}
+    if(p<1&&arrived&&fromDrag){arrived=false;map.classList.remove('arrived')}
+  }
+  function onScroll(){if(drag)return;const r=map.getBoundingClientRect();set((innerHeight*.8-r.top)/(r.height*.8))}
+  addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',()=>{const v=p;p=0;set(v,true)});
+  fly.addEventListener('pointerdown',e=>{e.preventDefault();drag=true;fly.classList.add('drag');fly.setPointerCapture(e.pointerId);haptic(6)});
+  fly.addEventListener('pointermove',e=>{if(!drag)return;const r=svg.getBoundingClientRect();const x=(e.clientX-r.left)/r.width*400,y=(e.clientY-r.top)/r.height*520;
+    let bi=0,bd=1e9;samples.forEach(([sx,sy],i)=>{const d=(sx-x)**2+(sy-y)**2;if(d<bd){bd=d;bi=i}});set(bi/200,true)});
+  const end=()=>{drag=false;fly.classList.remove('drag')};fly.addEventListener('pointerup',end);fly.addEventListener('pointercancel',end);
+  fly.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowDown'){e.preventDefault();set(p+.1,true)}if(e.key==='ArrowLeft'||e.key==='ArrowUp'){e.preventDefault();set(p-.1,true)}if(e.key==='End')set(1,true);if(e.key==='Home')set(0,true)});
+  window.mapReset=()=>{p=0;shown=-1;arrived=false;map.classList.remove('arrived');set(0,true)};
+  set(0,true);document.fonts&&document.fonts.ready.then(()=>{const v=p;set(v,true)});
 })();
+
+// ---------- vĩ thanh: tha chưa? nút "Chưa" chạy trốn ----------
+const fg=$('#forgive'),no=$('#no'),fs=$('#fsmall');let dodges=0;
+const dodgeLines=['ủa bấm hụt rồi kìa','hông có nút đó đâu','thôi mà Nê','nút này hư rồi, bấm nút kia đi'];
+function dodge(){
+  dodges++;haptic(10);
+  if(dodges>4){no.textContent='Tha rồi';no.classList.add('yes');no.onclick=forgive;no.style.transform='';fs.textContent='thấy chưa, nút nào cũng là tha';return}
+  const box=$('#fbtns').getBoundingClientRect(),w=Math.min(innerWidth-40,520);
+  const x=(Math.random()-.5)*w,y=(Math.random()-.5)*90;no.style.transform=`translate(${x}px,${y}px) rotate(${(Math.random()-.5)*30}deg)`;
+  fs.textContent=dodgeLines[Math.min(dodges-1,dodgeLines.length-1)];
+}
+no.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse'&&dodges<=4)dodge()});
+no.addEventListener('click',e=>{if(dodges<=4){e.preventDefault();dodge()}});
+function forgive(){
+  if(fg.classList.contains('forgiven'))return;fg.classList.add('forgiven');haptic([30,50,30,50,60]);
+  const r=fg.querySelector('.fface').getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,'heart',24);
+  try{localStorage.setItem('ne-forgave','1')}catch(_){}
+}
+$('#yes').addEventListener('click',forgive);
+
+$('#again').addEventListener('click',()=>{
+  app.classList.remove('is-open','is-read','promised');opened=false;
+  thi.getAnimations().forEach(a=>a.cancel());['--dx','--dy','--rot'].forEach(v=>thi.style.removeProperty(v));thi.style.setProperty('--sx',1);thi.style.setProperty('--sy',1);
+  hintTxt.textContent='kéo trái thị xuống cho rụng nha';drawStem();go(0,true);if(wide.matches&&!localStorage.getItem('ne-wish'))setSide(false);
+  fg.classList.remove('forgiven');dodges=0;window.mapReset&&mapReset();no.textContent='Chưa';no.classList.remove('yes');no.onclick=null;no.style.transform='';fs.textContent='';
+  scrollTo({top:0,behavior:'instant'});
+});
 </script>
 </body>
 </html>
